@@ -17,7 +17,7 @@ namespace INFSYS_Design
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RoomManagement());
+            Application.Run(new RoomExtension());
 
         }
     }

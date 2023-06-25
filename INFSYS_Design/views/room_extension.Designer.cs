@@ -57,6 +57,10 @@ namespace INFSYS_Design.views
             this.created_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deadline = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.submit_btn = new System.Windows.Forms.Button();
+            this.date_return_label = new System.Windows.Forms.Label();
+            this.date_return = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.waiting_list)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,7 +85,7 @@ namespace INFSYS_Design.views
             // 
             // room_level_label
             // 
-            this.room_level_label.Location = new System.Drawing.Point(46, 142);
+            this.room_level_label.Location = new System.Drawing.Point(46, 128);
             this.room_level_label.Name = "room_level_label";
             this.room_level_label.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.room_level_label.Size = new System.Drawing.Size(100, 17);
@@ -92,7 +96,7 @@ namespace INFSYS_Design.views
             // 
             // room_level
             // 
-            this.room_level.Location = new System.Drawing.Point(152, 135);
+            this.room_level.Location = new System.Drawing.Point(152, 121);
             this.room_level.Multiline = true;
             this.room_level.Name = "room_level";
             this.room_level.Size = new System.Drawing.Size(333, 29);
@@ -100,7 +104,7 @@ namespace INFSYS_Design.views
             // 
             // bed_type_label
             // 
-            this.bed_type_label.Location = new System.Drawing.Point(43, 250);
+            this.bed_type_label.Location = new System.Drawing.Point(43, 213);
             this.bed_type_label.Name = "bed_type_label";
             this.bed_type_label.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bed_type_label.Size = new System.Drawing.Size(103, 17);
@@ -111,7 +115,7 @@ namespace INFSYS_Design.views
             // 
             // bed_type
             // 
-            this.bed_type.Location = new System.Drawing.Point(152, 245);
+            this.bed_type.Location = new System.Drawing.Point(152, 208);
             this.bed_type.Multiline = true;
             this.bed_type.Name = "bed_type";
             this.bed_type.Size = new System.Drawing.Size(333, 29);
@@ -119,7 +123,7 @@ namespace INFSYS_Design.views
             // 
             // num_bed_label
             // 
-            this.num_bed_label.Location = new System.Drawing.Point(46, 193);
+            this.num_bed_label.Location = new System.Drawing.Point(46, 171);
             this.num_bed_label.Name = "num_bed_label";
             this.num_bed_label.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.num_bed_label.Size = new System.Drawing.Size(100, 17);
@@ -130,7 +134,7 @@ namespace INFSYS_Design.views
             // 
             // num_bed
             // 
-            this.num_bed.Location = new System.Drawing.Point(152, 188);
+            this.num_bed.Location = new System.Drawing.Point(152, 166);
             this.num_bed.Multiline = true;
             this.num_bed.Name = "num_bed";
             this.num_bed.Size = new System.Drawing.Size(333, 29);
@@ -299,7 +303,7 @@ namespace INFSYS_Design.views
             this.created_at,
             this.deadline,
             this.status});
-            this.waiting_list.Location = new System.Drawing.Point(49, 296);
+            this.waiting_list.Location = new System.Drawing.Point(49, 289);
             this.waiting_list.Name = "waiting_list";
             this.waiting_list.ReadOnly = true;
             this.waiting_list.RowHeadersVisible = false;
@@ -334,12 +338,52 @@ namespace INFSYS_Design.views
             this.status.ReadOnly = true;
             this.status.Width = 125;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.AllowDrop = true;
+            this.dateTimePicker1.Location = new System.Drawing.Point(94, 476);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 25;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // submit_btn
+            // 
+            this.submit_btn.Location = new System.Drawing.Point(344, 471);
+            this.submit_btn.Name = "submit_btn";
+            this.submit_btn.Size = new System.Drawing.Size(84, 32);
+            this.submit_btn.TabIndex = 26;
+            this.submit_btn.Text = "Gia hạn";
+            this.submit_btn.UseVisualStyleBackColor = true;
+            // 
+            // date_return_label
+            // 
+            this.date_return_label.Location = new System.Drawing.Point(30, 255);
+            this.date_return_label.Name = "date_return_label";
+            this.date_return_label.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.date_return_label.Size = new System.Drawing.Size(116, 17);
+            this.date_return_label.TabIndex = 28;
+            this.date_return_label.Text = "Ngày trả phòng";
+            this.date_return_label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // date_return
+            // 
+            this.date_return.Location = new System.Drawing.Point(152, 250);
+            this.date_return.Multiline = true;
+            this.date_return.Name = "date_return";
+            this.date_return.Size = new System.Drawing.Size(333, 29);
+            this.date_return.TabIndex = 27;
+            // 
             // RoomExtension
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1006, 529);
+            this.Controls.Add(this.date_return_label);
+            this.Controls.Add(this.date_return);
+            this.Controls.Add(this.submit_btn);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.waiting_list);
             this.Controls.Add(this.gender_label);
             this.Controls.Add(this.gender);
@@ -404,6 +448,10 @@ namespace INFSYS_Design.views
         private System.Windows.Forms.DataGridViewTextBoxColumn created_at;
         private System.Windows.Forms.DataGridViewTextBoxColumn deadline;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button submit_btn;
+        private System.Windows.Forms.Label date_return_label;
+        private System.Windows.Forms.TextBox date_return;
     }
 }
 

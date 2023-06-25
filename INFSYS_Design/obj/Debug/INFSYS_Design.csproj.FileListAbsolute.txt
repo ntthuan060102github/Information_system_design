@@ -19,3 +19,20 @@ C:\Users\84962\source\repos\New folder\INFSYS_Design\INFSYS_Design\obj\Debug\INF
 C:\Users\84962\source\repos\New folder\INFSYS_Design\INFSYS_Design\obj\Debug\aa-DJ\INFSYS_Design.resources.dll
 C:\Users\84962\source\repos\New folder\INFSYS_Design\INFSYS_Design\obj\Debug\INFSYS_Design.exe
 C:\Users\84962\source\repos\New folder\INFSYS_Design\INFSYS_Design\obj\Debug\INFSYS_Design.pdb
+C:\Users\84962\source\repos\Information_system_design\INFSYS_Design\bin\Debug\INFSYS_Design.exe.config
+C:\Users\84962\source\repos\Information_system_design\INFSYS_Design\bin\Debug\INFSYS_Design.exe
+C:\Users\84962\source\repos\Information_system_design\INFSYS_Design\bin\Debug\INFSYS_Design.pdb
+C:\Users\84962\source\repos\Information_system_design\INFSYS_Design\bin\Debug\aa-DJ\INFSYS_Design.resources.dll
+C:\Users\84962\source\repos\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.csproj.AssemblyReference.cache
+C:\Users\84962\source\repos\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.Properties.Resources.resources
+C:\Users\84962\source\repos\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.AddService.resources
+C:\Users\84962\source\repos\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.components.AddRoomModal.resources
+C:\Users\84962\source\repos\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.ListOfCustomers.resources
+C:\Users\84962\source\repos\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.ListOfRooms.resources
+C:\Users\84962\source\repos\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.RoomExtension.resources
+C:\Users\84962\source\repos\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.ListOfRooms.aa-DJ.resources
+C:\Users\84962\source\repos\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.csproj.GenerateResource.cache
+C:\Users\84962\source\repos\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.csproj.CoreCompileInputs.cache
+C:\Users\84962\source\repos\Information_system_design\INFSYS_Design\obj\Debug\aa-DJ\INFSYS_Design.resources.dll
+C:\Users\84962\source\repos\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.exe
+C:\Users\84962\source\repos\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.pdb

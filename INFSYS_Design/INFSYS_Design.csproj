@@ -64,24 +64,6 @@
     <Compile Include="views\components\add_room_modal.Designer.cs">
       <DependentUpon>add_room_modal.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\components\customer_card.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="views\components\customer_card.Designer.cs">
-      <DependentUpon>customer_card.cs</DependentUpon>
-    </Compile>
-    <Compile Include="views\components\room_card.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="views\components\room_card.Designer.cs">
-      <DependentUpon>room_card.cs</DependentUpon>
-    </Compile>
-    <Compile Include="views\components\room_management_card.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="views\components\room_management_card.Designer.cs">
-      <DependentUpon>room_management_card.cs</DependentUpon>
-    </Compile>
     <Compile Include="views\list_of_customers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,12 +84,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="views\room_management.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="views\room_management.Designer.cs">
-      <DependentUpon>room_management.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -123,15 +99,6 @@
     <EmbeddedResource Include="views\components\add_room_modal.resx">
       <DependentUpon>add_room_modal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\components\customer_card.resx">
-      <DependentUpon>customer_card.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="views\components\room_card.resx">
-      <DependentUpon>room_card.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="views\components\room_management_card.resx">
-      <DependentUpon>room_management_card.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="views\list_of_customers.resx">
       <DependentUpon>list_of_customers.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,9 +110,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\room_extension.resx">
       <DependentUpon>room_extension.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="views\room_management.resx">
-      <DependentUpon>room_management.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

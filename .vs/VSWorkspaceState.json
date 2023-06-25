@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\INFSYS_Design",
+    "\\INFSYS_Design\\views"
   ],
-  "SelectedNode": "\\INFSYS_Design",
+  "SelectedNode": "\\INFSYS_Design\\views\\room_extension.cs",
   "PreviewInSolutionExplorer": false
 }

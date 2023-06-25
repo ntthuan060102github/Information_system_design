@@ -145,438 +145,156 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;back_btn.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
-  <data name="panel1.AutoScroll" type="System.Boolean, mscorlib">
+  <metadata name="room_num.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
-  <data name="roomCard10.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="roomCard10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 8</value>
-  </data>
-  <data name="roomCard10.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 8, 8, 8</value>
-  </data>
-  <data name="roomCard10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>309, 147</value>
-  </data>
-  <data name="roomCard10.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;roomCard10.Name" xml:space="preserve">
-    <value>roomCard10</value>
-  </data>
-  <data name="&gt;&gt;roomCard10.Type" xml:space="preserve">
-    <value>INFSYS_Design.views.components.RoomCard, INFSYS_Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;roomCard10.Parent" xml:space="preserve">
-    <value>flowLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;roomCard10.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="roomCard11.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="roomCard11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>333, 8</value>
-  </data>
-  <data name="roomCard11.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 8, 8, 8</value>
-  </data>
-  <data name="roomCard11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>309, 147</value>
-  </data>
-  <data name="roomCard11.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;roomCard11.Name" xml:space="preserve">
-    <value>roomCard11</value>
-  </data>
-  <data name="&gt;&gt;roomCard11.Type" xml:space="preserve">
-    <value>INFSYS_Design.views.components.RoomCard, INFSYS_Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;roomCard11.Parent" xml:space="preserve">
-    <value>flowLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;roomCard11.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="roomCard12.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="roomCard12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>658, 8</value>
-  </data>
-  <data name="roomCard12.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 8, 8, 8</value>
-  </data>
-  <data name="roomCard12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>309, 147</value>
-  </data>
-  <data name="roomCard12.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;roomCard12.Name" xml:space="preserve">
-    <value>roomCard12</value>
-  </data>
-  <data name="&gt;&gt;roomCard12.Type" xml:space="preserve">
-    <value>INFSYS_Design.views.components.RoomCard, INFSYS_Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;roomCard12.Parent" xml:space="preserve">
-    <value>flowLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;roomCard12.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="flowLayoutPanel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 177</value>
-  </data>
-  <data name="flowLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>979, 165</value>
-  </data>
-  <data name="flowLayoutPanel4.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel4.Name" xml:space="preserve">
-    <value>flowLayoutPanel4</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel4.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel4.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="roomCard1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="roomCard1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 8</value>
-  </data>
-  <data name="roomCard1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 8, 8, 8</value>
-  </data>
-  <data name="roomCard1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>309, 147</value>
-  </data>
-  <data name="roomCard1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;roomCard1.Name" xml:space="preserve">
-    <value>roomCard1</value>
-  </data>
-  <data name="&gt;&gt;roomCard1.Type" xml:space="preserve">
-    <value>INFSYS_Design.views.components.RoomCard, INFSYS_Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;roomCard1.Parent" xml:space="preserve">
-    <value>flowLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;roomCard1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="roomCard2.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="roomCard2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>333, 8</value>
-  </data>
-  <data name="roomCard2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 8, 8, 8</value>
-  </data>
-  <data name="roomCard2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>309, 147</value>
-  </data>
-  <data name="roomCard2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;roomCard2.Name" xml:space="preserve">
-    <value>roomCard2</value>
-  </data>
-  <data name="&gt;&gt;roomCard2.Type" xml:space="preserve">
-    <value>INFSYS_Design.views.components.RoomCard, INFSYS_Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;roomCard2.Parent" xml:space="preserve">
-    <value>flowLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;roomCard2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="roomCard3.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="roomCard3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>658, 8</value>
-  </data>
-  <data name="roomCard3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 8, 8, 8</value>
-  </data>
-  <data name="roomCard3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>309, 147</value>
-  </data>
-  <data name="roomCard3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;roomCard3.Name" xml:space="preserve">
-    <value>roomCard3</value>
-  </data>
-  <data name="&gt;&gt;roomCard3.Type" xml:space="preserve">
-    <value>INFSYS_Design.views.components.RoomCard, INFSYS_Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;roomCard3.Parent" xml:space="preserve">
-    <value>flowLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;roomCard3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="roomCard4.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="roomCard4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 8</value>
-  </data>
-  <data name="roomCard4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 8, 8, 8</value>
-  </data>
-  <data name="roomCard4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>309, 147</value>
-  </data>
-  <data name="roomCard4.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;roomCard4.Name" xml:space="preserve">
-    <value>roomCard4</value>
-  </data>
-  <data name="&gt;&gt;roomCard4.Type" xml:space="preserve">
-    <value>INFSYS_Design.views.components.RoomCard, INFSYS_Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;roomCard4.Parent" xml:space="preserve">
-    <value>flowLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;roomCard4.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="roomCard5.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="roomCard5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>333, 8</value>
-  </data>
-  <data name="roomCard5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 8, 8, 8</value>
-  </data>
-  <data name="roomCard5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>309, 147</value>
-  </data>
-  <data name="roomCard5.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;roomCard5.Name" xml:space="preserve">
-    <value>roomCard5</value>
-  </data>
-  <data name="&gt;&gt;roomCard5.Type" xml:space="preserve">
-    <value>INFSYS_Design.views.components.RoomCard, INFSYS_Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;roomCard5.Parent" xml:space="preserve">
-    <value>flowLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;roomCard5.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="roomCard6.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="roomCard6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>658, 8</value>
-  </data>
-  <data name="roomCard6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 8, 8, 8</value>
-  </data>
-  <data name="roomCard6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>309, 147</value>
-  </data>
-  <data name="roomCard6.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;roomCard6.Name" xml:space="preserve">
-    <value>roomCard6</value>
-  </data>
-  <data name="&gt;&gt;roomCard6.Type" xml:space="preserve">
-    <value>INFSYS_Design.views.components.RoomCard, INFSYS_Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;roomCard6.Parent" xml:space="preserve">
-    <value>flowLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;roomCard6.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="roomCard7.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="roomCard7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 8</value>
-  </data>
-  <data name="roomCard7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 8, 8, 8</value>
-  </data>
-  <data name="roomCard7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>309, 147</value>
-  </data>
-  <data name="roomCard7.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;roomCard7.Name" xml:space="preserve">
-    <value>roomCard7</value>
-  </data>
-  <data name="&gt;&gt;roomCard7.Type" xml:space="preserve">
-    <value>INFSYS_Design.views.components.RoomCard, INFSYS_Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;roomCard7.Parent" xml:space="preserve">
-    <value>flowLayoutPanel3</value>
-  </data>
-  <data name="&gt;&gt;roomCard7.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="roomCard8.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="roomCard8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>333, 8</value>
-  </data>
-  <data name="roomCard8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 8, 8, 8</value>
-  </data>
-  <data name="roomCard8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>309, 147</value>
-  </data>
-  <data name="roomCard8.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;roomCard8.Name" xml:space="preserve">
-    <value>roomCard8</value>
-  </data>
-  <data name="&gt;&gt;roomCard8.Type" xml:space="preserve">
-    <value>INFSYS_Design.views.components.RoomCard, INFSYS_Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;roomCard8.Parent" xml:space="preserve">
-    <value>flowLayoutPanel3</value>
-  </data>
-  <data name="&gt;&gt;roomCard8.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="roomCard9.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="roomCard9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>658, 8</value>
-  </data>
-  <data name="roomCard9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 8, 8, 8</value>
-  </data>
-  <data name="roomCard9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>309, 147</value>
-  </data>
-  <data name="roomCard9.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;roomCard9.Name" xml:space="preserve">
-    <value>roomCard9</value>
-  </data>
-  <data name="&gt;&gt;roomCard9.Type" xml:space="preserve">
-    <value>INFSYS_Design.views.components.RoomCard, INFSYS_Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;roomCard9.Parent" xml:space="preserve">
-    <value>flowLayoutPanel3</value>
-  </data>
-  <data name="&gt;&gt;roomCard9.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="flowLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 166</value>
-  </data>
-  <data name="flowLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>976, 165</value>
-  </data>
-  <data name="flowLayoutPanel3.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel3.Name" xml:space="preserve">
-    <value>flowLayoutPanel3</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel3.Parent" xml:space="preserve">
-    <value>flowLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel3.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="flowLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 166</value>
-  </data>
-  <data name="flowLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>976, 165</value>
-  </data>
-  <data name="flowLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel2.Name" xml:space="preserve">
-    <value>flowLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel2.Parent" xml:space="preserve">
-    <value>flowLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="flowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>976, 165</value>
-  </data>
-  <data name="flowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel1.Name" xml:space="preserve">
-    <value>flowLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel1.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+  </metadata>
+  <data name="room_num.HeaderText" xml:space="preserve">
+    <value>Số phòng</value>
+  </data>
+  <data name="room_num.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <metadata name="room_status.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="room_status.HeaderText" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="room_status.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <metadata name="room_level.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="room_level.HeaderText" xml:space="preserve">
+    <value>Hạng phòng</value>
+  </data>
+  <data name="room_level.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <metadata name="num_bed.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="num_bed.HeaderText" xml:space="preserve">
+    <value>Số giường</value>
+  </data>
+  <data name="num_bed.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <metadata name="bed_type.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="bed_type.HeaderText" xml:space="preserve">
+    <value>Loại giường</value>
+  </data>
+  <data name="bed_type.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 47</value>
   </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="dataGridView1.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
     <value>982, 470</value>
   </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+  <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
+  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
+    <value>dataGridView1</value>
   </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btn_view_detail.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn_view_detail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 12</value>
+  </data>
+  <data name="btn_view_detail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 29</value>
+  </data>
+  <data name="btn_view_detail.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btn_view_detail.Text" xml:space="preserve">
+    <value>Xem thông tin</value>
+  </data>
+  <data name="&gt;&gt;btn_view_detail.Name" xml:space="preserve">
+    <value>btn_view_detail</value>
+  </data>
+  <data name="&gt;&gt;btn_view_detail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_view_detail.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btn_view_detail.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="add_room_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="add_room_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>240, 12</value>
+  </data>
+  <data name="add_room_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 29</value>
+  </data>
+  <data name="add_room_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="add_room_btn.Text" xml:space="preserve">
+    <value>Thêm phòng</value>
+  </data>
+  <data name="&gt;&gt;add_room_btn.Name" xml:space="preserve">
+    <value>add_room_btn</value>
+  </data>
+  <data name="&gt;&gt;add_room_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;add_room_btn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;add_room_btn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btn_delete_room.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn_delete_room.Location" type="System.Drawing.Point, System.Drawing">
+    <value>360, 12</value>
+  </data>
+  <data name="btn_delete_room.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 29</value>
+  </data>
+  <data name="btn_delete_room.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btn_delete_room.Text" xml:space="preserve">
+    <value>Xóa phòng</value>
+  </data>
+  <data name="&gt;&gt;btn_delete_room.Name" xml:space="preserve">
+    <value>btn_delete_room</value>
+  </data>
+  <data name="&gt;&gt;btn_delete_room.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_delete_room.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btn_delete_room.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -593,6 +311,36 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Danh sách phòng</value>
+  </data>
+  <data name="&gt;&gt;room_num.Name" xml:space="preserve">
+    <value>room_num</value>
+  </data>
+  <data name="&gt;&gt;room_num.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;room_status.Name" xml:space="preserve">
+    <value>room_status</value>
+  </data>
+  <data name="&gt;&gt;room_status.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;room_level.Name" xml:space="preserve">
+    <value>room_level</value>
+  </data>
+  <data name="&gt;&gt;room_level.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;num_bed.Name" xml:space="preserve">
+    <value>num_bed</value>
+  </data>
+  <data name="&gt;&gt;num_bed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bed_type.Name" xml:space="preserve">
+    <value>bed_type</value>
+  </data>
+  <data name="&gt;&gt;bed_type.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ListOfRooms</value>
