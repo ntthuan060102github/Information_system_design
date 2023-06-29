@@ -10,29 +10,29 @@ using System.Windows.Forms;
 
 namespace INFSYS_Design.views
 {
-    public partial class ListOfRooms : Form
+    public partial class list_of_services : Form
     {
-        public ListOfRooms()
+        public list_of_services()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void add_service_btn_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void list_of_rooms_Load(object sender, EventArgs e)
+        private void update_service_btn_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btn_view_detail_Click(object sender, EventArgs e)
+        private void delete_service_btn_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void add_room_btn_Click(object sender, EventArgs e)
+        private void back_btn_Click(object sender, EventArgs e)
         {
 
         }

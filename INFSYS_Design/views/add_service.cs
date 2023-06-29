@@ -28,143 +28,128 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox_Name = new System.Windows.Forms.TextBox();
-            this.label_Name = new System.Windows.Forms.Label();
-            this.labelDescription = new System.Windows.Forms.Label();
-            this.textBox_Description = new System.Windows.Forms.TextBox();
-            this.labelType = new System.Windows.Forms.Label();
-            this.comboBox_Type = new System.Windows.Forms.ComboBox();
-            this.labelPrice = new System.Windows.Forms.Label();
-            this.textBox_Price = new System.Windows.Forms.TextBox();
-            this.Add_btn = new System.Windows.Forms.Button();
-            this.Back_btn = new System.Windows.Forms.Button();
+            this.tb_name = new System.Windows.Forms.TextBox();
+            this.lb_name = new System.Windows.Forms.Label();
+            this.lb_description = new System.Windows.Forms.Label();
+            this.tb_description = new System.Windows.Forms.TextBox();
+            this.lb_type = new System.Windows.Forms.Label();
+            this.cbb_type = new System.Windows.Forms.ComboBox();
+            this.lb_price = new System.Windows.Forms.Label();
+            this.tb_price = new System.Windows.Forms.TextBox();
+            this.add_btn = new System.Windows.Forms.Button();
+            this.back_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // tb_name
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(1001, 111);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "THÊM DỊCH VỤ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tb_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_name.Location = new System.Drawing.Point(189, 43);
+            this.tb_name.Multiline = true;
+            this.tb_name.Name = "tb_name";
+            this.tb_name.Size = new System.Drawing.Size(325, 28);
+            this.tb_name.TabIndex = 6;
             // 
-            // textBox_Name
+            // lb_name
             // 
-            this.textBox_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Name.Location = new System.Drawing.Point(338, 141);
-            this.textBox_Name.Multiline = true;
-            this.textBox_Name.Name = "textBox_Name";
-            this.textBox_Name.Size = new System.Drawing.Size(407, 28);
-            this.textBox_Name.TabIndex = 6;
+            this.lb_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_name.Location = new System.Drawing.Point(50, 43);
+            this.lb_name.Name = "lb_name";
+            this.lb_name.Size = new System.Drawing.Size(120, 28);
+            this.lb_name.TabIndex = 7;
+            this.lb_name.Text = "Tên dịch vụ";
+            this.lb_name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label_Name
+            // lb_description
             // 
-            this.label_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Name.Location = new System.Drawing.Point(173, 141);
-            this.label_Name.Name = "label_Name";
-            this.label_Name.Size = new System.Drawing.Size(130, 28);
-            this.label_Name.TabIndex = 7;
-            this.label_Name.Text = "Tên dịch vụ";
-            this.label_Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lb_description.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_description.Location = new System.Drawing.Point(50, 95);
+            this.lb_description.Name = "lb_description";
+            this.lb_description.Size = new System.Drawing.Size(120, 28);
+            this.lb_description.TabIndex = 9;
+            this.lb_description.Text = "Mô tả";
+            this.lb_description.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // labelDescription
+            // tb_description
             // 
-            this.labelDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDescription.Location = new System.Drawing.Point(173, 193);
-            this.labelDescription.Name = "labelDescription";
-            this.labelDescription.Size = new System.Drawing.Size(130, 28);
-            this.labelDescription.TabIndex = 9;
-            this.labelDescription.Text = "Mô tả";
-            this.labelDescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tb_description.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_description.Location = new System.Drawing.Point(189, 95);
+            this.tb_description.Multiline = true;
+            this.tb_description.Name = "tb_description";
+            this.tb_description.Size = new System.Drawing.Size(325, 28);
+            this.tb_description.TabIndex = 8;
             // 
-            // textBox_Description
+            // lb_type
             // 
-            this.textBox_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Description.Location = new System.Drawing.Point(338, 193);
-            this.textBox_Description.Multiline = true;
-            this.textBox_Description.Name = "textBox_Description";
-            this.textBox_Description.Size = new System.Drawing.Size(407, 28);
-            this.textBox_Description.TabIndex = 8;
+            this.lb_type.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_type.Location = new System.Drawing.Point(50, 150);
+            this.lb_type.Name = "lb_type";
+            this.lb_type.Size = new System.Drawing.Size(120, 28);
+            this.lb_type.TabIndex = 11;
+            this.lb_type.Text = "Loại dịch vụ";
+            this.lb_type.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // labelType
+            // cbb_type
             // 
-            this.labelType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelType.Location = new System.Drawing.Point(173, 248);
-            this.labelType.Name = "labelType";
-            this.labelType.Size = new System.Drawing.Size(130, 28);
-            this.labelType.TabIndex = 11;
-            this.labelType.Text = "Loại dịch vụ";
-            this.labelType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbb_type.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbb_type.FormattingEnabled = true;
+            this.cbb_type.Location = new System.Drawing.Point(189, 150);
+            this.cbb_type.Name = "cbb_type";
+            this.cbb_type.Size = new System.Drawing.Size(325, 28);
+            this.cbb_type.TabIndex = 12;
             // 
-            // comboBox_Type
+            // lb_price
             // 
-            this.comboBox_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_Type.FormattingEnabled = true;
-            this.comboBox_Type.Location = new System.Drawing.Point(338, 248);
-            this.comboBox_Type.Name = "comboBox_Type";
-            this.comboBox_Type.Size = new System.Drawing.Size(407, 28);
-            this.comboBox_Type.TabIndex = 12;
+            this.lb_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_price.Location = new System.Drawing.Point(50, 208);
+            this.lb_price.Name = "lb_price";
+            this.lb_price.Size = new System.Drawing.Size(120, 28);
+            this.lb_price.TabIndex = 14;
+            this.lb_price.Text = "Giá";
+            this.lb_price.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // labelPrice
+            // tb_price
             // 
-            this.labelPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrice.Location = new System.Drawing.Point(173, 306);
-            this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(130, 28);
-            this.labelPrice.TabIndex = 14;
-            this.labelPrice.Text = "Giá";
-            this.labelPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tb_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_price.Location = new System.Drawing.Point(189, 208);
+            this.tb_price.Multiline = true;
+            this.tb_price.Name = "tb_price";
+            this.tb_price.Size = new System.Drawing.Size(325, 28);
+            this.tb_price.TabIndex = 13;
             // 
-            // textBox_Price
+            // add_btn
             // 
-            this.textBox_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Price.Location = new System.Drawing.Point(338, 306);
-            this.textBox_Price.Multiline = true;
-            this.textBox_Price.Name = "textBox_Price";
-            this.textBox_Price.Size = new System.Drawing.Size(407, 28);
-            this.textBox_Price.TabIndex = 13;
+            this.add_btn.Location = new System.Drawing.Point(97, 283);
+            this.add_btn.Name = "add_btn";
+            this.add_btn.Size = new System.Drawing.Size(97, 29);
+            this.add_btn.TabIndex = 15;
+            this.add_btn.Text = "Thêm";
+            this.add_btn.UseVisualStyleBackColor = true;
+            this.add_btn.Click += new System.EventHandler(this.add_btn_Click);
             // 
-            // Add_btn
+            // back_btn
             // 
-            this.Add_btn.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.Add_btn.Location = new System.Drawing.Point(229, 407);
-            this.Add_btn.Name = "Add_btn";
-            this.Add_btn.Size = new System.Drawing.Size(127, 44);
-            this.Add_btn.TabIndex = 15;
-            this.Add_btn.Text = "Thêm";
-            this.Add_btn.UseVisualStyleBackColor = true;
-            // 
-            // Back_btn
-            // 
-            this.Back_btn.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.Back_btn.Location = new System.Drawing.Point(537, 407);
-            this.Back_btn.Name = "Back_btn";
-            this.Back_btn.Size = new System.Drawing.Size(127, 44);
-            this.Back_btn.TabIndex = 16;
-            this.Back_btn.Text = "Hủy";
-            this.Back_btn.UseVisualStyleBackColor = true;
+            this.back_btn.Location = new System.Drawing.Point(340, 283);
+            this.back_btn.Name = "back_btn";
+            this.back_btn.Size = new System.Drawing.Size(97, 29);
+            this.back_btn.TabIndex = 16;
+            this.back_btn.Text = "Hủy";
+            this.back_btn.UseVisualStyleBackColor = true;
             // 
             // AddService
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1006, 529);
-            this.Controls.Add(this.Back_btn);
-            this.Controls.Add(this.Add_btn);
-            this.Controls.Add(this.labelPrice);
-            this.Controls.Add(this.textBox_Price);
-            this.Controls.Add(this.comboBox_Type);
-            this.Controls.Add(this.labelType);
-            this.Controls.Add(this.labelDescription);
-            this.Controls.Add(this.textBox_Description);
-            this.Controls.Add(this.label_Name);
-            this.Controls.Add(this.textBox_Name);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(582, 353);
+            this.Controls.Add(this.back_btn);
+            this.Controls.Add(this.add_btn);
+            this.Controls.Add(this.lb_price);
+            this.Controls.Add(this.tb_price);
+            this.Controls.Add(this.cbb_type);
+            this.Controls.Add(this.lb_type);
+            this.Controls.Add(this.lb_description);
+            this.Controls.Add(this.tb_description);
+            this.Controls.Add(this.lb_name);
+            this.Controls.Add(this.tb_name);
             this.Name = "AddService";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm dịch vụ";
@@ -175,17 +160,20 @@
         }
 
         #endregion
+        private System.Windows.Forms.TextBox tb_name;
+        private System.Windows.Forms.Label lb_name;
+        private System.Windows.Forms.Label lb_description;
+        private System.Windows.Forms.TextBox tb_description;
+        private System.Windows.Forms.Label lb_type;
+        private System.Windows.Forms.ComboBox cbb_type;
+        private System.Windows.Forms.Label lb_price;
+        private System.Windows.Forms.TextBox tb_price;
+        private System.Windows.Forms.Button add_btn;
+        private System.Windows.Forms.Button back_btn;
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox_Name;
-        private System.Windows.Forms.Label label_Name;
-        private System.Windows.Forms.Label labelDescription;
-        private System.Windows.Forms.TextBox textBox_Description;
-        private System.Windows.Forms.Label labelType;
-        private System.Windows.Forms.ComboBox comboBox_Type;
-        private System.Windows.Forms.Label labelPrice;
-        private System.Windows.Forms.TextBox textBox_Price;
-        private System.Windows.Forms.Button Add_btn;
-        private System.Windows.Forms.Button Back_btn;
+        private void add_btn_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

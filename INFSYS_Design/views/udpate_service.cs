@@ -10,29 +10,24 @@ using System.Windows.Forms;
 
 namespace INFSYS_Design.views
 {
-    public partial class ListOfRooms : Form
+    public partial class UdpateService : Form
     {
-        public ListOfRooms()
+        public UdpateService()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void udpate_service_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void list_of_rooms_Load(object sender, EventArgs e)
+        private void update_btn_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btn_view_detail_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void add_room_btn_Click(object sender, EventArgs e)
+        private void back_btn_Click(object sender, EventArgs e)
         {
 
         }

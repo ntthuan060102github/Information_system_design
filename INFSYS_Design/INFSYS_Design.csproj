@@ -87,6 +87,12 @@
     <Compile Include="views\list_of_rooms.Designer.cs">
       <DependentUpon>list_of_rooms.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\list_of_services.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\list_of_services.Designer.cs">
+      <DependentUpon>list_of_services.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="views\udpate_service.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\udpate_service.Designer.cs">
+      <DependentUpon>udpate_service.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -134,6 +146,9 @@
     <EmbeddedResource Include="views\list_of_rooms.resx">
       <DependentUpon>list_of_rooms.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\list_of_services.resx">
+      <DependentUpon>list_of_services.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\revenue.resx">
       <DependentUpon>revenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\udpate_service.resx">
+      <DependentUpon>udpate_service.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

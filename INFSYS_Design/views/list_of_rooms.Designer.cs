@@ -109,6 +109,7 @@ namespace INFSYS_Design.views
             resources.ApplyResources(this.btn_view_detail, "btn_view_detail");
             this.btn_view_detail.Name = "btn_view_detail";
             this.btn_view_detail.UseVisualStyleBackColor = false;
+            this.btn_view_detail.Click += new System.EventHandler(this.btn_view_detail_Click);
             // 
             // add_room_btn
             // 
@@ -118,6 +119,7 @@ namespace INFSYS_Design.views
             resources.ApplyResources(this.add_room_btn, "add_room_btn");
             this.add_room_btn.Name = "add_room_btn";
             this.add_room_btn.UseVisualStyleBackColor = false;
+            this.add_room_btn.Click += new System.EventHandler(this.add_room_btn_Click);
             // 
             // btn_delete_room
             // 
