@@ -52,6 +52,11 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controllers\NhanVien.cs" />
+    <Compile Include="controllers\TaiKhoan.cs" />
+    <Compile Include="DBConn.cs" />
+    <Compile Include="models\DB_NhanVien.cs" />
+    <Compile Include="models\DB_TaiKhoan.cs" />
     <Compile Include="views\add_service.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +68,12 @@
     </Compile>
     <Compile Include="views\components\add_room_modal.Designer.cs">
       <DependentUpon>add_room_modal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="views\list_of_customers.cs">
       <SubType>Form</SubType>
@@ -76,11 +87,23 @@
     <Compile Include="views\list_of_rooms.Designer.cs">
       <DependentUpon>list_of_rooms.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\room_extension.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="views\room_extension.Designer.cs">
       <DependentUpon>room_extension.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\revenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\revenue.Designer.cs">
+      <DependentUpon>revenue.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,6 +122,9 @@
     <EmbeddedResource Include="views\components\add_room_modal.resx">
       <DependentUpon>add_room_modal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\list_of_customers.resx">
       <DependentUpon>list_of_customers.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,8 +134,14 @@
     <EmbeddedResource Include="views\list_of_rooms.resx">
       <DependentUpon>list_of_rooms.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\room_extension.resx">
       <DependentUpon>room_extension.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\revenue.resx">
+      <DependentUpon>revenue.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -123,10 +155,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="controllers\" />
-    <Folder Include="models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
