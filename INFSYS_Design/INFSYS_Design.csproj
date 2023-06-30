@@ -123,6 +123,18 @@
     <Compile Include="views\revenue.Designer.cs">
       <DependentUpon>revenue.cs</DependentUpon>
     </Compile>
+	  <Compile Include="views\checkin.cs">
+		  <SubType>Form</SubType>
+	  </Compile>
+	  <Compile Include="views\checkin.Designer.cs">
+		  <DependentUpon>checkin.cs</DependentUpon>
+	  </Compile>
+	  <Compile Include="views\booking_intermediary.cs">
+		  <SubType>Form</SubType>
+	  </Compile>
+	  <Compile Include="views\booking_intermediary.Designer.cs">
+		  <DependentUpon>booking_intermediary.cs</DependentUpon>
+	  </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="views\room_status.cs">
@@ -182,6 +194,12 @@
     <EmbeddedResource Include="views\revenue.resx">
       <DependentUpon>revenue.cs</DependentUpon>
     </EmbeddedResource>
+	  <EmbeddedResource Include="views\checkin.resx">
+		  <DependentUpon>checkin.cs</DependentUpon>
+	  </EmbeddedResource>
+	  <EmbeddedResource Include="views\booking_intermediary.resx">
+		  <DependentUpon>booking_intermediary.cs</DependentUpon>
+	  </EmbeddedResource>
     <EmbeddedResource Include="views\room_status.resx">
       <DependentUpon>room_status.cs</DependentUpon>
     </EmbeddedResource>
