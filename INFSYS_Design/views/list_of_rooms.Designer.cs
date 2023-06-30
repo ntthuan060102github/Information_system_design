@@ -1,7 +1,7 @@
 ﻿
 namespace INFSYS_Design.views
 {
-    partial class ListOfRooms
+    partial class GUI_ListOfRooms
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace INFSYS_Design.views
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListOfRooms));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_ListOfRooms));
             this.back_btn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.room_num = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,6 +40,7 @@ namespace INFSYS_Design.views
             this.btn_view_detail = new System.Windows.Forms.Button();
             this.add_room_btn = new System.Windows.Forms.Button();
             this.btn_delete_room = new System.Windows.Forms.Button();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,11 +66,13 @@ namespace INFSYS_Design.views
             this.room_status,
             this.room_level,
             this.num_bed,
-            this.bed_type});
+            this.bed_type,
+            this.price});
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // room_num
             // 
@@ -130,7 +133,13 @@ namespace INFSYS_Design.views
             this.btn_delete_room.Name = "btn_delete_room";
             this.btn_delete_room.UseVisualStyleBackColor = false;
             // 
-            // ListOfRooms
+            // price
+            // 
+            resources.ApplyResources(this.price, "price");
+            this.price.Name = "price";
+            this.price.ReadOnly = true;
+            // 
+            // GUI_ListOfRooms
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -140,7 +149,7 @@ namespace INFSYS_Design.views
             this.Controls.Add(this.btn_view_detail);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.back_btn);
-            this.Name = "ListOfRooms";
+            this.Name = "GUI_ListOfRooms";
             this.Load += new System.EventHandler(this.list_of_rooms_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -158,5 +167,6 @@ namespace INFSYS_Design.views
         private System.Windows.Forms.Button btn_view_detail;
         private System.Windows.Forms.Button add_room_btn;
         private System.Windows.Forms.Button btn_delete_room;
+        private System.Windows.Forms.DataGridViewTextBoxColumn price;
     }
 }

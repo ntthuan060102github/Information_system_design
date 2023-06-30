@@ -30,6 +30,8 @@ namespace INFSYS_Design.views
         private void InitializeComponent()
         {
             this.hello_label = new System.Windows.Forms.Label();
+            this.btn_customer_list = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // hello_label
@@ -46,12 +48,38 @@ namespace INFSYS_Design.views
             this.hello_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hello_label.Click += new System.EventHandler(this.hello_label_Click);
             // 
+            // btn_customer_list
+            // 
+            this.btn_customer_list.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_customer_list.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_customer_list.Location = new System.Drawing.Point(374, 162);
+            this.btn_customer_list.Name = "btn_customer_list";
+            this.btn_customer_list.Size = new System.Drawing.Size(259, 46);
+            this.btn_customer_list.TabIndex = 2;
+            this.btn_customer_list.Text = "Danh sách khách hàng";
+            this.btn_customer_list.UseVisualStyleBackColor = false;
+            this.btn_customer_list.Click += new System.EventHandler(this.btn_customer_list_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button1.Location = new System.Drawing.Point(374, 214);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(259, 46);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Danh sách phòng";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // GUI_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1006, 529);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_customer_list);
             this.Controls.Add(this.hello_label);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Margin = new System.Windows.Forms.Padding(6);
@@ -65,5 +93,7 @@ namespace INFSYS_Design.views
         #endregion
 
         private System.Windows.Forms.Label hello_label;
+        private System.Windows.Forms.Button btn_customer_list;
+        private System.Windows.Forms.Button button1;
     }
 }

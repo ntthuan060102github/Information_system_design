@@ -40,8 +40,8 @@ namespace INFSYS_Design.views
                 return;
             }
             GUI_Home homePage = new GUI_Home();
-            homePage.ShowDialog();
-            this.Close();
+            homePage.Show();
+            this.Hide();
         }
 
         private void username_label_Click(object sender, EventArgs e)

@@ -7,14 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using INFSYS_Design.controllers;
 
 namespace INFSYS_Design.views
 {
-    public partial class ListOfCustomers : Form
+    public partial class GUI_ListOfCustomers : Form
     {
-        public ListOfCustomers()
+        public GUI_ListOfCustomers()
         {
             InitializeComponent();
+            List<ThongTinKhachHang> dataset = ThongTinKhachHang.layDanhSachKhachHang();
+            foreach(ThongTinKhachHang customer in dataset)
+            {
+                this.dataGridView1.Rows.Add(
+                    customer.hoTen,
+                    customer.maSoDinhDanh,
+                    customer.namSinh,
+                    customer.email,
+                    customer.sdt,
+                    customer.diaChiThuongTru,
+                    customer.gioiTinh == 1 ? "Nam" : "Nữ"
+                );
+            }
         }
 
         private void list_of_customers_Load(object sender, EventArgs e)
@@ -35,6 +49,17 @@ namespace INFSYS_Design.views
         private void back_btn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void back_btn_Click_1(object sender, EventArgs e)
+        {
+            Program.previousForm.Show();
+            this.Hide();
         }
     }
 }

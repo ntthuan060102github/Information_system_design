@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using INFSYS_Design.controllers;
 using System.Data.SqlClient;
-using INFSYS_Design.controllers;
 
 namespace INFSYS_Design.models
 {
@@ -19,7 +18,7 @@ namespace INFSYS_Design.models
 
                 SqlCommand sqlCmd = new SqlCommand();
                 sqlCmd.CommandType = System.Data.CommandType.Text;
-                sqlCmd.CommandText = $"SELECT * FROM TAIKHOAN WHERE TAIKHOAN=\'{username}\'";
+                sqlCmd.CommandText = $"SELECT TOP 1 * FROM TAIKHOAN WHERE TAIKHOAN=\'{username}\'";
                 sqlCmd.Connection = new DBConn().conn;
                 SqlDataReader res = sqlCmd.ExecuteReader();
                 if (res.Read())

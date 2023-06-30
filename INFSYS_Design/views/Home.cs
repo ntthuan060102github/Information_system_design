@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using INFSYS_Design.controllers;
+using INFSYS_Design.views;
 
 namespace INFSYS_Design.views
 {
@@ -28,6 +29,22 @@ namespace INFSYS_Design.views
         private void hello_label_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_customer_list_Click(object sender, EventArgs e)
+        {
+            GUI_ListOfCustomers customersPage = new GUI_ListOfCustomers();
+            Program.previousForm = new GUI_Home();
+            customersPage.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GUI_ListOfRooms customersPage = new GUI_ListOfRooms();
+            Program.previousForm = new GUI_Home();
+            customersPage.Show();
+            this.Hide();
         }
     }
 }

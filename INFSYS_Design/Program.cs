@@ -10,6 +10,7 @@ namespace INFSYS_Design
     static class Program
     {
         public static int currentUserId;
+        public static Form previousForm = null;
         [STAThread]
         static void Main()
         {

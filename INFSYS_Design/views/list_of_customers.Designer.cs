@@ -1,7 +1,7 @@
 ﻿
 namespace INFSYS_Design.views
 {
-    partial class ListOfCustomers
+    partial class GUI_ListOfCustomers
     {
         /// <summary>
         /// Required designer variable.
@@ -49,6 +49,7 @@ namespace INFSYS_Design.views
             this.back_btn.TabIndex = 0;
             this.back_btn.Text = "Trang chủ";
             this.back_btn.UseVisualStyleBackColor = true;
+            this.back_btn.Click += new System.EventHandler(this.back_btn_Click_1);
             // 
             // dataGridView1
             // 
@@ -72,6 +73,7 @@ namespace INFSYS_Design.views
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(982, 470);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // customer_name
             // 
@@ -122,14 +124,14 @@ namespace INFSYS_Design.views
             this.gender.Name = "gender";
             this.gender.ReadOnly = true;
             // 
-            // ListOfCustomers
+            // GUI_ListOfCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1006, 529);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.back_btn);
-            this.Name = "ListOfCustomers";
+            this.Name = "GUI_ListOfCustomers";
             this.Text = "Danh sách khách hàng";
             this.Load += new System.EventHandler(this.list_of_customers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
