@@ -40,3 +40,7 @@ D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\a
 D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.exe
 D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.pdb
 D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.list_of_services.resources
+D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.checkout.resources
+D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.Invoice.resources
+D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.RoomStatus.resources
+D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.UpdateService.resources

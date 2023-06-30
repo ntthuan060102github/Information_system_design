@@ -1,6 +1,6 @@
 ﻿namespace INFSYS_Design.views
 {
-    partial class UdpateService
+    partial class UpdateService
     {
         /// <summary>
         /// Required designer variable.
@@ -42,6 +42,7 @@
             // 
             // back_btn
             // 
+            this.back_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.back_btn.Location = new System.Drawing.Point(340, 283);
             this.back_btn.Name = "back_btn";
             this.back_btn.Size = new System.Drawing.Size(97, 29);
@@ -52,6 +53,7 @@
             // 
             // update_btn
             // 
+            this.update_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.update_btn.Location = new System.Drawing.Point(97, 283);
             this.update_btn.Name = "update_btn";
             this.update_btn.Size = new System.Drawing.Size(97, 29);
@@ -62,6 +64,7 @@
             // 
             // lb_price
             // 
+            this.lb_price.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_price.Location = new System.Drawing.Point(50, 208);
             this.lb_price.Name = "lb_price";
@@ -72,6 +75,7 @@
             // 
             // tb_price
             // 
+            this.tb_price.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tb_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_price.Location = new System.Drawing.Point(189, 208);
             this.tb_price.Multiline = true;
@@ -81,6 +85,7 @@
             // 
             // cbb_type
             // 
+            this.cbb_type.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbb_type.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbb_type.FormattingEnabled = true;
             this.cbb_type.Location = new System.Drawing.Point(189, 150);
@@ -90,6 +95,7 @@
             // 
             // lb_type
             // 
+            this.lb_type.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_type.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_type.Location = new System.Drawing.Point(50, 150);
             this.lb_type.Name = "lb_type";
@@ -100,6 +106,7 @@
             // 
             // lb_description
             // 
+            this.lb_description.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_description.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_description.Location = new System.Drawing.Point(50, 95);
             this.lb_description.Name = "lb_description";
@@ -110,6 +117,7 @@
             // 
             // tb_description
             // 
+            this.tb_description.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tb_description.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_description.Location = new System.Drawing.Point(189, 95);
             this.tb_description.Multiline = true;
@@ -119,6 +127,7 @@
             // 
             // lb_name
             // 
+            this.lb_name.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_name.Location = new System.Drawing.Point(50, 43);
             this.lb_name.Name = "lb_name";
@@ -129,6 +138,7 @@
             // 
             // tb_name
             // 
+            this.tb_name.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tb_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_name.Location = new System.Drawing.Point(189, 43);
             this.tb_name.Multiline = true;
@@ -136,7 +146,7 @@
             this.tb_name.Size = new System.Drawing.Size(325, 28);
             this.tb_name.TabIndex = 17;
             // 
-            // UdpateService
+            // UpdateService
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -151,7 +161,7 @@
             this.Controls.Add(this.tb_description);
             this.Controls.Add(this.lb_name);
             this.Controls.Add(this.tb_name);
-            this.Name = "UdpateService";
+            this.Name = "UpdateService";
             this.Text = "Sửa dịch vụ";
             this.Load += new System.EventHandler(this.udpate_service_Load);
             this.ResumeLayout(false);

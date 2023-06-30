@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.back_btn = new System.Windows.Forms.Button();
             this.add_service_btn = new System.Windows.Forms.Button();
             this.update_service_btn = new System.Windows.Forms.Button();
@@ -44,6 +44,7 @@
             // 
             // back_btn
             // 
+            this.back_btn.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.back_btn.Location = new System.Drawing.Point(12, 12);
             this.back_btn.Name = "back_btn";
             this.back_btn.Size = new System.Drawing.Size(86, 29);
@@ -54,6 +55,7 @@
             // 
             // add_service_btn
             // 
+            this.add_service_btn.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.add_service_btn.Location = new System.Drawing.Point(104, 12);
             this.add_service_btn.Name = "add_service_btn";
             this.add_service_btn.Size = new System.Drawing.Size(97, 29);
@@ -64,6 +66,7 @@
             // 
             // update_service_btn
             // 
+            this.update_service_btn.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.update_service_btn.Location = new System.Drawing.Point(207, 12);
             this.update_service_btn.Name = "update_service_btn";
             this.update_service_btn.Size = new System.Drawing.Size(97, 29);
@@ -74,6 +77,7 @@
             // 
             // delete_service_btn
             // 
+            this.delete_service_btn.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.delete_service_btn.Location = new System.Drawing.Point(310, 12);
             this.delete_service_btn.Name = "delete_service_btn";
             this.delete_service_btn.Size = new System.Drawing.Size(97, 29);
@@ -87,14 +91,14 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.service_id,

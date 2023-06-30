@@ -10,26 +10,23 @@ using System.Windows.Forms;
 
 namespace INFSYS_Design.views
 {
-    public partial class UpdateService : Form
+    public partial class RoomStatus : Form
     {
-        public UpdateService()
+        public RoomStatus()
         {
             InitializeComponent();
         }
 
-        private void udpate_service_Load(object sender, EventArgs e)
+        private void room_status_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void update_btn_Click(object sender, EventArgs e)
+        private void create_invoice_btn_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void back_btn_Click(object sender, EventArgs e)
-        {
-
+            Invoice invoice = new Invoice();
+            invoice.ShowDialog();
+            this.Close();
         }
     }
 }

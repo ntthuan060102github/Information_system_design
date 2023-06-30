@@ -10,24 +10,19 @@ using System.Windows.Forms;
 
 namespace INFSYS_Design.views
 {
-    public partial class UpdateService : Form
+    public partial class Invoice : Form
     {
-        public UpdateService()
+        public Invoice()
         {
             InitializeComponent();
         }
 
-        private void udpate_service_Load(object sender, EventArgs e)
+        private void pay_btn_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void update_btn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void back_btn_Click(object sender, EventArgs e)
+        private void invoice_Load(object sender, EventArgs e)
         {
 
         }

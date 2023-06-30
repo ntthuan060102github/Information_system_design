@@ -9,7 +9,7 @@ namespace INFSYS_Design
 {
     class DBConn
     {
-        private string strConn = @"Data Source=LAPTOP-AOM8J85N\SQLEXPRESS;Initial Catalog=PTTK_HTTT;Integrated Security=True";
+        private string strConn = @"Data Source=LAPTOP-OIBBNV6Q\SQLEXPRESS;Initial Catalog=PTTK_HTTT_23;Integrated Security=True";
         public SqlConnection conn { get; } = null;
 
         public DBConn()
