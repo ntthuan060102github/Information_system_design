@@ -52,16 +52,22 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controllers\HoaDon.cs" />
     <Compile Include="controllers\LoaiPhong.cs" />
     <Compile Include="controllers\NhanVien.cs" />
     <Compile Include="controllers\Phong.cs" />
     <Compile Include="controllers\TaiKhoan.cs" />
+    <Compile Include="controllers\YeuCauDatPhong.cs" />
+    <Compile Include="controllers\LichSuDatPhong.cs" />
     <Compile Include="controllers\ThongTinKhachHang.cs" />
     <Compile Include="DBConn.cs" />
+    <Compile Include="models\DB_HoaDon.cs" />
     <Compile Include="models\DB_LoaiPhong.cs" />
     <Compile Include="models\DB_NhanVien.cs" />
     <Compile Include="models\DB_Phong.cs" />
     <Compile Include="models\DB_TaiKhoan.cs" />
+    <Compile Include="models\DB_LichSuDatPhong.cs" />
+    <Compile Include="models\DB_YeuCauDatPhong.cs" />
     <Compile Include="models\DB_ThongTinKhachHang.cs" />
     <Compile Include="views\add_service.cs">
       <SubType>Form</SubType>

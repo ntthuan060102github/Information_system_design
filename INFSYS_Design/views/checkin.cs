@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace INFSYS_Design.views
 {
-    public partial class checkin : Form
+    public partial class GUI_Checkin : Form
     {
-        public checkin()
+        public GUI_Checkin()
         {
             InitializeComponent();
         }
@@ -33,6 +33,11 @@ namespace INFSYS_Design.views
         }
 
         private void checkin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

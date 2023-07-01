@@ -1,6 +1,6 @@
 ﻿namespace INFSYS_Design.views
 {
-    partial class revenue
+    partial class GUI_XemDoanhThu
     {
         /// <summary>
         /// Required designer variable.
@@ -192,6 +192,7 @@
             this.Controls.Add(this.btnReturn);
             this.Name = "revenue";
             this.Text = "revenue";
+            this.Load += new System.EventHandler(this.revenue_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

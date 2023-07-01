@@ -15,18 +15,39 @@ namespace INFSYS_Design.controllers
         public int loaiGiuong;
         public int gia;
 
-        public LoaiPhong(string maLoaiPhong, int hangPhong, int soGiuong, int loaiGiuong, int gia)
+        public LoaiPhong(Dictionary<string, object> kwargs)
         {
-            this.maLoaiPhong = maLoaiPhong;
-            this.hangPhong = hangPhong;
-            this.soGiuong = soGiuong;
-            this.loaiGiuong = loaiGiuong;
-            this.gia = gia;
+            object data;
+
+            if (kwargs.TryGetValue("MA", out data))
+            {
+                this.maLoaiPhong = data.ToString();
+            }
+            if (kwargs.TryGetValue("HANGPHONG", out data))
+            {
+                this.hangPhong = int.Parse(data.ToString());
+            }
+            if (kwargs.TryGetValue("SOGIUONG", out data))
+            {
+                this.soGiuong = int.Parse(data.ToString());
+            }
+            if (kwargs.TryGetValue("LOAIGIUONG", out data))
+            {
+                this.loaiGiuong = int.Parse(data.ToString());
+            }
+            if (kwargs.TryGetValue("GIA", out data))
+            {
+                this.gia = int.Parse(data.ToString());
+            }
         }
 
         public static LoaiPhong layThongTinLoaiPhong(string maLoaiPhong)
         {
             return DB_LoaiPhong.layThongTinLoaiPhong(maLoaiPhong);
+        }
+        public static List<LoaiPhong> layDanhSachLoaiPhong()
+        {
+            return DB_LoaiPhong.layDanhSachLoaiPhong();
         }
     }
 }
