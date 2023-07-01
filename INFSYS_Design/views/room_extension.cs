@@ -29,7 +29,10 @@ namespace INFSYS_Design.views
                 this.id_num.Text = cusomterInfo.maSoDinhDanh;
                 this.gender.Text = cusomterInfo.gioiTinh == 1 ? "Nam" : "Nữ";
                 this.year_of_birth.Text = cusomterInfo.namSinh.ToString();
-                this.submit_btn.Enabled = true;
+                if (Program.currentUserRole == "NHANVIEN")
+                {
+                    this.submit_btn.Enabled = true;
+                }
             }
             this.room_number.Text = room.soPhong.ToString();
             this.room_level.Text = roomType.hangPhong == 1 ? "Thường" : "Cao cấp";
