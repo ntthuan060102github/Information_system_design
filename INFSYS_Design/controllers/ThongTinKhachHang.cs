@@ -79,10 +79,10 @@ namespace INFSYS_Design.controllers
             return DB_ThongTinKhachHang.layThongtinKhachHangTheoTen(hoTen);
         }
 
-        public static void themKhachHang(ThongTinKhachHang kh)
+        public static bool themKhachHang(ThongTinKhachHang kh)
         {
 
-            DB_ThongTinKhachHang.themKhachHang(kh);
+            return DB_ThongTinKhachHang.themKhachHang(kh);
         }
     }
 }
