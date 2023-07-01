@@ -17,6 +17,15 @@ namespace INFSYS_Design.views
         public GUI_DatPhong()
         {
             InitializeComponent();
+            List<LoaiPhong> dataset = LoaiPhong.layDanhSachLoaiPhong();
+            foreach (LoaiPhong typeroom in dataset)
+            {
+                this.dtgLoaiPhong.Rows.Add(
+                    typeroom.hangPhong,
+                    typeroom.soGiuong,
+                    typeroom.loaiGiuong
+                );
+            }
         }
 
         private void booking_intermediary_Load(object sender, EventArgs e)
