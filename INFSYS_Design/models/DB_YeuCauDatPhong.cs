@@ -13,7 +13,7 @@ namespace INFSYS_Design.models
     class DB_YeuCauDatPhong
     {
         
-        public static void themYeuCauDatPhong(YeuCauDatPhong yc)
+        public static bool themYeuCauDatPhong(YeuCauDatPhong yc)
         {
             DBConn conn = new DBConn();
             SqlCommand sqlCmd = new SqlCommand();
@@ -35,19 +35,19 @@ namespace INFSYS_Design.models
                 int rowsAffected = sqlCmd.ExecuteNonQuery();
                 if (rowsAffected > 0)
                 {
-                    // Thông báo chèn dữ liệu thành công
-                    MessageBox.Show("Thêm khách hàng thành công!");
+                    //chèn dữ liệu thành công
+                    return true;
                 }
                 else
                 {
-                    // Thông báo chèn dữ liệu thất bại
-                    MessageBox.Show("Thêm khách hàng thất bại!");
+                    //chèn dữ liệu thất bại
+                    return false;
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                // Thông báo lỗi ngoại lệ
-                MessageBox.Show(ex.ToString());
+                //lỗi ngoại lệ
+                return false;
             }
         }
 

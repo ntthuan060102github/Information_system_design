@@ -62,10 +62,10 @@ namespace INFSYS_Design.controllers
             return DB_LichSuDatPhong.layLichSuDatPhong(maKH);
         }
 
-        public static void themLichSuDatPhong(LichSuDatPhong lsdp)
+        public static bool themLichSuDatPhong(LichSuDatPhong lsdp)
         {
 
-            DB_LichSuDatPhong.themLichSuDatPhong(lsdp);
+            return DB_LichSuDatPhong.themLichSuDatPhong(lsdp);
         }
     }
 }

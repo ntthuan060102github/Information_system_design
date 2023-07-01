@@ -52,10 +52,10 @@ namespace INFSYS_Design.controllers
             }
         }
 
-        public static void themYeuCauDatPhong(YeuCauDatPhong yc)
+        public static bool themYeuCauDatPhong(YeuCauDatPhong yc)
         {
 
-            DB_YeuCauDatPhong.themYeuCauDatPhong(yc);
+            return DB_YeuCauDatPhong.themYeuCauDatPhong(yc);
         }
     }
 }
