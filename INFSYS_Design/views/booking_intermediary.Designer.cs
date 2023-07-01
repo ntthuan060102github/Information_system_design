@@ -29,11 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lb_LoaiPhong = new System.Windows.Forms.Label();
             this.label_cus_info = new System.Windows.Forms.Label();
             this.label_list_empty_room = new System.Windows.Forms.Label();
             this.title = new System.Windows.Forms.Label();
             this.btnReturn = new System.Windows.Forms.Button();
             this.pTTKhachHang = new System.Windows.Forms.Panel();
+            this.dtpNgayDen = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.label_customer_birth_day = new System.Windows.Forms.Label();
             this.tbGioiTinh = new System.Windows.Forms.TextBox();
@@ -48,27 +51,24 @@
             this.label_customer_phone_number = new System.Windows.Forms.Label();
             this.tbTenKH = new System.Windows.Forms.TextBox();
             this.label_customer_name = new System.Windows.Forms.Label();
-            this.dtg_DSPhongTrong = new System.Windows.Forms.DataGridView();
+            this.dtgDSPhongTrong = new System.Windows.Forms.DataGridView();
             this.SELECTROOM = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.SOPHONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LOAIPHONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtpNgayDen = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.dtgLoaiPhong = new System.Windows.Forms.DataGridView();
-            this.lb_LoaiPhong = new System.Windows.Forms.Label();
+            this.HANGPHONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SOGIUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LOAIGIUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.checkDSCho = new System.Windows.Forms.CheckBox();
             this.dtpCheckout = new System.Windows.Forms.DateTimePicker();
             this.dtpCheckin = new System.Windows.Forms.DateTimePicker();
             this.label_time_checkout = new System.Windows.Forms.Label();
             this.label_time_checkin = new System.Windows.Forms.Label();
-            this.checkDSCho = new System.Windows.Forms.CheckBox();
-            this.HANGPHONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SOGIUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LOAIGIUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.pTTKhachHang.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_DSPhongTrong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDSPhongTrong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgLoaiPhong)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -86,6 +86,20 @@
             this.panel1.Size = new System.Drawing.Size(1008, 148);
             this.panel1.TabIndex = 26;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lb_LoaiPhong
+            // 
+            this.lb_LoaiPhong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_LoaiPhong.BackColor = System.Drawing.Color.White;
+            this.lb_LoaiPhong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lb_LoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_LoaiPhong.ForeColor = System.Drawing.Color.Black;
+            this.lb_LoaiPhong.Location = new System.Drawing.Point(336, 104);
+            this.lb_LoaiPhong.Name = "lb_LoaiPhong";
+            this.lb_LoaiPhong.Size = new System.Drawing.Size(374, 44);
+            this.lb_LoaiPhong.TabIndex = 32;
+            this.lb_LoaiPhong.Text = "LOẠI PHÒNG";
+            this.lb_LoaiPhong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_cus_info
             // 
@@ -171,6 +185,29 @@
             this.pTTKhachHang.Size = new System.Drawing.Size(336, 389);
             this.pTTKhachHang.TabIndex = 27;
             this.pTTKhachHang.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // dtpNgayDen
+            // 
+            this.dtpNgayDen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgayDen.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgayDen.Location = new System.Drawing.Point(152, 306);
+            this.dtpNgayDen.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
+            this.dtpNgayDen.Name = "dtpNgayDen";
+            this.dtpNgayDen.Size = new System.Drawing.Size(158, 22);
+            this.dtpNgayDen.TabIndex = 48;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(32, 313);
+            this.label2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 13);
+            this.label2.TabIndex = 47;
+            this.label2.Text = "Ngày đến:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // dtpNgaySinh
             // 
@@ -334,19 +371,19 @@
             this.label_customer_name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label_customer_name.Click += new System.EventHandler(this.label1_Click);
             // 
-            // dtg_DSPhongTrong
+            // dtgDSPhongTrong
             // 
-            this.dtg_DSPhongTrong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg_DSPhongTrong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgDSPhongTrong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDSPhongTrong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SELECTROOM,
             this.SOPHONG,
             this.LOAIPHONG});
-            this.dtg_DSPhongTrong.Location = new System.Drawing.Point(710, 148);
-            this.dtg_DSPhongTrong.Name = "dtg_DSPhongTrong";
-            this.dtg_DSPhongTrong.RowHeadersVisible = false;
-            this.dtg_DSPhongTrong.Size = new System.Drawing.Size(298, 326);
-            this.dtg_DSPhongTrong.TabIndex = 28;
-            this.dtg_DSPhongTrong.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_list_empty_room_CellContentClick);
+            this.dtgDSPhongTrong.Location = new System.Drawing.Point(710, 148);
+            this.dtgDSPhongTrong.Name = "dtgDSPhongTrong";
+            this.dtgDSPhongTrong.RowHeadersVisible = false;
+            this.dtgDSPhongTrong.Size = new System.Drawing.Size(298, 326);
+            this.dtgDSPhongTrong.TabIndex = 28;
+            this.dtgDSPhongTrong.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_list_empty_room_CellContentClick);
             // 
             // SELECTROOM
             // 
@@ -368,29 +405,6 @@
             this.LOAIPHONG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.LOAIPHONG.HeaderText = "Loại phòng";
             this.LOAIPHONG.Name = "LOAIPHONG";
-            // 
-            // dtpNgayDen
-            // 
-            this.dtpNgayDen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNgayDen.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayDen.Location = new System.Drawing.Point(152, 306);
-            this.dtpNgayDen.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
-            this.dtpNgayDen.Name = "dtpNgayDen";
-            this.dtpNgayDen.Size = new System.Drawing.Size(158, 22);
-            this.dtpNgayDen.TabIndex = 48;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 313);
-            this.label2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 13);
-            this.label2.TabIndex = 47;
-            this.label2.Text = "Ngày đến:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // btnSubmit
             // 
@@ -420,19 +434,23 @@
             this.dtgLoaiPhong.TabIndex = 30;
             this.dtgLoaiPhong.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgLoaiPhong_CellContentClick);
             // 
-            // lb_LoaiPhong
+            // HANGPHONG
             // 
-            this.lb_LoaiPhong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_LoaiPhong.BackColor = System.Drawing.Color.White;
-            this.lb_LoaiPhong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lb_LoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_LoaiPhong.ForeColor = System.Drawing.Color.Black;
-            this.lb_LoaiPhong.Location = new System.Drawing.Point(336, 104);
-            this.lb_LoaiPhong.Name = "lb_LoaiPhong";
-            this.lb_LoaiPhong.Size = new System.Drawing.Size(374, 44);
-            this.lb_LoaiPhong.TabIndex = 32;
-            this.lb_LoaiPhong.Text = "LOẠI PHÒNG";
-            this.lb_LoaiPhong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.HANGPHONG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.HANGPHONG.HeaderText = "Hạng phòng";
+            this.HANGPHONG.Name = "HANGPHONG";
+            // 
+            // SOGIUONG
+            // 
+            this.SOGIUONG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SOGIUONG.HeaderText = "Số giường";
+            this.SOGIUONG.Name = "SOGIUONG";
+            // 
+            // LOAIGIUONG
+            // 
+            this.LOAIGIUONG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.LOAIGIUONG.HeaderText = "Loại giường";
+            this.LOAIGIUONG.Name = "LOAIGIUONG";
             // 
             // panel3
             // 
@@ -448,6 +466,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(672, 66);
             this.panel3.TabIndex = 31;
+            // 
+            // checkDSCho
+            // 
+            this.checkDSCho.AutoSize = true;
+            this.checkDSCho.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkDSCho.Location = new System.Drawing.Point(346, 28);
+            this.checkDSCho.Name = "checkDSCho";
+            this.checkDSCho.Size = new System.Drawing.Size(112, 17);
+            this.checkDSCho.TabIndex = 41;
+            this.checkDSCho.Text = "Danh sách chờ";
+            this.checkDSCho.UseVisualStyleBackColor = true;
             // 
             // dtpCheckout
             // 
@@ -493,35 +522,6 @@
             this.label_time_checkin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label_time_checkin.Click += new System.EventHandler(this.label_time_checkin_Click);
             // 
-            // checkDSCho
-            // 
-            this.checkDSCho.AutoSize = true;
-            this.checkDSCho.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkDSCho.Location = new System.Drawing.Point(346, 28);
-            this.checkDSCho.Name = "checkDSCho";
-            this.checkDSCho.Size = new System.Drawing.Size(112, 17);
-            this.checkDSCho.TabIndex = 41;
-            this.checkDSCho.Text = "Danh sách chờ";
-            this.checkDSCho.UseVisualStyleBackColor = true;
-            // 
-            // HANGPHONG
-            // 
-            this.HANGPHONG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HANGPHONG.HeaderText = "Hạng phòng";
-            this.HANGPHONG.Name = "HANGPHONG";
-            // 
-            // SOGIUONG
-            // 
-            this.SOGIUONG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SOGIUONG.HeaderText = "Số giường";
-            this.SOGIUONG.Name = "SOGIUONG";
-            // 
-            // LOAIGIUONG
-            // 
-            this.LOAIGIUONG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.LOAIGIUONG.HeaderText = "Loại giường";
-            this.LOAIGIUONG.Name = "LOAIGIUONG";
-            // 
             // GUI_DatPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -529,7 +529,7 @@
             this.ClientSize = new System.Drawing.Size(1008, 537);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.dtgLoaiPhong);
-            this.Controls.Add(this.dtg_DSPhongTrong);
+            this.Controls.Add(this.dtgDSPhongTrong);
             this.Controls.Add(this.pTTKhachHang);
             this.Controls.Add(this.panel1);
             this.Name = "GUI_DatPhong";
@@ -539,7 +539,7 @@
             this.panel1.PerformLayout();
             this.pTTKhachHang.ResumeLayout(false);
             this.pTTKhachHang.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_DSPhongTrong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDSPhongTrong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgLoaiPhong)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -555,7 +555,7 @@
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.Panel pTTKhachHang;
-        private System.Windows.Forms.DataGridView dtg_DSPhongTrong;
+        private System.Windows.Forms.DataGridView dtgDSPhongTrong;
         private System.Windows.Forms.DataGridViewCheckBoxColumn SELECTROOM;
         private System.Windows.Forms.DataGridViewTextBoxColumn SOPHONG;
         private System.Windows.Forms.DataGridViewTextBoxColumn LOAIPHONG;

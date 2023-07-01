@@ -73,6 +73,12 @@ namespace INFSYS_Design.controllers
             return DB_ThongTinKhachHang.layThongtinKhachHang(ma);
         }
 
+        public static ThongTinKhachHang layThongTinKhachHangTheoTen(string hoTen)
+        {
+
+            return DB_ThongTinKhachHang.layThongtinKhachHangTheoTen(hoTen);
+        }
+
         public static void themKhachHang(ThongTinKhachHang kh)
         {
 

@@ -64,6 +64,32 @@ namespace INFSYS_Design.models
             return null;
         }
 
+        public static ThongTinKhachHang layThongtinKhachHangTheoTen(string hoTen)
+        {
+            DBConn conn = new DBConn();
+            SqlCommand sqlCmd = new SqlCommand();
+            sqlCmd.CommandType = System.Data.CommandType.Text;
+            sqlCmd.CommandText = $"SELECT * FROM THONGTINKHACHHANG WHERE HOTEN={hoTen}";
+            sqlCmd.Connection = conn.conn;
+            string[] columnNames = { "ma", "maSoDinhDanh", "loaiMaSoDinhDanh", "email", "namSinh", "hoTen", "sdt", "diaChiThuongTru", "gioiTinh" };
+
+            SqlDataReader res = sqlCmd.ExecuteReader();
+
+
+            while (res.Read())
+            {
+                Dictionary<string, object> customerInfo = new Dictionary<string, object>();
+                foreach (string colName in columnNames)
+                {
+                    customerInfo.Add(colName.ToUpper(), res.GetValue(res.GetOrdinal(colName.ToUpper())));
+                }
+                ThongTinKhachHang customer = new ThongTinKhachHang(customerInfo);
+                return customer;
+            }
+
+            return null;
+        }
+
         public static void themKhachHang(ThongTinKhachHang kh)
         {
             DBConn conn = new DBConn();
