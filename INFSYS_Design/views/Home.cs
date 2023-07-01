@@ -34,7 +34,7 @@ namespace INFSYS_Design.views
         private void btn_customer_list_Click(object sender, EventArgs e)
         {
             GUI_ListOfCustomers customersPage = new GUI_ListOfCustomers();
-            Program.previousForm = new GUI_Home();
+            Program.previousForm.Add(this);
             customersPage.Show();
             this.Hide();
         }
@@ -42,7 +42,7 @@ namespace INFSYS_Design.views
         private void button1_Click(object sender, EventArgs e)
         {
             GUI_ListOfRooms customersPage = new GUI_ListOfRooms();
-            Program.previousForm = new GUI_Home();
+            Program.previousForm.Add(this);
             customersPage.Show();
             this.Hide();
         }

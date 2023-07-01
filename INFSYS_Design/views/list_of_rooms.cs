@@ -40,7 +40,10 @@ namespace INFSYS_Design.views
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Program.previousForm.Show();
+            int idx = Program.previousForm.Count - 1;
+            Form prvForm = Program.previousForm[idx];
+            Program.previousForm.RemoveAt(idx);
+            prvForm.Show();
             this.Hide();
         }
 
@@ -51,7 +54,23 @@ namespace INFSYS_Design.views
 
         private void btn_view_detail_Click(object sender, EventArgs e)
         {
-
+            var selectedRow = this.dataGridView1.SelectedRows;
+            if (selectedRow.Count == 0)
+            {
+                MessageBox.Show(
+                    "Vui lòng chọn phòng cần xóa!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+            int idx = this.dataGridView1.SelectedRows[0].Index;
+            int soPhong = int.Parse(this.dataGridView1.Rows[idx].Cells[0].Value.ToString());
+            RoomExtension roomExtensionPage = new RoomExtension(soPhong);
+            Program.previousForm.Add(roomExtensionPage);
+            roomExtensionPage.Show();
+            this.Hide();
         }
 
         private void add_room_btn_Click(object sender, EventArgs e)

@@ -11,7 +11,7 @@ namespace INFSYS_Design
     {
         public static int currentUserId;
         public static string currentUserRole;
-        public static Form previousForm = null;
+        public static List<Form> previousForm = new List<Form> { };
         [STAThread]
         static void Main()
         {

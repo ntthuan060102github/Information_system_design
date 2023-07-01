@@ -47,5 +47,28 @@ namespace INFSYS_Design.models
 
             return res;
         }
+        public static Phong layThongTinPhong(int soPhong)
+        {
+            DBConn conn = new DBConn();
+            SqlCommand sqlCmd = new SqlCommand();
+            sqlCmd.CommandType = System.Data.CommandType.Text;
+            sqlCmd.CommandText = $"SELECT * FROM PHONG WHERE SOPHONG = {soPhong}";
+            sqlCmd.Connection = conn.conn;
+            string[] columnNames = { "soPhong", "trangThai", "loaiPhong" };
+
+            SqlDataReader res = sqlCmd.ExecuteReader();
+
+            if (res.Read())
+            {
+                Dictionary<string, object> raw_room = new Dictionary<string, object>();
+                foreach (string colName in columnNames)
+                {
+                    raw_room.Add(colName.ToUpper(), res.GetValue(res.GetOrdinal(colName.ToUpper())));
+                }
+                Phong room = new Phong(raw_room);
+                return room;
+            }
+            return null;
+        }
     }
 }

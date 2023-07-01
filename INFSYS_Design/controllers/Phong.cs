@@ -39,5 +39,9 @@ namespace INFSYS_Design.controllers
         {
             return 0 != DB_Phong.xoaPhong(soPhong);
         }
+        public static Phong layThongTinPhong(int soPhong)
+        {
+            return DB_Phong.layThongTinPhong(soPhong);
+        }
     }
 }

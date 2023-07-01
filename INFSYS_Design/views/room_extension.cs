@@ -7,14 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using INFSYS_Design.controllers;
 
 namespace INFSYS_Design.views
 {
     public partial class RoomExtension : Form
     {
-        public RoomExtension()
+        public RoomExtension(int soPhong)
         {
             InitializeComponent();
+            Phong room = Phong.layThongTinPhong(soPhong);
         }
 
         private void label1_Click(object sender, EventArgs e)
