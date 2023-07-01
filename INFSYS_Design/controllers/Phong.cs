@@ -43,5 +43,13 @@ namespace INFSYS_Design.controllers
         {
             return DB_Phong.layThongTinPhong(soPhong);
         }
+        public static ThongTinKhachHang layThongTinHangDangThuePhong(int soPhong)
+        {
+            return DB_Phong.layThongTinKhachHangDangThuePhong(soPhong);
+        }
+        public static DateTime layThoiGianTraPhong(int soPhong)
+        {
+            return DB_Phong.layThoiGianTraPhong(soPhong);
+        }
     }
 }

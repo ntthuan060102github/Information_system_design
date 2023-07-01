@@ -38,7 +38,7 @@ namespace INFSYS_Design.views
 
         private void back_btn_Click(object sender, EventArgs e)
         {
-            Program.previousForm.Show();
+            //Program.previousForm.Show();
             this.Hide();
         }
 

@@ -47,7 +47,7 @@ namespace INFSYS_Design.views
             this.back_btn.Name = "back_btn";
             this.back_btn.Size = new System.Drawing.Size(86, 29);
             this.back_btn.TabIndex = 0;
-            this.back_btn.Text = "Trang chủ";
+            this.back_btn.Text = "Quay lại";
             this.back_btn.UseVisualStyleBackColor = true;
             this.back_btn.Click += new System.EventHandler(this.back_btn_Click_1);
             // 

@@ -52,12 +52,14 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controllers\DanhSachCho.cs" />
     <Compile Include="controllers\LoaiPhong.cs" />
     <Compile Include="controllers\NhanVien.cs" />
     <Compile Include="controllers\Phong.cs" />
     <Compile Include="controllers\TaiKhoan.cs" />
     <Compile Include="controllers\ThongTinKhachHang.cs" />
     <Compile Include="DBConn.cs" />
+    <Compile Include="models\DB_DanhSachCho.cs" />
     <Compile Include="models\DB_LoaiPhong.cs" />
     <Compile Include="models\DB_NhanVien.cs" />
     <Compile Include="models\DB_Phong.cs" />
