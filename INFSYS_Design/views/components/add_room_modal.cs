@@ -1,7 +1,7 @@
 ﻿
 namespace INFSYS_Design.views.components
 {
-    partial class AddRoomModal
+    partial class GUI_AddRoomModal
     {
         /// <summary>
         /// Required designer variable.

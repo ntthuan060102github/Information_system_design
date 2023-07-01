@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace INFSYS_Design.views.components
 {
-    public partial class AddRoomModal : Form
+    public partial class GUI_AddRoomModal : Form
     {
-        public AddRoomModal()
+        public GUI_AddRoomModal()
         {
             InitializeComponent();
         }
