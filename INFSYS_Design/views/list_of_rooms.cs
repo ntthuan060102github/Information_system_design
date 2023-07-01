@@ -16,6 +16,11 @@ namespace INFSYS_Design.views
         public GUI_ListOfRooms()
         {
             InitializeComponent();
+            if(Program.currentUserRole == "NHANVIEN")
+            {
+                this.btn_delete_room.Hide();
+                this.add_room_btn.Hide();
+            }
             List<Phong> list_of_rooms = Phong.layDanhSachPhong();
             foreach(Phong room in list_of_rooms)
             {
@@ -71,6 +76,43 @@ namespace INFSYS_Design.views
                     return "Đang sử dụng";
                 default:
                     return "Không xác định";
+            }
+        }
+
+        private void btn_delete_room_Click(object sender, EventArgs e)
+        {
+            var selectedRow = this.dataGridView1.SelectedRows;
+            if (selectedRow.Count == 0)
+            {
+                MessageBox.Show(
+                    "Vui lòng chọn phòng cần xóa!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+            int idx = this.dataGridView1.SelectedRows[0].Index;
+
+            int soPhong = int.Parse(this.dataGridView1.Rows[idx].Cells[0].Value.ToString());
+            if (Phong.xoaPhong(soPhong))
+            {
+                MessageBox.Show(
+                    "Thành công!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+                this.dataGridView1.Rows.RemoveAt(idx);
+            }
+            else
+            {
+                MessageBox.Show(
+                    "Thất bại!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
             }
         }
     }

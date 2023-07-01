@@ -37,10 +37,10 @@ namespace INFSYS_Design.views
             this.room_level = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.num_bed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bed_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_view_detail = new System.Windows.Forms.Button();
             this.add_room_btn = new System.Windows.Forms.Button();
             this.btn_delete_room = new System.Windows.Forms.Button();
-            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,6 +69,7 @@ namespace INFSYS_Design.views
             this.bed_type,
             this.price});
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -104,6 +105,12 @@ namespace INFSYS_Design.views
             this.bed_type.Name = "bed_type";
             this.bed_type.ReadOnly = true;
             // 
+            // price
+            // 
+            resources.ApplyResources(this.price, "price");
+            this.price.Name = "price";
+            this.price.ReadOnly = true;
+            // 
             // btn_view_detail
             // 
             this.btn_view_detail.BackColor = System.Drawing.SystemColors.Control;
@@ -132,12 +139,7 @@ namespace INFSYS_Design.views
             resources.ApplyResources(this.btn_delete_room, "btn_delete_room");
             this.btn_delete_room.Name = "btn_delete_room";
             this.btn_delete_room.UseVisualStyleBackColor = false;
-            // 
-            // price
-            // 
-            resources.ApplyResources(this.price, "price");
-            this.price.Name = "price";
-            this.price.ReadOnly = true;
+            this.btn_delete_room.Click += new System.EventHandler(this.btn_delete_room_Click);
             // 
             // GUI_ListOfRooms
             // 
