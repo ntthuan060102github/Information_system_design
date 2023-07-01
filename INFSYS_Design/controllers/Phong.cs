@@ -51,5 +51,13 @@ namespace INFSYS_Design.controllers
         {
             return DB_Phong.layThoiGianTraPhong(soPhong);
         }
+        public static bool kiemTraSoPhongDaTonTai(int soPhong)
+        {
+            return DB_Phong.layThongTinPhong(soPhong) != null;
+        }
+        public static bool themPhong(int soPhong, string maLoaiPhong)
+        {
+            return DB_Phong.themPhong(soPhong, maLoaiPhong) == 1;
+        }
     }
 }

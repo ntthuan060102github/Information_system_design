@@ -19,7 +19,7 @@ namespace INFSYS_Design.controllers
         {
             object data;
 
-            if (kwargs.TryGetValue("MA", out data))
+            if (kwargs.TryGetValue("MALOAIPHONG", out data))
             {
                 this.maLoaiPhong = data.ToString();
             }

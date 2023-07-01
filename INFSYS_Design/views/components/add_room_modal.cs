@@ -1,4 +1,15 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using INFSYS_Design.controllers;
+using INFSYS_Design.views;
+
 namespace INFSYS_Design.views.components
 {
     partial class GUI_AddRoomModal
@@ -80,8 +91,9 @@ namespace INFSYS_Design.views.components
             this.button1.TabIndex = 4;
             this.button1.Text = "Thêm";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // AddRoomModal
+            // GUI_AddRoomModal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -92,7 +104,7 @@ namespace INFSYS_Design.views.components
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.room_num);
-            this.Name = "AddRoomModal";
+            this.Name = "GUI_AddRoomModal";
             this.Load += new System.EventHandler(this.add_room_modal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -106,5 +118,78 @@ namespace INFSYS_Design.views.components
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
+
+        private void button1_Click(object sender, System.EventArgs e)
+        {
+            try
+            {
+                string text_soPhong = this.room_num.Text;
+                int soPhong = int.Parse(text_soPhong);
+
+                if(soPhong/100 <=0 || soPhong/100>=10)
+                {
+                    MessageBox.Show(
+                        "Số phòng không hợp lệ!",
+                        "Lỗi!",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
+                    return;
+                }
+
+                if (Phong.kiemTraSoPhongDaTonTai(soPhong))
+                {
+                    MessageBox.Show(
+                        "Số phòng đã tồn tại!",
+                        "Lỗi!",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
+                    return;
+                }
+                if(this.comboBox1.SelectedItem == null)
+                {
+                    MessageBox.Show(
+                        "Vui lòng chọn loại phòng!",
+                        "Thông báo!",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning
+                    );
+                    return;
+                }
+                if(Phong.themPhong(soPhong, this.comboBox1.SelectedItem.ToString()))
+                {
+                    MessageBox.Show(
+                        "Thành công!",
+                        "Thông báo!",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
+                    this.Close();
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show(
+                        "Thất bại!",
+                        "Thông báo!",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
+                    return;
+                }
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(
+                    "Số phòng không hợp lệ!",
+                    "Lỗi!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+                return;
+            }
+        }
     }
 }

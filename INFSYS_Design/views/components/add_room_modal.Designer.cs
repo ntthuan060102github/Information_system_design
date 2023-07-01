@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using INFSYS_Design.controllers;
 
 namespace INFSYS_Design.views.components
 {
@@ -15,6 +16,16 @@ namespace INFSYS_Design.views.components
         public GUI_AddRoomModal()
         {
             InitializeComponent();
+            List<LoaiPhong> listOfRoomTypes = LoaiPhong.layDanhSachLoaiPhong();
+
+            if (listOfRoomTypes != null)
+            {
+                foreach(LoaiPhong roomType in listOfRoomTypes)
+                {
+                    this.comboBox1.Items.Add(roomType.maLoaiPhong);
+                }
+            }
+            
         }
 
         private void add_room_modal_Load(object sender, EventArgs e)
