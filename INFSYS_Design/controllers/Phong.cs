@@ -35,5 +35,9 @@ namespace INFSYS_Design.controllers
         {
             return DB_Phong.layDanhSachPhong();
         }
+        public static bool xoaPhong(int soPhong)
+        {
+            return 0 != DB_Phong.xoaPhong(soPhong);
+        }
     }
 }

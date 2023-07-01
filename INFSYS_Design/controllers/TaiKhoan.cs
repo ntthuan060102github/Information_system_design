@@ -29,7 +29,9 @@ namespace INFSYS_Design.controllers
             }
             if (matkhau == taiKhoan.matkhau)
             {
+                NhanVien userInfo = NhanVien.layThongTinNhanVien(taiKhoan.manv);
                 Program.currentUserId = taiKhoan.manv;
+                Program.currentUserRole = userInfo.chucVu;
                 return true;
             }
             return false;

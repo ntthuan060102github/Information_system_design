@@ -35,5 +35,17 @@ namespace INFSYS_Design.models
             }
             return list_of_rooms;
         }
+        public static int xoaPhong(int soPhong)
+        {
+            DBConn conn = new DBConn();
+            SqlCommand sqlCmd = new SqlCommand();
+            sqlCmd.CommandType = System.Data.CommandType.Text;
+            sqlCmd.CommandText = $"DELETE FROM PHONG WHERE SOPHONG = {soPhong}";
+            sqlCmd.Connection = conn.conn;
+
+            int res = sqlCmd.ExecuteNonQuery();
+
+            return res;
+        }
     }
 }
