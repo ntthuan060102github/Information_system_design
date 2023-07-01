@@ -1,7 +1,7 @@
 ﻿
 namespace INFSYS_Design.views
 {
-    partial class RoomExtension
+    partial class GUI_RoomExtension
     {
         /// <summary>
         /// Required designer variable.
@@ -61,6 +61,7 @@ namespace INFSYS_Design.views
             this.submit_btn = new System.Windows.Forms.Button();
             this.date_return_label = new System.Windows.Forms.Label();
             this.date_return = new System.Windows.Forms.TextBox();
+            this.btn_back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.waiting_list)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,6 +70,7 @@ namespace INFSYS_Design.views
             this.room_number.Location = new System.Drawing.Point(152, 78);
             this.room_number.Multiline = true;
             this.room_number.Name = "room_number";
+            this.room_number.ReadOnly = true;
             this.room_number.Size = new System.Drawing.Size(333, 29);
             this.room_number.TabIndex = 0;
             // 
@@ -99,6 +101,7 @@ namespace INFSYS_Design.views
             this.room_level.Location = new System.Drawing.Point(152, 121);
             this.room_level.Multiline = true;
             this.room_level.Name = "room_level";
+            this.room_level.ReadOnly = true;
             this.room_level.Size = new System.Drawing.Size(333, 29);
             this.room_level.TabIndex = 2;
             // 
@@ -118,6 +121,7 @@ namespace INFSYS_Design.views
             this.bed_type.Location = new System.Drawing.Point(152, 208);
             this.bed_type.Multiline = true;
             this.bed_type.Name = "bed_type";
+            this.bed_type.ReadOnly = true;
             this.bed_type.Size = new System.Drawing.Size(333, 29);
             this.bed_type.TabIndex = 6;
             // 
@@ -137,6 +141,7 @@ namespace INFSYS_Design.views
             this.num_bed.Location = new System.Drawing.Point(152, 166);
             this.num_bed.Multiline = true;
             this.num_bed.Name = "num_bed";
+            this.num_bed.ReadOnly = true;
             this.num_bed.Size = new System.Drawing.Size(333, 29);
             this.num_bed.TabIndex = 4;
             // 
@@ -178,6 +183,7 @@ namespace INFSYS_Design.views
             this.year_of_birth.Location = new System.Drawing.Point(643, 248);
             this.year_of_birth.Multiline = true;
             this.year_of_birth.Name = "year_of_birth";
+            this.year_of_birth.ReadOnly = true;
             this.year_of_birth.Size = new System.Drawing.Size(302, 29);
             this.year_of_birth.TabIndex = 15;
             // 
@@ -196,6 +202,7 @@ namespace INFSYS_Design.views
             this.email.Location = new System.Drawing.Point(643, 191);
             this.email.Multiline = true;
             this.email.Name = "email";
+            this.email.ReadOnly = true;
             this.email.Size = new System.Drawing.Size(302, 29);
             this.email.TabIndex = 13;
             // 
@@ -214,6 +221,7 @@ namespace INFSYS_Design.views
             this.id_num.Location = new System.Drawing.Point(643, 138);
             this.id_num.Multiline = true;
             this.id_num.Name = "id_num";
+            this.id_num.ReadOnly = true;
             this.id_num.Size = new System.Drawing.Size(302, 29);
             this.id_num.TabIndex = 11;
             // 
@@ -233,6 +241,7 @@ namespace INFSYS_Design.views
             this.customer_name.Location = new System.Drawing.Point(643, 81);
             this.customer_name.Multiline = true;
             this.customer_name.Name = "customer_name";
+            this.customer_name.ReadOnly = true;
             this.customer_name.Size = new System.Drawing.Size(302, 29);
             this.customer_name.TabIndex = 9;
             this.customer_name.TextChanged += new System.EventHandler(this.customer_name_TextChanged);
@@ -246,12 +255,14 @@ namespace INFSYS_Design.views
             this.phone_num_label.TabIndex = 19;
             this.phone_num_label.Text = "Số điện thoại";
             this.phone_num_label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.phone_num_label.Click += new System.EventHandler(this.phone_num_label_Click);
             // 
             // phone_num
             // 
             this.phone_num.Location = new System.Drawing.Point(643, 310);
             this.phone_num.Multiline = true;
             this.phone_num.Name = "phone_num";
+            this.phone_num.ReadOnly = true;
             this.phone_num.Size = new System.Drawing.Size(302, 29);
             this.phone_num.TabIndex = 18;
             // 
@@ -270,6 +281,7 @@ namespace INFSYS_Design.views
             this.address.Location = new System.Drawing.Point(643, 375);
             this.address.Multiline = true;
             this.address.Name = "address";
+            this.address.ReadOnly = true;
             this.address.Size = new System.Drawing.Size(302, 29);
             this.address.TabIndex = 20;
             // 
@@ -288,6 +300,7 @@ namespace INFSYS_Design.views
             this.gender.Location = new System.Drawing.Point(643, 440);
             this.gender.Multiline = true;
             this.gender.Name = "gender";
+            this.gender.ReadOnly = true;
             this.gender.Size = new System.Drawing.Size(302, 29);
             this.gender.TabIndex = 22;
             // 
@@ -297,6 +310,7 @@ namespace INFSYS_Design.views
             this.waiting_list.AllowUserToDeleteRows = false;
             this.waiting_list.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.waiting_list.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.waiting_list.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.waiting_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.waiting_list.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -320,7 +334,6 @@ namespace INFSYS_Design.views
             this.created_at.MinimumWidth = 6;
             this.created_at.Name = "created_at";
             this.created_at.ReadOnly = true;
-            this.created_at.Width = 125;
             // 
             // deadline
             // 
@@ -328,7 +341,6 @@ namespace INFSYS_Design.views
             this.deadline.MinimumWidth = 6;
             this.deadline.Name = "deadline";
             this.deadline.ReadOnly = true;
-            this.deadline.Width = 125;
             // 
             // status
             // 
@@ -336,7 +348,6 @@ namespace INFSYS_Design.views
             this.status.MinimumWidth = 6;
             this.status.Name = "status";
             this.status.ReadOnly = true;
-            this.status.Width = 125;
             // 
             // dateTimePicker1
             // 
@@ -349,6 +360,7 @@ namespace INFSYS_Design.views
             // 
             // submit_btn
             // 
+            this.submit_btn.Enabled = false;
             this.submit_btn.Location = new System.Drawing.Point(344, 471);
             this.submit_btn.Name = "submit_btn";
             this.submit_btn.Size = new System.Drawing.Size(84, 32);
@@ -371,15 +383,28 @@ namespace INFSYS_Design.views
             this.date_return.Location = new System.Drawing.Point(152, 250);
             this.date_return.Multiline = true;
             this.date_return.Name = "date_return";
+            this.date_return.ReadOnly = true;
             this.date_return.Size = new System.Drawing.Size(333, 29);
             this.date_return.TabIndex = 27;
             // 
-            // RoomExtension
+            // btn_back
+            // 
+            this.btn_back.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_back.Location = new System.Drawing.Point(12, 12);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(86, 31);
+            this.btn_back.TabIndex = 29;
+            this.btn_back.Text = "Quay lại";
+            this.btn_back.UseVisualStyleBackColor = false;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
+            // GUI_RoomExtension
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1006, 529);
+            this.Controls.Add(this.btn_back);
             this.Controls.Add(this.date_return_label);
             this.Controls.Add(this.date_return);
             this.Controls.Add(this.submit_btn);
@@ -409,7 +434,7 @@ namespace INFSYS_Design.views
             this.Controls.Add(this.room_level);
             this.Controls.Add(this.room_number_label);
             this.Controls.Add(this.room_number);
-            this.Name = "RoomExtension";
+            this.Name = "GUI_RoomExtension";
             this.Text = "Gia hạn";
             this.Load += new System.EventHandler(this.RoomExtension_Load);
             ((System.ComponentModel.ISupportInitialize)(this.waiting_list)).EndInit();
@@ -452,6 +477,7 @@ namespace INFSYS_Design.views
         private System.Windows.Forms.Button submit_btn;
         private System.Windows.Forms.Label date_return_label;
         private System.Windows.Forms.TextBox date_return;
+        private System.Windows.Forms.Button btn_back;
     }
 }
 

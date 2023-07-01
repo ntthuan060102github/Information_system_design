@@ -58,7 +58,7 @@ namespace INFSYS_Design.views
             if (selectedRow.Count == 0)
             {
                 MessageBox.Show(
-                    "Vui lòng chọn phòng cần xóa!",
+                    "Vui lòng chọn phòng cần xem thông tin!",
                     "Thông báo!",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning
@@ -67,8 +67,8 @@ namespace INFSYS_Design.views
             }
             int idx = this.dataGridView1.SelectedRows[0].Index;
             int soPhong = int.Parse(this.dataGridView1.Rows[idx].Cells[0].Value.ToString());
-            RoomExtension roomExtensionPage = new RoomExtension(soPhong);
-            Program.previousForm.Add(roomExtensionPage);
+            GUI_RoomExtension roomExtensionPage = new GUI_RoomExtension(soPhong);
+            Program.previousForm.Add(this);
             roomExtensionPage.Show();
             this.Hide();
         }
