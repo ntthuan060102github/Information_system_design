@@ -24,7 +24,7 @@ namespace INFSYS_Design.views
 
         private void checkout_btn_Click(object sender, EventArgs e)
         {
-            RoomStatus roomStatus = new RoomStatus();
+            GUI_RoomStatus roomStatus = new GUI_RoomStatus();
             roomStatus.ShowDialog();
             this.Close();
         }

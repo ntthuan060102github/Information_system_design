@@ -1,6 +1,6 @@
 ﻿namespace INFSYS_Design.views
 {
-    partial class Invoice
+    partial class GUI_Invoice
     {
         /// <summary>
         /// Required designer variable.
@@ -221,6 +221,7 @@
             this.label1.TabIndex = 37;
             this.label1.Text = "Hóa đơn bán hàng";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            
             // 
             // Invoice
             // 

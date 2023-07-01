@@ -28,12 +28,9 @@ D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\I
 D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.AddService.resources
 D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.components.AddRoomModal.resources
 D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.GUI_Home.resources
-D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.ListOfCustomers.resources
-D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.ListOfRooms.resources
 D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.GUI_Login.resources
 D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.RoomExtension.resources
 D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.revenue.resources
-D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.ListOfRooms.aa-DJ.resources
 D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.csproj.GenerateResource.cache
 D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.csproj.CoreCompileInputs.cache
 D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\aa-DJ\INFSYS_Design.resources.dll
@@ -44,3 +41,8 @@ D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\I
 D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.Invoice.resources
 D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.RoomStatus.resources
 D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.UpdateService.resources
+D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.GUI_ListOfCustomers.resources
+D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.GUI_ListOfRooms.resources
+D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.checkin.resources
+D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.booking_intermediary.resources
+D:\PhanTichThietKe-HTTT\DoAn\Information_system_design\INFSYS_Design\obj\Debug\INFSYS_Design.views.GUI_ListOfRooms.aa-DJ.resources

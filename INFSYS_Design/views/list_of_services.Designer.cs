@@ -1,6 +1,6 @@
 ﻿namespace INFSYS_Design.views
 {
-    partial class list_of_services
+    partial class GUI_ListOfServices
     {
         /// <summary>
         /// Required designer variable.
@@ -165,6 +165,7 @@
             this.Name = "list_of_services";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh sách dịch vụ";
+            this.Load += new System.EventHandler(this.list_of_services_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

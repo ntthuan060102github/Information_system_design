@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace INFSYS_Design.views
 {
-    public partial class RoomStatus : Form
+    public partial class GUI_RoomStatus : Form
     {
-        public RoomStatus()
+        public GUI_RoomStatus()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace INFSYS_Design.views
 
         private void create_invoice_btn_Click(object sender, EventArgs e)
         {
-            Invoice invoice = new Invoice();
+            GUI_Invoice invoice = new GUI_Invoice();
             invoice.ShowDialog();
             this.Close();
         }

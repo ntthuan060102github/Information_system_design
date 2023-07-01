@@ -1,6 +1,6 @@
 ﻿namespace INFSYS_Design.views
 {
-    partial class UpdateService
+    partial class GUI_UpdateService
     {
         /// <summary>
         /// Required designer variable.

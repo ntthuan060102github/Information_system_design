@@ -117,6 +117,12 @@
     <Compile Include="views\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\register_service.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\register_service.Designer.cs">
+      <DependentUpon>register_service.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\room_extension.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,12 @@
     </Compile>
     <Compile Include="views\room_status.Designer.cs">
       <DependentUpon>room_status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\service_charge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\service_charge.Designer.cs">
+      <DependentUpon>service_charge.cs</DependentUpon>
     </Compile>
     <Compile Include="views\udpate_service.cs">
       <SubType>Form</SubType>
@@ -194,6 +206,9 @@
     <EmbeddedResource Include="views\login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\register_service.resx">
+      <DependentUpon>register_service.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\room_extension.resx">
       <DependentUpon>room_extension.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\room_status.resx">
       <DependentUpon>room_status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\service_charge.resx">
+      <DependentUpon>service_charge.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\udpate_service.resx">
       <DependentUpon>udpate_service.cs</DependentUpon>

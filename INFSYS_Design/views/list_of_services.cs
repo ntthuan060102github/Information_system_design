@@ -10,23 +10,23 @@ using System.Windows.Forms;
 
 namespace INFSYS_Design.views
 {
-    public partial class list_of_services : Form
+    public partial class GUI_ListOfServices : Form
     {
-        public list_of_services()
+        public GUI_ListOfServices()
         {
             InitializeComponent();
         }
 
         private void add_service_btn_Click(object sender, EventArgs e)
         {
-            AddService addService = new AddService();
+            GUI_AddService addService = new GUI_AddService();
             addService.ShowDialog();
             addService.Dispose();
         }
 
         private void update_service_btn_Click(object sender, EventArgs e)
         {
-            UpdateService updateService = new UpdateService();
+            GUI_UpdateService updateService = new GUI_UpdateService();
             updateService.ShowDialog();
             updateService.Dispose();
         }
@@ -38,9 +38,13 @@ namespace INFSYS_Design.views
 
         private void back_btn_Click(object sender, EventArgs e)
         {
-            GUI_Home home = new GUI_Home();
-            home.ShowDialog();
-            this.Close();
+            Program.previousForm.Show();
+            this.Hide();
+        }
+
+        private void list_of_services_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

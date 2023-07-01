@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace INFSYS_Design.views
 {
-    public partial class GUI_AddService : Form
+    public partial class GUI_RegisterService : Form
     {
-        public GUI_AddService()
+        public GUI_RegisterService()
         {
             InitializeComponent();
-        }
-
-        private void AddService_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

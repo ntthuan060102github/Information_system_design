@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace INFSYS_Design.views
 {
-    public partial class UpdateService : Form
+    public partial class GUI_UpdateService : Form
     {
-        public UpdateService()
+        public GUI_UpdateService()
         {
             InitializeComponent();
         }

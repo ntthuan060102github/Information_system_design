@@ -1,6 +1,6 @@
 ﻿namespace INFSYS_Design.views
 {
-    partial class RoomStatus
+    partial class GUI_RoomStatus
     {
         /// <summary>
         /// Required designer variable.

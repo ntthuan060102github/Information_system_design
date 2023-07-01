@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace INFSYS_Design.views
 {
-    public partial class Invoice : Form
+    public partial class GUI_Invoice : Form
     {
-        public Invoice()
+        public GUI_Invoice()
         {
             InitializeComponent();
         }
@@ -26,5 +26,7 @@ namespace INFSYS_Design.views
         {
 
         }
+
+        
     }
 }
