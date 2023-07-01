@@ -21,7 +21,7 @@ namespace INFSYS_Design.models
 
             SqlDataReader res = sqlCmd.ExecuteReader();
 
-            while (res.Read())
+            if (res.Read())
             {
                 Dictionary<string, object> typeRoomInfo = new Dictionary<string, object>();
                 foreach (string colName in columnNames)
@@ -38,7 +38,7 @@ namespace INFSYS_Design.models
             DBConn conn = new DBConn();
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.CommandType = System.Data.CommandType.Text;
-            sqlCmd.CommandText = $"SELECT TOP 1 * FROM LOAIPHONG ";
+            sqlCmd.CommandText = $"SELECT * FROM LOAIPHONG ";
             sqlCmd.Connection = conn.conn;
             string[] columnNames = { "maLoaiPhong", "hangPhong", "soGiuong", "loaiGiuong", "gia"};
 
