@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace INFSYS_Design.views
 {
-    public partial class revenue : Form
+    public partial class GUI_XemDoanhThu : Form
     {
-        public revenue()
+        public GUI_XemDoanhThu()
         {
             InitializeComponent();
         }
@@ -23,6 +23,11 @@ namespace INFSYS_Design.views
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void revenue_Load(object sender, EventArgs e)
         {
 
         }

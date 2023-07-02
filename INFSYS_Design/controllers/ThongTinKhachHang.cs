@@ -67,5 +67,22 @@ namespace INFSYS_Design.controllers
 
             return dataset;
         }
+        public static ThongTinKhachHang layThongTinKhachHang(int ma)
+        {
+
+            return DB_ThongTinKhachHang.layThongtinKhachHang(ma);
+        }
+
+        public static ThongTinKhachHang layThongTinKhachHangTheoTen(string hoTen)
+        {
+
+            return DB_ThongTinKhachHang.layThongtinKhachHangTheoTen(hoTen);
+        }
+
+        public static bool themKhachHang(ThongTinKhachHang kh)
+        {
+
+            return DB_ThongTinKhachHang.themKhachHang(kh);
+        }
     }
 }

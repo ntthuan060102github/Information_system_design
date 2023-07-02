@@ -43,7 +43,7 @@ namespace INFSYS_Design.views
             this.txtbox_username.Name = "txtbox_username";
             this.txtbox_username.Size = new System.Drawing.Size(321, 36);
             this.txtbox_username.TabIndex = 0;
-            this.txtbox_username.Text = "thuan";
+            this.txtbox_username.Text = "admin";
             // 
             // txtbox_password
             // 
@@ -52,7 +52,7 @@ namespace INFSYS_Design.views
             this.txtbox_password.Name = "txtbox_password";
             this.txtbox_password.Size = new System.Drawing.Size(321, 36);
             this.txtbox_password.TabIndex = 1;
-            this.txtbox_password.Text = "thuan";
+            this.txtbox_password.Text = "admin";
             // 
             // username_label
             // 

@@ -142,5 +142,18 @@ namespace INFSYS_Design.models
             }
             return null;*/
         }
+        public static int themPhong(int soPhong, string maLoaiPhong)
+        {
+            DBConn conn = new DBConn();
+            SqlCommand sqlCmd = new SqlCommand();
+            sqlCmd.CommandType = System.Data.CommandType.Text;
+            sqlCmd.CommandText = $@"
+                INSERT INTO PHONG(SOPHONG, LOAIPHONG, TRANGTHAI)
+                VALUES({soPhong}, '{maLoaiPhong}', 'TRONG')
+            ";
+            sqlCmd.Connection = conn.conn;
+
+            return sqlCmd.ExecuteNonQuery();
+        }
     }
 }

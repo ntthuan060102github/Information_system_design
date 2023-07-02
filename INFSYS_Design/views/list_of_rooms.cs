@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using INFSYS_Design.views.components;
 using INFSYS_Design.controllers;
 
 namespace INFSYS_Design.views
@@ -75,7 +76,8 @@ namespace INFSYS_Design.views
 
         private void add_room_btn_Click(object sender, EventArgs e)
         {
-
+            GUI_AddRoomModal modal = new GUI_AddRoomModal();
+            modal.ShowDialog();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

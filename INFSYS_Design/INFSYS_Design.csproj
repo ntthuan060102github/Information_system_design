@@ -59,6 +59,8 @@
     <Compile Include="controllers\Phong.cs" />
     <Compile Include="controllers\TaiKhoan.cs" />
     <Compile Include="controllers\ThongTinKhachHang.cs" />
+	<Compile Include="controllers\YeuCauDatPhong.cs" />
+	<Compile Include="controllers\LichSuDatPhong.cs" />
     <Compile Include="DBConn.cs" />
     <Compile Include="models\DB_DichVu.cs" />
     <Compile Include="models\DB_DanhSachCho.cs" />
@@ -67,6 +69,8 @@
     <Compile Include="models\DB_Phong.cs" />
     <Compile Include="models\DB_TaiKhoan.cs" />
     <Compile Include="models\DB_ThongTinKhachHang.cs" />
+	<Compile Include="models\DB_YeuCauDatPhong.cs" />
+	<Compile Include="models\DB_LichSuDatPhong.cs" />
     <Compile Include="views\add_service.cs">
       <SubType>Form</SubType>
     </Compile>

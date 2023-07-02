@@ -310,6 +310,7 @@ namespace INFSYS_Design.views
             this.waiting_list.AllowUserToDeleteRows = false;
             this.waiting_list.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.waiting_list.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.waiting_list.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.waiting_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.waiting_list.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -333,7 +334,6 @@ namespace INFSYS_Design.views
             this.created_at.MinimumWidth = 6;
             this.created_at.Name = "created_at";
             this.created_at.ReadOnly = true;
-            this.created_at.Width = 125;
             // 
             // deadline
             // 
@@ -341,7 +341,6 @@ namespace INFSYS_Design.views
             this.deadline.MinimumWidth = 6;
             this.deadline.Name = "deadline";
             this.deadline.ReadOnly = true;
-            this.deadline.Width = 125;
             // 
             // status
             // 
@@ -349,7 +348,6 @@ namespace INFSYS_Design.views
             this.status.MinimumWidth = 6;
             this.status.Name = "status";
             this.status.ReadOnly = true;
-            this.status.Width = 125;
             // 
             // dateTimePicker1
             // 

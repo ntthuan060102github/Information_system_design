@@ -1,6 +1,6 @@
 ﻿namespace INFSYS_Design.views
 {
-    partial class checkin
+    partial class GUI_Checkin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label_customer = new System.Windows.Forms.Label();
+            this.label_history = new System.Windows.Forms.Label();
             this.label_customer_name = new System.Windows.Forms.Label();
             this.label_room_number = new System.Windows.Forms.Label();
             this.btnCheck = new System.Windows.Forms.Button();
@@ -40,8 +42,6 @@
             this.HOTEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SOPHONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.THOIGIANNHAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label_history = new System.Windows.Forms.Label();
-            this.label_customer = new System.Windows.Forms.Label();
             this.btnCheckin = new System.Windows.Forms.Button();
             this.customer_gender = new System.Windows.Forms.Label();
             this.customer_address = new System.Windows.Forms.Label();
@@ -70,6 +70,34 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1008, 221);
             this.panel1.TabIndex = 12;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label_customer
+            // 
+            this.label_customer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label_customer.BackColor = System.Drawing.Color.White;
+            this.label_customer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_customer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_customer.ForeColor = System.Drawing.Color.Black;
+            this.label_customer.Location = new System.Drawing.Point(418, 177);
+            this.label_customer.Name = "label_customer";
+            this.label_customer.Size = new System.Drawing.Size(590, 44);
+            this.label_customer.TabIndex = 20;
+            this.label_customer.Text = "THÔNG TIN KHÁCH HÀNG";
+            this.label_customer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_history
+            // 
+            this.label_history.BackColor = System.Drawing.Color.White;
+            this.label_history.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_history.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_history.ForeColor = System.Drawing.Color.Black;
+            this.label_history.Location = new System.Drawing.Point(0, 177);
+            this.label_history.Name = "label_history";
+            this.label_history.Size = new System.Drawing.Size(418, 44);
+            this.label_history.TabIndex = 19;
+            this.label_history.Text = "LỊCH SỬ ĐẶT PHÒNG";
+            this.label_history.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_customer_name
             // 
@@ -177,33 +205,6 @@
             this.THOIGIANNHAN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.THOIGIANNHAN.HeaderText = "Thời gian nhận phòng";
             this.THOIGIANNHAN.Name = "THOIGIANNHAN";
-            // 
-            // label_history
-            // 
-            this.label_history.BackColor = System.Drawing.Color.White;
-            this.label_history.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label_history.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_history.ForeColor = System.Drawing.Color.Black;
-            this.label_history.Location = new System.Drawing.Point(0, 177);
-            this.label_history.Name = "label_history";
-            this.label_history.Size = new System.Drawing.Size(418, 44);
-            this.label_history.TabIndex = 19;
-            this.label_history.Text = "LỊCH SỬ ĐẶT PHÒNG";
-            this.label_history.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label_customer
-            // 
-            this.label_customer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_customer.BackColor = System.Drawing.Color.White;
-            this.label_customer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label_customer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_customer.ForeColor = System.Drawing.Color.Black;
-            this.label_customer.Location = new System.Drawing.Point(418, 177);
-            this.label_customer.Name = "label_customer";
-            this.label_customer.Size = new System.Drawing.Size(590, 44);
-            this.label_customer.TabIndex = 20;
-            this.label_customer.Text = "THÔNG TIN KHÁCH HÀNG";
-            this.label_customer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnCheckin
             // 
