@@ -1,4 +1,5 @@
-﻿using System;
+﻿using INFSYS_Design.controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,26 @@ namespace INFSYS_Design.views
         private void revenue_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSee_Click(object sender, EventArgs e)
+        {
+            string text_ngBD = this.dtpStart.Value.ToString();
+            string text_ngKT = this.dtpEnd.Value.ToString();
+
+            List<HoaDon> dshd = HoaDon.layDanhSachHoaDonTheoNgay(text_ngBD, text_ngKT);
+
+            foreach (HoaDon hd in dshd)
+            {
+                this.dtgDoanhThu.Rows.Add(
+                    hd.maHoaDon,
+                    hd.thoiGianTao,
+                    hd.VAT,
+                    hd.chiPhiChuaThue,
+                    hd.soTienNhan,
+                    hd.maCheckout
+                );
+            }
         }
     }
 }

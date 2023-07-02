@@ -35,14 +35,14 @@
             this.title = new System.Windows.Forms.Label();
             this.dtpStart = new System.Windows.Forms.DateTimePicker();
             this.dtpEnd = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgDoanhThu = new System.Windows.Forms.DataGridView();
             this.MAHOADON = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.THOIGIANTAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CHIPHICHUATHUE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SOTIENNHAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MACHECKOUT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDoanhThu)).BeginInit();
             this.SuspendLayout();
             // 
             // btnReturn
@@ -67,6 +67,7 @@
             this.btnSee.TabIndex = 1;
             this.btnSee.Text = "Xem doanh thu";
             this.btnSee.UseVisualStyleBackColor = true;
+            this.btnSee.Click += new System.EventHandler(this.btnSee_Click);
             // 
             // label_date_start
             // 
@@ -74,7 +75,7 @@
             this.label_date_start.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_date_start.Location = new System.Drawing.Point(284, 126);
             this.label_date_start.Name = "label_date_start";
-            this.label_date_start.Size = new System.Drawing.Size(106, 16);
+            this.label_date_start.Size = new System.Drawing.Size(104, 16);
             this.label_date_start.TabIndex = 2;
             this.label_date_start.Text = "Ngày bắt đầu:";
             this.label_date_start.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -86,7 +87,7 @@
             this.label_date_end.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_date_end.Location = new System.Drawing.Point(284, 167);
             this.label_date_end.Name = "label_date_end";
-            this.label_date_end.Size = new System.Drawing.Size(109, 16);
+            this.label_date_end.Size = new System.Drawing.Size(105, 16);
             this.label_date_end.TabIndex = 3;
             this.label_date_end.Text = "Ngày kết thúc:";
             this.label_date_end.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -123,23 +124,23 @@
             this.dtpEnd.Size = new System.Drawing.Size(128, 20);
             this.dtpEnd.TabIndex = 6;
             // 
-            // dataGridView1
+            // dtgDoanhThu
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgDoanhThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDoanhThu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MAHOADON,
             this.THOIGIANTAO,
             this.VAT,
             this.CHIPHICHUATHUE,
             this.SOTIENNHAN,
             this.MACHECKOUT});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 217);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(1008, 320);
-            this.dataGridView1.TabIndex = 7;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dtgDoanhThu.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dtgDoanhThu.Location = new System.Drawing.Point(0, 217);
+            this.dtgDoanhThu.Name = "dtgDoanhThu";
+            this.dtgDoanhThu.RowHeadersVisible = false;
+            this.dtgDoanhThu.Size = new System.Drawing.Size(1008, 320);
+            this.dtgDoanhThu.TabIndex = 7;
+            this.dtgDoanhThu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // MAHOADON
             // 
@@ -177,12 +178,12 @@
             this.MACHECKOUT.HeaderText = "Mã checkout";
             this.MACHECKOUT.Name = "MACHECKOUT";
             // 
-            // revenue
+            // GUI_XemDoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 537);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgDoanhThu);
             this.Controls.Add(this.dtpEnd);
             this.Controls.Add(this.dtpStart);
             this.Controls.Add(this.title);
@@ -190,10 +191,10 @@
             this.Controls.Add(this.label_date_start);
             this.Controls.Add(this.btnSee);
             this.Controls.Add(this.btnReturn);
-            this.Name = "revenue";
+            this.Name = "GUI_XemDoanhThu";
             this.Text = "revenue";
             this.Load += new System.EventHandler(this.revenue_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDoanhThu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,7 +209,7 @@
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.DateTimePicker dtpStart;
         private System.Windows.Forms.DateTimePicker dtpEnd;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgDoanhThu;
         private System.Windows.Forms.DataGridViewTextBoxColumn MAHOADON;
         private System.Windows.Forms.DataGridViewTextBoxColumn THOIGIANTAO;
         private System.Windows.Forms.DataGridViewTextBoxColumn VAT;

@@ -47,13 +47,28 @@ namespace INFSYS_Design.controllers
             }
         }
 
+        public HoaDon(string thoiGianTao, int VAT, int chiPhiChuaThue, int soTienNhan, int maCheckout)
+        {
+            this.thoiGianTao = thoiGianTao;
+            this.VAT = VAT;
+            this.chiPhiChuaThue = chiPhiChuaThue;
+            this.soTienNhan = soTienNhan;
+            this.maCheckout = maCheckout;
+        }
+
         public static HoaDon layThongTinHoaDon(int maHoaDon)
         {
             return DB_HoaDon.layThongTinHoaDon(maHoaDon);
         }
-        public static HoaDon layDanhSachHoaDon()
+
+        public static List<HoaDon> layDanhSachHoaDon()
         {
             return DB_HoaDon.layDanhSachHoaDon();
+        }
+
+        public static List<HoaDon> layDanhSachHoaDonTheoNgay(string ngayBD, string ngayKT)
+        {
+            return DB_HoaDon.layDanhSachHoaDonTheoNgay(ngayBD, ngayKT);
         }
     }
 }

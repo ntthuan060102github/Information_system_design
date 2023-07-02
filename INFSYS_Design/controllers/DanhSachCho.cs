@@ -45,9 +45,23 @@ namespace INFSYS_Design.controllers
                 this.maYeuCau = int.Parse(data.ToString());
             }
         }
+
+        public DanhSachCho(string trangThai, string thoiGianTao, string hanChot, int nguoiThucHien, int maYeuCau)
+        {
+            this.trangThai = trangThai;
+            this.thoiGianTao = DateTime.Parse(thoiGianTao);
+            this.hanChot = DateTime.Parse(hanChot);
+            this.nguoiThucHien = nguoiThucHien;
+            this.maYeuCau = maYeuCau;
+        }
+
         public static List<DanhSachCho> layDanhlayDanhSachTheoTheoLoaiPhong(string maLoaiPhong)
         {
             return DB_DanhSachCho.layDanhSachTheoTheoLoaiPhong(maLoaiPhong);
+        }
+        public static bool themKHVaoDSCho(DanhSachCho kh)
+        {
+            return DB_DanhSachCho.themKHVaoDSCho(kh) == 1;
         }
     }
 }

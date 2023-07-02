@@ -61,6 +61,23 @@ namespace INFSYS_Design.controllers
             }
         }
 
+        public ThongTinKhachHang(string maSoDinhDanh, string loaiMaSoDinhDanh, string email, int namSinh, string hoTen, string sdt, string diaChiThuongTru, int gioiTinh)
+        {
+            this.maSoDinhDanh = maSoDinhDanh;
+            this.loaiMaSoDinhDanh = loaiMaSoDinhDanh;
+            this.email = email;
+            this.namSinh = namSinh;
+            this.hoTen = hoTen;
+            this.sdt = sdt;
+            this.diaChiThuongTru = diaChiThuongTru;
+            this.gioiTinh = gioiTinh;
+        }
+
+        public ThongTinKhachHang(string text_ID, string text_loaiDinhDanh, string text_email, int namSinh, string text_tenKH, string text_diaChi, string text_gioiTinh)
+        {
+            this.namSinh = namSinh;
+        }
+
         public static List<ThongTinKhachHang> layDanhSachKhachHang()
         {
             List<ThongTinKhachHang> dataset = DB_ThongTinKhachHang.layDanhSachKhachHang();
@@ -82,7 +99,12 @@ namespace INFSYS_Design.controllers
         public static bool themKhachHang(ThongTinKhachHang kh)
         {
 
-            return DB_ThongTinKhachHang.themKhachHang(kh);
+            return DB_ThongTinKhachHang.themKhachHang(kh) == 1;
+        }
+        public static bool kiemTraKhachHang(ThongTinKhachHang kh)
+        {
+
+            return DB_ThongTinKhachHang.layTTKhachHang(kh) != null;
         }
     }
 }

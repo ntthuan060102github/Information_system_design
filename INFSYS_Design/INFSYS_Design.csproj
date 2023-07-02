@@ -57,6 +57,7 @@
     <Compile Include="controllers\NhanVien.cs" />
     <Compile Include="controllers\Phong.cs" />
     <Compile Include="controllers\TaiKhoan.cs" />
+    <Compile Include="controllers\HoaDon.cs" />
     <Compile Include="controllers\ThongTinKhachHang.cs" />
 	<Compile Include="controllers\YeuCauDatPhong.cs" />
 	<Compile Include="controllers\LichSuDatPhong.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="models\DB_NhanVien.cs" />
     <Compile Include="models\DB_Phong.cs" />
     <Compile Include="models\DB_TaiKhoan.cs" />
+    <Compile Include="models\DB_HoaDon.cs" />
     <Compile Include="models\DB_ThongTinKhachHang.cs" />
 	<Compile Include="models\DB_YeuCauDatPhong.cs" />
 	<Compile Include="models\DB_LichSuDatPhong.cs" />

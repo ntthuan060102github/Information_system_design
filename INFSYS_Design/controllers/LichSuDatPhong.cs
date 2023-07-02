@@ -56,16 +56,28 @@ namespace INFSYS_Design.controllers
                 this.thoiGianCheckin = data.ToString();
             }
         }
-        public static LichSuDatPhong layLichSuDatPhong(int maKH)
+
+        public LichSuDatPhong(string thoiGianTraPhongDuKien, string thoiGianDat ,string hinhThucThanhToan, int soTienDatCoc, int maYeuCau, string soPhong, string thoiGianCheckin)
+        {
+            this.thoiGianTraPhongDuKien = thoiGianTraPhongDuKien;
+            this.thoiGianDat = thoiGianDat;
+            this.hinhThucThanhToan = hinhThucThanhToan;
+            this.soTienDatCoc = soTienDatCoc;
+            this.maYeuCau = maYeuCau;
+            this.soPhong = soPhong;
+            this.thoiGianCheckin = thoiGianCheckin;
+        }
+
+        public static LichSuDatPhong layLichSuDatPhong(int soPhong, int maKH)
         {
 
-            return DB_LichSuDatPhong.layLichSuDatPhong(maKH);
+            return DB_LichSuDatPhong.layLichSuDatPhong(soPhong,maKH);
         }
 
         public static bool themLichSuDatPhong(LichSuDatPhong lsdp)
         {
 
-            return DB_LichSuDatPhong.themLichSuDatPhong(lsdp);
+            return DB_LichSuDatPhong.themLichSuDatPhong(lsdp) == 1;
         }
     }
 }

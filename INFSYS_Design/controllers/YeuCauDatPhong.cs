@@ -52,10 +52,25 @@ namespace INFSYS_Design.controllers
             }
         }
 
+        public YeuCauDatPhong(int soDemLuuTru, string ngayDen, string ngayYeuCau, string yeuCauDacBiet, int maKH, string loaiPhong)
+        {
+            this.soDemLuuTru = soDemLuuTru;
+            this.ngayDen = ngayDen;
+            this.ngayYeuCau = ngayYeuCau;
+            this.yeuCauDacBiet = yeuCauDacBiet;
+            this.maKH = maKH;
+            this.loaiPhong = loaiPhong;
+        }
+
+        public static YeuCauDatPhong layThongtinYeuCau(int maKH)
+        {
+            return DB_YeuCauDatPhong.layThongtinYeuCau(maKH);
+        }
+
         public static bool themYeuCauDatPhong(YeuCauDatPhong yc)
         {
 
-            return DB_YeuCauDatPhong.themYeuCauDatPhong(yc);
+            return DB_YeuCauDatPhong.themYeuCauDatPhong(yc) == 1;
         }
     }
 }
