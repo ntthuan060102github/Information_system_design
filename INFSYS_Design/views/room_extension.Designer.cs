@@ -352,10 +352,13 @@ namespace INFSYS_Design.views
             // dateTimePicker1
             // 
             this.dateTimePicker1.AllowDrop = true;
+            this.dateTimePicker1.Checked = false;
+            this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
             this.dateTimePicker1.Location = new System.Drawing.Point(94, 476);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 25;
+            this.dateTimePicker1.Value = new System.DateTime(2023, 7, 1, 0, 0, 0, 0);
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // submit_btn
@@ -367,6 +370,7 @@ namespace INFSYS_Design.views
             this.submit_btn.TabIndex = 26;
             this.submit_btn.Text = "Gia hạn";
             this.submit_btn.UseVisualStyleBackColor = true;
+            this.submit_btn.Click += new System.EventHandler(this.submit_btn_Click);
             // 
             // date_return_label
             // 
