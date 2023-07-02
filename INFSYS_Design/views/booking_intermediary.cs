@@ -18,9 +18,9 @@ namespace INFSYS_Design.views
         public GUI_DatPhong()
         {
             InitializeComponent();
-            List<LoaiPhong> lp = LoaiPhong.layDanhSachLoaiPhong();
-            
-            foreach (LoaiPhong typeroom in lp)
+            List<LoaiPhong> dsLoaiPhong = LoaiPhong.layDanhSachLoaiPhong();
+
+            foreach (LoaiPhong typeroom in dsLoaiPhong)
             {
                 this.dtgLoaiPhong.Rows.Add(
                     typeroom.maLoaiPhong,
@@ -30,16 +30,21 @@ namespace INFSYS_Design.views
                 );
             }
 
-            var typeRoom = this.dtgLoaiPhong.SelectedRows;
-            string type = typeRoom[0].ToString();
-
-            List<Phong> p = Phong.layDanhSachPhongTrongTheoLoaiPhong(type);
-            foreach (Phong room in p)
+            int loaiPhongColumnIndex = dtgLoaiPhong.Columns["MALOAIPHONG"].Index;
+            DataGridViewRow currentRow = dtgLoaiPhong.CurrentRow;
+            if(currentRow != null)
             {
-                this.dtgDSPhongTrong.Rows.Add(
-                    room.soPhong,
-                    room.loaiPhong
-                );
+                object value = currentRow.Cells[loaiPhongColumnIndex].Value;
+                string type = value.ToString();
+
+                List<Phong> p = Phong.layDanhSachPhongTrongTheoLoaiPhong(type);
+                foreach (Phong room in p)
+                {
+                    this.dtgDSPhongTrong.Rows.Add(
+                        room.soPhong,
+                        room.loaiPhong
+                    );
+                }
             }
 
         }
@@ -146,22 +151,7 @@ namespace INFSYS_Design.views
 
         private void tbLoaiPhong_TextChanged(object sender, EventArgs e)
         {
-            //List<LoaiPhong> dsLoaiPhong = DB_LoaiPhong.layDanhSachLoaiPhong();
 
-            //// Duyệt qua danh sách loại phòng
-            //foreach (LoaiPhong lp in dsLoaiPhong)
-            //{
-            //    // Lấy ra các giá trị của các trường bạn muốn hiển thị
-            //    string ma = lp.getMa();
-            //    string ten = lp.getTen();
-            //    decimal gia = lp.getGia();
-            //    // Tiếp tục với các trường khác nếu có
-
-            //    // Nối các giá trị của các trường thành một chuỗi
-            //    string loaiPhong = ma + " - " + ten + " - " + gia.ToString() + "\n";
-            //    // Gán cho textBox
-            //    tbLoaiPhong.AppendText(loaiPhong);
-            //}
         }
 
         private void btnBook_Click(object sender, EventArgs e)
@@ -203,6 +193,7 @@ namespace INFSYS_Design.views
                 string text_yeuCauDacBiet = this.tbYeuCauDacBiet.Text;
                 string text_hinhThucThanhToan = this.tbhinhThucThanhToan.Text;
                 int soTienDatCoc = int.Parse(this.tbSoTienDatCoc.Text);
+
                 string text_ngSinh = this.dtpNgaySinh.Value.ToString();
                 int namSinh = int.Parse(text_ngSinh.Substring(text_ngSinh.Length, -4));
                 string text_ngDen = this.dtpNgayDen.Value.ToString();
@@ -261,7 +252,17 @@ namespace INFSYS_Design.views
 
                 DanhSachCho kh_dsCho = new DanhSachCho("", ngayYeuCau, ngHetHan, nguoiThucHien, maYeuCau);
 
-                if (checkDSCho)
+                string soPhong = "1";
+                
+                int soPhongColumnIndex = dtgDSPhongTrong.Columns["SOPHONG"].Index;
+                DataGridViewRow currentRow = dtgDSPhongTrong.CurrentRow;
+                if (currentRow != null)
+                {
+                    object value = currentRow.Cells[soPhongColumnIndex].Value;
+                    soPhong = value.ToString();
+                }
+
+                if (checkDSCho || dtgDSPhongTrong == null)
                 {
                     if (DanhSachCho.themKHVaoDSCho(kh_dsCho))
                     {
@@ -285,12 +286,10 @@ namespace INFSYS_Design.views
                         return;
                     }
                 }
-                else
+                else if(dtgDSPhongTrong != null && currentRow !=null)
                 {
-                    var numberRoom = this.dtgDSPhongTrong.SelectedRows;
-                    string number_room = numberRoom[0].ToString();
 
-                    LichSuDatPhong ls = new LichSuDatPhong(text_tgCheckout,ngayYeuCau, text_hinhThucThanhToan, soTienDatCoc, maYeuCau, number_room, text_tgCheckin);
+                    LichSuDatPhong ls = new LichSuDatPhong(text_tgCheckout,ngayYeuCau, text_hinhThucThanhToan, soTienDatCoc, maYeuCau, soPhong);
                     if (LichSuDatPhong.themLichSuDatPhong(ls))
                     {
                         MessageBox.Show(

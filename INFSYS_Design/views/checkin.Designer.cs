@@ -39,9 +39,6 @@
             this.tbTenKH = new System.Windows.Forms.TextBox();
             this.tbSoPhong = new System.Windows.Forms.TextBox();
             this.dtgHistory = new System.Windows.Forms.DataGridView();
-            this.HOTEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SOPHONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.THOIGIANNHAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCheckin = new System.Windows.Forms.Button();
             this.customer_gender = new System.Windows.Forms.Label();
             this.customer_address = new System.Windows.Forms.Label();
@@ -50,6 +47,8 @@
             this.customer_year_of_birth = new System.Windows.Forms.Label();
             this.customer_id_num = new System.Windows.Forms.Label();
             this.customer_name = new System.Windows.Forms.Label();
+            this.HOTEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SOPHONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgHistory)).BeginInit();
             this.SuspendLayout();
@@ -178,32 +177,13 @@
             this.dtgHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgHistory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.HOTEN,
-            this.SOPHONG,
-            this.THOIGIANNHAN});
+            this.SOPHONG});
             this.dtgHistory.Dock = System.Windows.Forms.DockStyle.Left;
             this.dtgHistory.Location = new System.Drawing.Point(0, 221);
             this.dtgHistory.Name = "dtgHistory";
             this.dtgHistory.RowHeadersVisible = false;
             this.dtgHistory.Size = new System.Drawing.Size(418, 316);
             this.dtgHistory.TabIndex = 13;
-            // 
-            // HOTEN
-            // 
-            this.HOTEN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HOTEN.HeaderText = "Tên khách hàng";
-            this.HOTEN.Name = "HOTEN";
-            // 
-            // SOPHONG
-            // 
-            this.SOPHONG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SOPHONG.HeaderText = "Số phòng";
-            this.SOPHONG.Name = "SOPHONG";
-            // 
-            // THOIGIANNHAN
-            // 
-            this.THOIGIANNHAN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.THOIGIANNHAN.HeaderText = "Thời gian nhận phòng";
-            this.THOIGIANNHAN.Name = "THOIGIANNHAN";
             // 
             // btnCheckin
             // 
@@ -301,6 +281,18 @@
             this.customer_name.Text = "Võ Ngọc Sơn";
             this.customer_name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // HOTEN
+            // 
+            this.HOTEN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.HOTEN.HeaderText = "Tên khách hàng";
+            this.HOTEN.Name = "HOTEN";
+            // 
+            // SOPHONG
+            // 
+            this.SOPHONG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SOPHONG.HeaderText = "Số phòng";
+            this.SOPHONG.Name = "SOPHONG";
+            // 
             // GUI_Checkin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,9 +330,6 @@
         private System.Windows.Forms.TextBox tbTenKH;
         private System.Windows.Forms.TextBox tbSoPhong;
         private System.Windows.Forms.DataGridView dtgHistory;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HOTEN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SOPHONG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn THOIGIANNHAN;
         private System.Windows.Forms.Label label_customer;
         private System.Windows.Forms.Label label_history;
         private System.Windows.Forms.Button btnCheckin;
@@ -351,5 +340,7 @@
         private System.Windows.Forms.Label customer_year_of_birth;
         private System.Windows.Forms.Label customer_id_num;
         private System.Windows.Forms.Label customer_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HOTEN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SOPHONG;
     }
 }

@@ -14,10 +14,11 @@ namespace INFSYS_Design.models
     {
         public static YeuCauDatPhong layThongtinYeuCau(int maKH)
         {
+            string makh = maKH.ToString();
             DBConn conn = new DBConn();
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.CommandType = System.Data.CommandType.Text;
-            sqlCmd.CommandText = $"SELECT * FROM YEUCAUDATPHONG WHERE MAKHACHHANG={maKH}";
+            sqlCmd.CommandText = $"SELECT * FROM YEUCAUDATPHONG WHERE MAKHACHHANG={makh}";
             sqlCmd.Connection = conn.conn;
             string[] columnNames = { "soDemLuuTru", "ngayDen", "ngayYeuCau", "yeuCauDacBiet", "maKH", "loaiPhong" };
 
@@ -43,7 +44,7 @@ namespace INFSYS_Design.models
             DBConn conn = new DBConn();
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.CommandType = System.Data.CommandType.Text;
-            sqlCmd.CommandText = "INSERT INTO YeuCauDatPhong (SODEMLUUTRU, NGAYDEN, NGAYYEUCAU, YEUCAUDACBIET, MAKH, LOAIPHONG) VALUES (@soDemLuuTru, @ngayDen, @ngayYeuCau, @yeuCauDacBiet, @maKH, @loaiPhong)";
+            sqlCmd.CommandText = "INSERT INTO YEUCAUDATPHONG (SODEMLUUTRU, NGAYDEN, NGAYYEUCAU, YEUCAUDACBIET, MAKH, LOAIPHONG) VALUES (@soDemLuuTru, @ngayDen, @ngayYeuCau, @yeuCauDacBiet, @maKH, @loaiPhong)";
             sqlCmd.Connection = conn.conn;
 
             sqlCmd.Parameters.AddWithValue("@soDemLuuTru", yc.soDemLuuTru);

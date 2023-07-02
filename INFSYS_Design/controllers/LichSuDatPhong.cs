@@ -57,7 +57,7 @@ namespace INFSYS_Design.controllers
             }
         }
 
-        public LichSuDatPhong(string thoiGianTraPhongDuKien, string thoiGianDat ,string hinhThucThanhToan, int soTienDatCoc, int maYeuCau, string soPhong, string thoiGianCheckin)
+        public LichSuDatPhong(string thoiGianTraPhongDuKien, string thoiGianDat ,string hinhThucThanhToan, int soTienDatCoc, int maYeuCau, string soPhong)
         {
             this.thoiGianTraPhongDuKien = thoiGianTraPhongDuKien;
             this.thoiGianDat = thoiGianDat;
@@ -65,7 +65,6 @@ namespace INFSYS_Design.controllers
             this.soTienDatCoc = soTienDatCoc;
             this.maYeuCau = maYeuCau;
             this.soPhong = soPhong;
-            this.thoiGianCheckin = thoiGianCheckin;
         }
 
         public static LichSuDatPhong layLichSuDatPhong(int soPhong, int maKH)
@@ -79,5 +78,11 @@ namespace INFSYS_Design.controllers
 
             return DB_LichSuDatPhong.themLichSuDatPhong(lsdp) == 1;
         }
+
+        public static bool capNhatLichSuDatPhong(string soPhong, int maYeuCau)
+        {
+            return DB_LichSuDatPhong.capNhatLichSuDatPhong(soPhong, maYeuCau) == 1;
+        }
+
     }
 }

@@ -56,8 +56,7 @@ namespace INFSYS_Design.views
 
             this.dtgHistory.Rows.Add(
                     ttkh.hoTen,
-                    ls.soPhong,
-                    ls.thoiGianCheckin
+                    ls.soPhong
             );
 
 
@@ -68,6 +67,32 @@ namespace INFSYS_Design.views
             this.customer_phone_num.Text = $"SĐT: {ttkh.sdt}";
             this.customer_address.Text = $"Địa chỉ thường trú: {ttkh.diaChiThuongTru}";
             this.customer_gender.Text = $"Giới tính: {ttkh.gioiTinh}";
+
+            YeuCauDatPhong yc_get = YeuCauDatPhong.layThongtinYeuCau(ttkh.ma);
+
+            int maYeuCau = yc_get.ma;
+
+            if (LichSuDatPhong.capNhatLichSuDatPhong(ls.soPhong, maYeuCau))
+            {
+                MessageBox.Show(
+                    "Thành công!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+                this.Close();
+                return;
+            }
+            else
+            {
+                MessageBox.Show(
+                    "Thất bại!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+                return;
+            }
         }
     }
 }
