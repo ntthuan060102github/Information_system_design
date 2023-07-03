@@ -41,6 +41,8 @@ namespace INFSYS_Design.views
             this.btn_view_detail = new System.Windows.Forms.Button();
             this.add_room_btn = new System.Windows.Forms.Button();
             this.btn_delete_room = new System.Windows.Forms.Button();
+            this.btn_checkin = new System.Windows.Forms.Button();
+            this.btn_checkout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,11 +143,32 @@ namespace INFSYS_Design.views
             this.btn_delete_room.UseVisualStyleBackColor = false;
             this.btn_delete_room.Click += new System.EventHandler(this.btn_delete_room_Click);
             // 
+            // btn_checkin
+            // 
+            this.btn_checkin.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_checkin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_checkin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            resources.ApplyResources(this.btn_checkin, "btn_checkin");
+            this.btn_checkin.Name = "btn_checkin";
+            this.btn_checkin.UseVisualStyleBackColor = false;
+            this.btn_checkin.Click += new System.EventHandler(this.btn_checkin_Click);
+            // 
+            // btn_checkout
+            // 
+            this.btn_checkout.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_checkout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_checkout.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            resources.ApplyResources(this.btn_checkout, "btn_checkout");
+            this.btn_checkout.Name = "btn_checkout";
+            this.btn_checkout.UseVisualStyleBackColor = false;
+            // 
             // GUI_ListOfRooms
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.btn_checkout);
+            this.Controls.Add(this.btn_checkin);
             this.Controls.Add(this.btn_delete_room);
             this.Controls.Add(this.add_room_btn);
             this.Controls.Add(this.btn_view_detail);
@@ -170,5 +193,7 @@ namespace INFSYS_Design.views
         private System.Windows.Forms.Button add_room_btn;
         private System.Windows.Forms.Button btn_delete_room;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
+        private System.Windows.Forms.Button btn_checkin;
+        private System.Windows.Forms.Button btn_checkout;
     }
 }

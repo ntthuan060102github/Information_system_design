@@ -32,6 +32,7 @@ namespace INFSYS_Design.views
             this.hello_label = new System.Windows.Forms.Label();
             this.btn_customer_list = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.checkin_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // hello_label
@@ -72,12 +73,25 @@ namespace INFSYS_Design.views
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // checkin_btn
+            // 
+            this.checkin_btn.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.checkin_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.checkin_btn.Location = new System.Drawing.Point(374, 266);
+            this.checkin_btn.Name = "checkin_btn";
+            this.checkin_btn.Size = new System.Drawing.Size(259, 46);
+            this.checkin_btn.TabIndex = 4;
+            this.checkin_btn.Text = "Checkin";
+            this.checkin_btn.UseVisualStyleBackColor = false;
+            this.checkin_btn.Click += new System.EventHandler(this.checkin_btn_Click);
+            // 
             // GUI_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1006, 529);
+            this.Controls.Add(this.checkin_btn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_customer_list);
             this.Controls.Add(this.hello_label);
@@ -95,5 +109,6 @@ namespace INFSYS_Design.views
         private System.Windows.Forms.Label hello_label;
         private System.Windows.Forms.Button btn_customer_list;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button checkin_btn;
     }
 }

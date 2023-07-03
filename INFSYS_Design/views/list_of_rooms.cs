@@ -136,5 +136,10 @@ namespace INFSYS_Design.views
                 );
             }
         }
+
+        private void btn_checkin_Click(object sender, EventArgs e)
+        {
+            GUI_Checkin checkinPage = new GUI_Checkin();
+        }
     }
 }
