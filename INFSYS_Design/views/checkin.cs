@@ -68,7 +68,7 @@ namespace INFSYS_Design.views
             this.customer_address.Text = $"Địa chỉ thường trú: {ttkh.diaChiThuongTru}";
             this.customer_gender.Text = $"Giới tính: {ttkh.gioiTinh}";
 
-            YeuCauDatPhong yc_get = YeuCauDatPhong.layThongtinYeuCau(ttkh.ma);
+            YeuCauDatPhong yc_get = YeuCauDatPhong.layThongtinYeuCau(ttkh.ma, soPhong);
 
             int maYeuCau = yc_get.ma;
 
