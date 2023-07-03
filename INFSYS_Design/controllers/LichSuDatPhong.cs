@@ -67,10 +67,10 @@ namespace INFSYS_Design.controllers
             this.soPhong = soPhong;
         }
 
-        public static LichSuDatPhong layLichSuDatPhong(int soPhong, int maKH)
+        public static List<LichSuDatPhong> layLichSuDatPhong(int soPhong)
         {
 
-            return DB_LichSuDatPhong.layLichSuDatPhong(soPhong,maKH);
+            return DB_LichSuDatPhong.layLichSuDatPhong(soPhong);
         }
 
         public static bool themLichSuDatPhong(LichSuDatPhong lsdp)

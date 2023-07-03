@@ -251,67 +251,68 @@ namespace INFSYS_Design.views
                 {
                     object value = currentRow.Cells[soPhongColumnIndex].Value;
                     soPhong = value.ToString();
-                }
+                
 
-                int sp = int.Parse(soPhong);
+                    int sp = int.Parse(soPhong);
 
-                YeuCauDatPhong yc = new YeuCauDatPhong(1, text_ngDen, ngayYeuCau, text_yeuCauDacBiet, kh_get.ma, type);
+                    YeuCauDatPhong yc = new YeuCauDatPhong(1, text_ngDen, ngayYeuCau, text_yeuCauDacBiet, kh_get.ma, type);
 
-                YeuCauDatPhong yc_get = YeuCauDatPhong.layThongtinYeuCau(kh_get.ma, sp);
+                    YeuCauDatPhong yc_get = YeuCauDatPhong.layThongtinYeuCau(kh_get.ma, sp);
 
-                int maYeuCau = yc_get.ma;
+                    int maYeuCau = yc_get.ma;
 
-                DanhSachCho kh_dsCho = new DanhSachCho("", ngayYeuCau, ngHetHan, nguoiThucHien, maYeuCau);
-          
+                    DanhSachCho kh_dsCho = new DanhSachCho("", ngayYeuCau, ngHetHan, nguoiThucHien, maYeuCau);
+                
 
-                if (checkDSCho || dtgDSPhongTrong == null)
-                {
-                    if (DanhSachCho.themKHVaoDSCho(kh_dsCho))
+                    if (checkDSCho || dtgDSPhongTrong == null)
                     {
-                        MessageBox.Show(
-                            "Thành công!",
-                            "Thông báo!",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Information
-                        );
-                        this.Close();
-                        return;
+                        if (DanhSachCho.themKHVaoDSCho(kh_dsCho))
+                        {
+                            MessageBox.Show(
+                                "Thành công!",
+                                "Thông báo!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information
+                            );
+                            this.Close();
+                            return;
+                        }
+                        else
+                        {
+                            MessageBox.Show(
+                                "Thất bại!",
+                                "Thông báo!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error
+                            );
+                            return;
+                        }
                     }
-                    else
+                    else if(dtgDSPhongTrong != null && currentRow !=null)
                     {
-                        MessageBox.Show(
-                            "Thất bại!",
-                            "Thông báo!",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error
-                        );
-                        return;
-                    }
-                }
-                else if(dtgDSPhongTrong != null && currentRow !=null)
-                {
 
-                    LichSuDatPhong ls = new LichSuDatPhong(text_tgCheckout,ngayYeuCau, text_hinhThucThanhToan, soTienDatCoc, maYeuCau, soPhong);
-                    if (LichSuDatPhong.themLichSuDatPhong(ls))
-                    {
-                        MessageBox.Show(
-                            "Thành công!",
-                            "Thông báo!",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Information
-                        );
-                        this.Close();
-                        return;
-                    }
-                    else
-                    {
-                        MessageBox.Show(
-                            "Thất bại!",
-                            "Thông báo!",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error
-                        );
-                        return;
+                        LichSuDatPhong ls = new LichSuDatPhong(text_tgCheckout,ngayYeuCau, text_hinhThucThanhToan, soTienDatCoc, maYeuCau, soPhong);
+                        if (LichSuDatPhong.themLichSuDatPhong(ls))
+                        {
+                            MessageBox.Show(
+                                "Thành công!",
+                                "Thông báo!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information
+                            );
+                            this.Close();
+                            return;
+                        }
+                        else
+                        {
+                            MessageBox.Show(
+                                "Thất bại!",
+                                "Thông báo!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error
+                            );
+                            return;
+                        }
                     }
                 }
 

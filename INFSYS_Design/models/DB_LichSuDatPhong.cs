@@ -12,29 +12,30 @@ namespace INFSYS_Design.models
 {
     class DB_LichSuDatPhong
     {
-        public static LichSuDatPhong layLichSuDatPhong(int soPhong, int maKH)
+        public static List<LichSuDatPhong> layLichSuDatPhong(int soPhong)
         {
             DBConn conn = new DBConn();
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.CommandType = System.Data.CommandType.Text;
-            sqlCmd.CommandText = $"SELECT * FROM LICHSUDATPHONG WHERE MAKHACHHANG={maKH} AND SOPHONG = {soPhong}";
+            sqlCmd.CommandText = $"SELECT * FROM LICHSUDATPHONG WHERE SOPHONG = {soPhong}";
             sqlCmd.Connection = conn.conn;
             string[] columnNames = { "ma", "thoiGianTraPhongDuKien", "thoiGianDat", "hinhThucThanhToan", "soTienDatCoc", "maYeuCau", "soPhong", "thoiGianCheckin"};
 
             SqlDataReader res = sqlCmd.ExecuteReader();
 
+            List<LichSuDatPhong> ds = new List<LichSuDatPhong>();
             while (res.Read())
             {
-                Dictionary<string, object> customerInfo = new Dictionary<string, object>();
+                Dictionary<string, object> lichSu = new Dictionary<string, object>();
                 foreach (string colName in columnNames)
                 {
-                    customerInfo.Add(colName.ToUpper(), res.GetValue(res.GetOrdinal(colName.ToUpper())));
+                    lichSu.Add(colName.ToUpper(), res.GetValue(res.GetOrdinal(colName.ToUpper())));
                 }
-                LichSuDatPhong customer = new LichSuDatPhong(customerInfo);
-                return customer;
+                LichSuDatPhong lsdp = new LichSuDatPhong(lichSu);
+                ds.Add(lsdp);
             }
 
-            return null;
+            return ds;
         }
 
         public static int themLichSuDatPhong(LichSuDatPhong lsdp)

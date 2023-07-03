@@ -1,4 +1,5 @@
 ﻿using INFSYS_Design.controllers;
+using INFSYS_Design.models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -52,12 +53,14 @@ namespace INFSYS_Design.views
 
             int maKH = ttkh.ma;
 
-            LichSuDatPhong ls = LichSuDatPhong.layLichSuDatPhong(soPhong, maKH);
-
-            this.dtgHistory.Rows.Add(
-                    ttkh.hoTen,
-                    ls.soPhong
-            );
+            List<LichSuDatPhong> ls = LichSuDatPhong.layLichSuDatPhong(soPhong);
+            foreach (LichSuDatPhong lsdp in ls)
+                {
+                    this.dtgHistory.Rows.Add(
+                        ttkh.hoTen,
+                        lsdp.soPhong
+                );
+            }
 
 
             this.customer_name.Text = $"{ttkh.hoTen}";
@@ -72,26 +75,34 @@ namespace INFSYS_Design.views
 
             int maYeuCau = yc_get.ma;
 
-            if (LichSuDatPhong.capNhatLichSuDatPhong(ls.soPhong, maYeuCau))
+            int soPhongColumnIndex = dtgHistory.Columns["SOPHONG"].Index;
+            DataGridViewRow currentRow = dtgHistory.CurrentRow;
+            if (currentRow != null)
             {
-                MessageBox.Show(
-                    "Thành công!",
-                    "Thông báo!",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information
-                );
-                this.Close();
-                return;
-            }
-            else
-            {
-                MessageBox.Show(
-                    "Thất bại!",
-                    "Thông báo!",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error
-                );
-                return;
+                object value = currentRow.Cells[soPhongColumnIndex].Value;
+                string sophong = value.ToString();
+
+                    if (LichSuDatPhong.capNhatLichSuDatPhong(sophong,maYeuCau))
+                {
+                    MessageBox.Show(
+                        "Thành công!",
+                        "Thông báo!",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
+                    this.Close();
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show(
+                        "Thất bại!",
+                        "Thông báo!",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
+                    return;
+                }
             }
         }
     }
