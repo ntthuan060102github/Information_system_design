@@ -1,6 +1,7 @@
 ﻿using INFSYS_Design.models;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,5 +45,26 @@ namespace INFSYS_Design.controllers
         {
             return DB_DichVu.layDanhSachDichVu();
         }
+
+        public static DichVu layThongTinDichVu(int ma)
+        {
+            return DB_DichVu.layThongTinDichVu(ma);
+        }
+        public static bool themDichVu(string tenDichVu, string moTa, string loaiDichVu, int gia)
+        {
+            return DB_DichVu.themDichVu(tenDichVu, moTa, loaiDichVu, gia) == 1;
+        }
+
+        public static bool xoaDichVu(int ma)
+        {
+            return 0 != DB_DichVu.xoaDichVu(ma);
+        }
+
+        public static bool suaDichVu(int ma, string tenDichVu, string moTa, string loaiDichVu, int gia)
+        {
+            return DB_DichVu.suaDichVu(ma, tenDichVu, moTa, loaiDichVu, gia) == 1;
+        }
+
+        
     }
 }

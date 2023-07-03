@@ -58,5 +58,19 @@ namespace INFSYS_Design.models
             }
             return null;
         }
+        public static int themHoaDon(HoaDon hd)
+        {
+            DBConn conn = new DBConn();
+            SqlCommand sqlCmd = new SqlCommand
+            {
+                CommandType = System.Data.CommandType.Text,
+                CommandText = $@"
+                INSERT INTO HOADON(THOIGIANTAO, VAT, CHIPHICHUATHUE, SOTIENNHAN, MACHECKOUT)
+                VALUES('{hd.thoiGianTao}', {hd.VAT}, {hd.chiPhiChuaThue},{hd.soTienNhan}, {hd.maCheckout})",
+                Connection = conn.conn
+            };
+
+            return sqlCmd.ExecuteNonQuery();
+        }
     }
 }

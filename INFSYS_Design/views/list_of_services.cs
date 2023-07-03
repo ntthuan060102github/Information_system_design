@@ -1,4 +1,5 @@
-﻿using System;
+﻿using INFSYS_Design.controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,18 @@ namespace INFSYS_Design.views
     {
         public GUI_ListOfServices()
         {
-            InitializeComponent();
+            InitializeComponent();            
+            List<DichVu> list_of_services = DichVu.layDanhSachDichVu();
+            foreach (DichVu service in list_of_services)
+            {
+                this.dataGridView1.Rows.Add(
+                    service.ma,
+                    service.tenDichVu,
+                    service.moTa,
+                    service.loaiDichVu,
+                    service.gia
+                );
+            }
         }
 
         private void add_service_btn_Click(object sender, EventArgs e)
@@ -26,19 +38,68 @@ namespace INFSYS_Design.views
 
         private void update_service_btn_Click(object sender, EventArgs e)
         {
-            GUI_UpdateService updateService = new GUI_UpdateService();
-            updateService.ShowDialog();
-            updateService.Dispose();
+            var selectedRow = this.dataGridView1.SelectedRows;
+            if (selectedRow.Count == 0)
+            {
+                MessageBox.Show(
+                    "Vui lòng chọn dịch vụ cần sửa!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+            int idx = this.dataGridView1.SelectedRows[0].Index;
+            int maDichVu = int.Parse(this.dataGridView1.Rows[idx].Cells[0].Value.ToString());
+            GUI_UpdateService updateService = new GUI_UpdateService(maDichVu);
+            Program.previousForm.Add(this);
+            updateService.Show();
+            this.Hide();
         }
 
         private void delete_service_btn_Click(object sender, EventArgs e)
         {
+            var selectedRow = this.dataGridView1.SelectedRows;
+            if (selectedRow.Count == 0)
+            {
+                MessageBox.Show(
+                    "Vui lòng chọn dịch vụ cần xóa!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+            int idx = this.dataGridView1.SelectedRows[0].Index;
 
+            int ma = int.Parse(this.dataGridView1.Rows[idx].Cells[0].Value.ToString());
+            if (DichVu.xoaDichVu(ma))
+            {
+                MessageBox.Show(
+                    "Thành công!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+                this.dataGridView1.Rows.RemoveAt(idx);
+            }
+            else
+            {
+                MessageBox.Show(
+                    "Thất bại!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+            }
         }
 
         private void back_btn_Click(object sender, EventArgs e)
         {
-            //Program.previousForm.Show();
+            int idx = Program.previousForm.Count - 1;
+            Form prvForm = Program.previousForm[idx];
+            Program.previousForm.RemoveAt(idx);
+            prvForm.Show();
             this.Hide();
         }
 

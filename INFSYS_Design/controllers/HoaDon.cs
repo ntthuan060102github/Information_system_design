@@ -55,5 +55,10 @@ namespace INFSYS_Design.controllers
         {
             return DB_HoaDon.layDanhSachHoaDon();
         }
+
+        public static bool themHoaDon(HoaDon hd)
+        {
+            return DB_HoaDon.themHoaDon(hd) == 1;
+        }
     }
 }
