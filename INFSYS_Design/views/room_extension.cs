@@ -13,10 +13,12 @@ namespace INFSYS_Design.views
 {
     public partial class GUI_RoomExtension : Form
     {
+        public int soPhong;
         public GUI_RoomExtension(int soPhong)
         {
             InitializeComponent();
             Phong room = Phong.layThongTinPhong(soPhong);
+            this.soPhong = soPhong;
             LoaiPhong roomType = LoaiPhong.layThongTinLoaiPhong(room.loaiPhong);
             ThongTinKhachHang cusomterInfo = Phong.layThongTinHangDangThuePhong(soPhong);
             List<DanhSachCho> waitingList = DanhSachCho.layDanhlayDanhSachTheoTheoLoaiPhong(room.loaiPhong);
@@ -115,7 +117,10 @@ namespace INFSYS_Design.views
 
         private void submit_btn_Click(object sender, EventArgs e)
         {
-
+            ThongTinKhachHang cusomterInfo = Phong.layThongTinHangDangThuePhong(this.soPhong);
+            YeuCauDatPhong yeuCauDatPhong = YeuCauDatPhong.layThongtinYeuCau(cusomterInfo.ma, this.soPhong);
+            DateTime thoiGianGiaHan = this.dateTimePicker1.Value;
+            
         }
     }
 }

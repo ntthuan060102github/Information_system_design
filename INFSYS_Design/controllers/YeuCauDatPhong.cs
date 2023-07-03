@@ -62,9 +62,9 @@ namespace INFSYS_Design.controllers
             this.loaiPhong = loaiPhong;
         }
 
-        public static YeuCauDatPhong layThongtinYeuCau(int maKH)
+        public static YeuCauDatPhong layThongtinYeuCau(int maKH, int soPhong)
         {
-            return DB_YeuCauDatPhong.layThongtinYeuCau(maKH);
+            return DB_YeuCauDatPhong.layThongtinYeuCau(maKH, soPhong);
         }
 
         public static bool themYeuCauDatPhong(YeuCauDatPhong yc)

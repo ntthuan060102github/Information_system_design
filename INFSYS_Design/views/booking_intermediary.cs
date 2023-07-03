@@ -243,17 +243,8 @@ namespace INFSYS_Design.views
                 int nguoiThucHien = Program.currentUserId;
 
                 ThongTinKhachHang kh_get = ThongTinKhachHang.layThongTinKhachHangTheoTen(text_tenKH);
-
-                YeuCauDatPhong yc = new YeuCauDatPhong(1, text_ngDen, ngayYeuCau, text_yeuCauDacBiet, kh_get.ma, type);
-
-                YeuCauDatPhong yc_get = YeuCauDatPhong.layThongtinYeuCau(kh_get.ma);
-
-                int maYeuCau = yc_get.ma;
-
-                DanhSachCho kh_dsCho = new DanhSachCho("", ngayYeuCau, ngHetHan, nguoiThucHien, maYeuCau);
-
                 string soPhong = "1";
-                
+
                 int soPhongColumnIndex = dtgDSPhongTrong.Columns["SOPHONG"].Index;
                 DataGridViewRow currentRow = dtgDSPhongTrong.CurrentRow;
                 if (currentRow != null)
@@ -261,6 +252,17 @@ namespace INFSYS_Design.views
                     object value = currentRow.Cells[soPhongColumnIndex].Value;
                     soPhong = value.ToString();
                 }
+
+                int sp = int.Parse(soPhong);
+
+                YeuCauDatPhong yc = new YeuCauDatPhong(1, text_ngDen, ngayYeuCau, text_yeuCauDacBiet, kh_get.ma, type);
+
+                YeuCauDatPhong yc_get = YeuCauDatPhong.layThongtinYeuCau(kh_get.ma, sp);
+
+                int maYeuCau = yc_get.ma;
+
+                DanhSachCho kh_dsCho = new DanhSachCho("", ngayYeuCau, ngHetHan, nguoiThucHien, maYeuCau);
+          
 
                 if (checkDSCho || dtgDSPhongTrong == null)
                 {
