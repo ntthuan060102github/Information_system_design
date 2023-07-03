@@ -12,20 +12,29 @@ namespace INFSYS_Design.models
 {
     class DB_YeuCauDatPhong
     {
-        public static YeuCauDatPhong layThongtinYeuCau(int maKH)
+        public static YeuCauDatPhong layThongtinYeuCau(int maKH, int soPhong)
         {
             string makh = maKH.ToString();
             DBConn conn = new DBConn();
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.CommandType = System.Data.CommandType.Text;
-            sqlCmd.CommandText = $"SELECT * FROM YEUCAUDATPHONG WHERE MAKHACHHANG={makh}";
+            sqlCmd.CommandText = $@"
+                SELECT * 
+                FROM YEUCAUDATPHONG
+                WHERE MAKHACHHANG={makh}
+                AND MA IN (
+                    SELECT MAYEUCAU
+                    FROM LICHSUDATPHONG
+                    WHERE SOPHONG = {soPhong}
+                )
+            ";
             sqlCmd.Connection = conn.conn;
             string[] columnNames = { "soDemLuuTru", "ngayDen", "ngayYeuCau", "yeuCauDacBiet", "maKH", "loaiPhong" };
 
             SqlDataReader res = sqlCmd.ExecuteReader();
 
 
-            while (res.Read())
+            if (res.Read())
             {
                 Dictionary<string, object> requestInfo = new Dictionary<string, object>();
                 foreach (string colName in columnNames)
