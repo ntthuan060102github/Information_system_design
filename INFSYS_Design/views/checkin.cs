@@ -14,7 +14,7 @@ namespace INFSYS_Design.views
 {
     public partial class GUI_Checkin : Form
     {
-        public GUI_Checkin()
+        public GUI_Checkin(int maDatPhong)
         {
             InitializeComponent();
         }
@@ -92,6 +92,11 @@ namespace INFSYS_Design.views
                 );
                 return;
             }
+        }
+
+        private void customer_name_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

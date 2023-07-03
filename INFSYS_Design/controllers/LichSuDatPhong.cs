@@ -83,6 +83,6 @@ namespace INFSYS_Design.controllers
         {
             return DB_LichSuDatPhong.capNhatLichSuDatPhong(soPhong, maYeuCau) == 1;
         }
-
+        public static int lay
     }
 }

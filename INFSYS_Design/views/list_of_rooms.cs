@@ -139,6 +139,21 @@ namespace INFSYS_Design.views
 
         private void btn_checkin_Click(object sender, EventArgs e)
         {
+            var selectedRow = this.dataGridView1.SelectedRows;
+            if (selectedRow.Count == 0)
+            {
+                MessageBox.Show(
+                    "Vui lòng chọn phòng cần checkin!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+            int idx = this.dataGridView1.SelectedRows[0].Index;
+
+            int soPhong = int.Parse(this.dataGridView1.Rows[idx].Cells[0].Value.ToString());
+            
             GUI_Checkin checkinPage = new GUI_Checkin();
         }
     }
