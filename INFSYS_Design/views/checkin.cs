@@ -52,8 +52,9 @@ namespace INFSYS_Design.views
             ThongTinKhachHang ttkh = ThongTinKhachHang.layThongTinKhachHangTheoTen(tenKH);
 
             int maKH = ttkh.ma;
+            YeuCauDatPhong yc_get = YeuCauDatPhong.layThongtinYeuCau(ttkh.ma, soPhong);
 
-            List<LichSuDatPhong> ls = LichSuDatPhong.layLichSuDatPhong(soPhong);
+            List<LichSuDatPhong> ls = LichSuDatPhong.layLichSuDatPhong(yc_get.ma);
             foreach (LichSuDatPhong lsdp in ls)
                 {
                     this.dtgHistory.Rows.Add(
@@ -70,8 +71,6 @@ namespace INFSYS_Design.views
             this.customer_phone_num.Text = $"SĐT: {ttkh.sdt}";
             this.customer_address.Text = $"Địa chỉ thường trú: {ttkh.diaChiThuongTru}";
             this.customer_gender.Text = $"Giới tính: {ttkh.gioiTinh}";
-
-            YeuCauDatPhong yc_get = YeuCauDatPhong.layThongtinYeuCau(ttkh.ma, soPhong);
 
             int maYeuCau = yc_get.ma;
 

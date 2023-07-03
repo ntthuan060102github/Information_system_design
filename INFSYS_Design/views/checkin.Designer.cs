@@ -66,7 +66,7 @@
             this.panel1.Controls.Add(this.tbSoPhong);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1344, 272);
             this.panel1.TabIndex = 12;
@@ -86,7 +86,6 @@
             this.label_customer.TabIndex = 20;
             this.label_customer.Text = "THÔNG TIN KHÁCH HÀNG";
             this.label_customer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            //this.label_customer.Click += new System.EventHandler(this.label_customer_Click);
             // 
             // label_history
             // 
@@ -131,7 +130,7 @@
             this.btnCheck.AutoSize = true;
             this.btnCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheck.Location = new System.Drawing.Point(797, 134);
-            this.btnCheck.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCheck.Margin = new System.Windows.Forms.Padding(4);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(165, 37);
             this.btnCheck.TabIndex = 16;
@@ -160,7 +159,7 @@
             this.btnReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturn.ForeColor = System.Drawing.Color.Red;
             this.btnReturn.Location = new System.Drawing.Point(16, 15);
-            this.btnReturn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReturn.Margin = new System.Windows.Forms.Padding(4);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(117, 44);
             this.btnReturn.TabIndex = 14;
@@ -170,7 +169,7 @@
             // tbTenKH
             // 
             this.tbTenKH.Location = new System.Drawing.Point(535, 162);
-            this.tbTenKH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbTenKH.Margin = new System.Windows.Forms.Padding(4);
             this.tbTenKH.Name = "tbTenKH";
             this.tbTenKH.Size = new System.Drawing.Size(195, 22);
             this.tbTenKH.TabIndex = 13;
@@ -178,7 +177,7 @@
             // tbSoPhong
             // 
             this.tbSoPhong.Location = new System.Drawing.Point(535, 121);
-            this.tbSoPhong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbSoPhong.Margin = new System.Windows.Forms.Padding(4);
             this.tbSoPhong.Name = "tbSoPhong";
             this.tbSoPhong.Size = new System.Drawing.Size(96, 22);
             this.tbSoPhong.TabIndex = 12;
@@ -191,7 +190,7 @@
             this.SOPHONG});
             this.dtgHistory.Dock = System.Windows.Forms.DockStyle.Left;
             this.dtgHistory.Location = new System.Drawing.Point(0, 272);
-            this.dtgHistory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgHistory.Margin = new System.Windows.Forms.Padding(4);
             this.dtgHistory.Name = "dtgHistory";
             this.dtgHistory.RowHeadersVisible = false;
             this.dtgHistory.RowHeadersWidth = 51;
@@ -219,7 +218,7 @@
             this.btnCheckin.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnCheckin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckin.Location = new System.Drawing.Point(557, 625);
-            this.btnCheckin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCheckin.Margin = new System.Windows.Forms.Padding(4);
             this.btnCheckin.Name = "btnCheckin";
             this.btnCheckin.Size = new System.Drawing.Size(787, 36);
             this.btnCheckin.TabIndex = 14;
@@ -324,7 +323,7 @@
             this.Controls.Add(this.btnCheckin);
             this.Controls.Add(this.dtgHistory);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GUI_Checkin";
             this.Text = "checkin";
             this.Load += new System.EventHandler(this.checkin_Load);

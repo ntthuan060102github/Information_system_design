@@ -43,7 +43,11 @@ namespace INFSYS_Design.controllers
 
         static public bool themLichSuGiaHan(int maDatPhong, DateTime thoiGianGiaHan)
         {
-
+            if (thoiGianGiaHan <= DateTime.Now)
+            {
+                return false;
+            }
+            return 1 == DB_LichSuGiaHan.themLichSuGiaHan(maDatPhong, thoiGianGiaHan.ToString());
         }
     }
 }

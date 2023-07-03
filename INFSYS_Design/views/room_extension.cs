@@ -117,10 +117,29 @@ namespace INFSYS_Design.views
 
         private void submit_btn_Click(object sender, EventArgs e)
         {
-            ThongTinKhachHang cusomterInfo = Phong.layThongTinHangDangThuePhong(this.soPhong);
-            YeuCauDatPhong yeuCauDatPhong = YeuCauDatPhong.layThongtinYeuCau(cusomterInfo.ma, this.soPhong);
+            ThongTinKhachHang customerInfo = Phong.layThongTinHangDangThuePhong(this.soPhong);
+            YeuCauDatPhong yeuCauDatPhong = YeuCauDatPhong.layThongtinYeuCau(customerInfo.ma, this.soPhong);
+            LichSuDatPhong lichSuDatPhong = LichSuDatPhong.layLichSuDatPhong(yeuCauDatPhong.ma);
             DateTime thoiGianGiaHan = this.dateTimePicker1.Value;
             
+            if(!LichSuGiaHan.themLichSuGiaHan(lichSuDatPhong.ma, thoiGianGiaHan))
+            {
+                MessageBox.Show(
+                    "Thất bại!",
+                    "Thất bại!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+            }
+            else
+            {
+                MessageBox.Show(
+                    "Thành công!",
+                    "Thành công!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+            }
         }
     }
 }
