@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using INFSYS_Design.controllers;
 using System.Data.SqlClient;
+using System.Windows.Documents;
 
 namespace INFSYS_Design.models
 {
@@ -34,7 +35,7 @@ namespace INFSYS_Design.models
             }
             return null;
         }
-        public static HoaDon layDanhSachHoaDon()
+        public static List<HoaDon> layDanhSachHoaDon()
         {
             DBConn conn = new DBConn();
             SqlCommand sqlCmd = new SqlCommand();
@@ -45,7 +46,7 @@ namespace INFSYS_Design.models
 
             SqlDataReader res = sqlCmd.ExecuteReader();
 
-
+            List<HoaDon> ds = new List<HoaDon>();
             if (res.Read())
             {
                 Dictionary<string, object> empDict = new Dictionary<string, object>();
@@ -54,9 +55,33 @@ namespace INFSYS_Design.models
                     empDict.Add(colName.ToUpper(), res.GetValue(res.GetOrdinal(colName.ToUpper())));
                 }
                 HoaDon HoaDon = new HoaDon(empDict);
-                return HoaDon;
+                ds.Add(HoaDon);
             }
-            return null;
+            return ds;
+        }
+        public static List<HoaDon> layDanhSachHoaDonTheoNgay(string ngayBD, string ngayKT)
+        {
+            DBConn conn = new DBConn();
+            SqlCommand sqlCmd = new SqlCommand();
+            sqlCmd.CommandType = System.Data.CommandType.Text;
+            sqlCmd.CommandText = $"SELECT * FROM HOADON WHERE NGAYTAO BETWEEN {ngayBD} AND {ngayKT}";
+            sqlCmd.Connection = conn.conn;
+            string[] columnNames = { "maHoaDon", "thoiGianTao", "VAT", "chiPhiChuaThue", "soTienNhan", "maCheckout" };
+
+            SqlDataReader res = sqlCmd.ExecuteReader();
+
+            List<HoaDon> ds = new List<HoaDon>();
+            if (res.Read())
+            {
+                Dictionary<string, object> empDict = new Dictionary<string, object>();
+                foreach (string colName in columnNames)
+                {
+                    empDict.Add(colName.ToUpper(), res.GetValue(res.GetOrdinal(colName.ToUpper())));
+                }
+                HoaDon HoaDon = new HoaDon(empDict);
+                ds.Add(HoaDon);
+            }
+            return ds;
         }
         public static int themHoaDon(HoaDon hd)
         {
@@ -73,4 +98,6 @@ namespace INFSYS_Design.models
             return sqlCmd.ExecuteNonQuery();
         }
     }
+
+    
 }

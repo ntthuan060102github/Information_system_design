@@ -12,16 +12,41 @@ namespace INFSYS_Design.models
 {
     class DB_YeuCauDatPhong
     {
-        
-        public static bool themYeuCauDatPhong(YeuCauDatPhong yc)
+        public static YeuCauDatPhong layThongtinYeuCau(int maKH)
+        {
+            string makh = maKH.ToString();
+            DBConn conn = new DBConn();
+            SqlCommand sqlCmd = new SqlCommand();
+            sqlCmd.CommandType = System.Data.CommandType.Text;
+            sqlCmd.CommandText = $"SELECT * FROM YEUCAUDATPHONG WHERE MAKHACHHANG={makh}";
+            sqlCmd.Connection = conn.conn;
+            string[] columnNames = { "soDemLuuTru", "ngayDen", "ngayYeuCau", "yeuCauDacBiet", "maKH", "loaiPhong" };
+
+            SqlDataReader res = sqlCmd.ExecuteReader();
+
+
+            while (res.Read())
+            {
+                Dictionary<string, object> requestInfo = new Dictionary<string, object>();
+                foreach (string colName in columnNames)
+                {
+                    requestInfo.Add(colName.ToUpper(), res.GetValue(res.GetOrdinal(colName.ToUpper())));
+                }
+                YeuCauDatPhong request = new YeuCauDatPhong(requestInfo);
+                return request;
+            }
+
+            return null;
+        }
+
+        public static int themYeuCauDatPhong(YeuCauDatPhong yc)
         {
             DBConn conn = new DBConn();
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.CommandType = System.Data.CommandType.Text;
-            sqlCmd.CommandText = "INSERT INTO YeuCauDatPhong (SODEMLUUTRU, NGAYDEN, NGAYYEUCAU, YEUCAUDACBIET, MAKH, LOAIPHONG) VALUES (@soDemLuuTru, @ngayDen, @ngayYeuCau, @yeuCauDacBiet, @maKH, @loaiPhong)";
+            sqlCmd.CommandText = "INSERT INTO YEUCAUDATPHONG (SODEMLUUTRU, NGAYDEN, NGAYYEUCAU, YEUCAUDACBIET, MAKH, LOAIPHONG) VALUES (@soDemLuuTru, @ngayDen, @ngayYeuCau, @yeuCauDacBiet, @maKH, @loaiPhong)";
             sqlCmd.Connection = conn.conn;
 
-            sqlCmd.Parameters.AddWithValue("@ma", yc.ma);
             sqlCmd.Parameters.AddWithValue("@soDemLuuTru", yc.soDemLuuTru);
             sqlCmd.Parameters.AddWithValue("@ngayDen", yc.ngayDen);
             sqlCmd.Parameters.AddWithValue("@ngayYeuCau", yc.ngayYeuCau);
@@ -29,26 +54,7 @@ namespace INFSYS_Design.models
             sqlCmd.Parameters.AddWithValue("@maKH", yc.maKH);
             sqlCmd.Parameters.AddWithValue("@loaiPhong", yc.loaiPhong);
 
-            try
-            {
-                // Thực thi câu lệnh SQL insert
-                int rowsAffected = sqlCmd.ExecuteNonQuery();
-                if (rowsAffected > 0)
-                {
-                    //chèn dữ liệu thành công
-                    return true;
-                }
-                else
-                {
-                    //chèn dữ liệu thất bại
-                    return false;
-                }
-            }
-            catch
-            {
-                //lỗi ngoại lệ
-                return false;
-            }
+            return sqlCmd.ExecuteNonQuery();
         }
 
     }

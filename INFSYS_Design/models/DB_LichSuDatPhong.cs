@@ -12,12 +12,12 @@ namespace INFSYS_Design.models
 {
     class DB_LichSuDatPhong
     {
-        public static LichSuDatPhong layLichSuDatPhong(int maKH)
+        public static LichSuDatPhong layLichSuDatPhong(int soPhong, int maKH)
         {
             DBConn conn = new DBConn();
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.CommandType = System.Data.CommandType.Text;
-            sqlCmd.CommandText = $"SELECT * FROM LichSuDatPhong WHERE MAKHACHHANG={maKH}";
+            sqlCmd.CommandText = $"SELECT * FROM LICHSUDATPHONG WHERE MAKHACHHANG={maKH} AND SOPHONG = {soPhong}";
             sqlCmd.Connection = conn.conn;
             string[] columnNames = { "ma", "thoiGianTraPhongDuKien", "thoiGianDat", "hinhThucThanhToan", "soTienDatCoc", "maYeuCau", "soPhong", "thoiGianCheckin"};
 
@@ -37,12 +37,12 @@ namespace INFSYS_Design.models
             return null;
         }
 
-        public static bool themLichSuDatPhong(LichSuDatPhong lsdp)
+        public static int themLichSuDatPhong(LichSuDatPhong lsdp)
         {
             DBConn conn = new DBConn();
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.CommandType = System.Data.CommandType.Text;
-            sqlCmd.CommandText = "INSERT INTO LichSuDatPhong (THOIGIANTRAPHONGDUKIEN, THOIGIANDAT, HINHTHUCTHANHTOAN, SOTIENDATCOC, MAYEUCAU, SOPHONG, THOIGIANCHECKIN) VALUES (@thoiGianTraPhongDuKien, @thoiGianDat, @hinhThucThanhToan, @soTienDatCoc, @maYeuCau, @soPhong, @thoiGianCheckin)";
+            sqlCmd.CommandText = "INSERT INTO LICHSUDATPHONG (THOIGIANTRAPHONGDUKIEN, THOIGIANDAT, HINHTHUCTHANHTOAN, SOTIENDATCOC, MAYEUCAU, SOPHONG) VALUES (@thoiGianTraPhongDuKien, @thoiGianDat, @hinhThucThanhToan, @soTienDatCoc, @maYeuCau, @soPhong)";
             sqlCmd.Connection = conn.conn;
 
             sqlCmd.Parameters.AddWithValue("@thoiGianTraPhongDuKien", lsdp.thoiGianTraPhongDuKien);
@@ -51,28 +51,21 @@ namespace INFSYS_Design.models
             sqlCmd.Parameters.AddWithValue("@soTienDatCoc", lsdp.soTienDatCoc);
             sqlCmd.Parameters.AddWithValue("@maYeuCau", lsdp.maYeuCau);
             sqlCmd.Parameters.AddWithValue("@soPhong", lsdp.soPhong);
-            sqlCmd.Parameters.AddWithValue("@thoiGianCheckin", lsdp.thoiGianCheckin);
 
-            try
-            {
-                // Thực thi câu lệnh SQL insert
-                int rowsAffected = sqlCmd.ExecuteNonQuery();
-                if (rowsAffected > 0)
-                {
-                    //chèn dữ liệu thành công
-                    return true;
-                }
-                else
-                {
-                    //chèn dữ liệu thất bại
-                    return false;
-                }
-            }
-            catch
-            {
-                //lỗi ngoại lệ
-                return false;
-            }
+            return sqlCmd.ExecuteNonQuery();
+        }
+
+        public static int capNhatLichSuDatPhong(string soPhong, int maYeuCau)
+        {
+            DateTime date = DateTime.Today;
+            string ngayCheckin = date.ToString("dd/MM/yyyy");
+            DBConn conn = new DBConn();
+            SqlCommand sqlCmd = new SqlCommand();
+            sqlCmd.CommandType = System.Data.CommandType.Text;
+            sqlCmd.CommandText = $"UPDATE LICHSUDATPHONG SET THOIGIANCHECKIN = {ngayCheckin} WHERE MAYEUCAU={maYeuCau} AND SOPHONG = {soPhong}";
+            sqlCmd.Connection = conn.conn;
+
+            return sqlCmd.ExecuteNonQuery();
         }
 
     }

@@ -47,5 +47,22 @@ namespace INFSYS_Design.models
             }
             return waitingList;
         }
+
+        public static int themKHVaoDSCho(DanhSachCho kh)
+        {
+            DBConn conn = new DBConn();
+            SqlCommand sqlCmd = new SqlCommand();
+            sqlCmd.CommandType = System.Data.CommandType.Text;
+            sqlCmd.CommandText = "INSERT INTO THONGTINKHACHHANG ( TRANGTHAI, THOIGIANTAO, HANCHOT, NGUOITHUCHIEN, MAYEUCAU) VALUES (@trangThai, @thoiGianTao, @hanChot, @nguoiThucHien, @maYeuCau)";
+            sqlCmd.Connection = conn.conn;
+
+            sqlCmd.Parameters.AddWithValue("@trangThai", kh.trangThai);
+            sqlCmd.Parameters.AddWithValue("@thoiGianTao", kh.thoiGianTao);
+            sqlCmd.Parameters.AddWithValue("@hanChot", kh.hanChot);
+            sqlCmd.Parameters.AddWithValue("@nguoiThucHien", kh.nguoiThucHien);
+            sqlCmd.Parameters.AddWithValue("@maYeuCau", kh.maYeuCau);
+
+            return sqlCmd.ExecuteNonQuery();
+        }
     }
 }

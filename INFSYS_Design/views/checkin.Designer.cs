@@ -36,12 +36,9 @@
             this.btnCheck = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
             this.btnReturn = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbTenKH = new System.Windows.Forms.TextBox();
+            this.tbSoPhong = new System.Windows.Forms.TextBox();
             this.dtgHistory = new System.Windows.Forms.DataGridView();
-            this.HOTEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SOPHONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.THOIGIANNHAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCheckin = new System.Windows.Forms.Button();
             this.customer_gender = new System.Windows.Forms.Label();
             this.customer_address = new System.Windows.Forms.Label();
@@ -50,6 +47,8 @@
             this.customer_year_of_birth = new System.Windows.Forms.Label();
             this.customer_id_num = new System.Windows.Forms.Label();
             this.customer_name = new System.Windows.Forms.Label();
+            this.HOTEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SOPHONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgHistory)).BeginInit();
             this.SuspendLayout();
@@ -63,8 +62,8 @@
             this.panel1.Controls.Add(this.btnCheck);
             this.panel1.Controls.Add(this.title);
             this.panel1.Controls.Add(this.btnReturn);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.tbTenKH);
+            this.panel1.Controls.Add(this.tbSoPhong);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -105,7 +104,7 @@
             this.label_customer_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_customer_name.Location = new System.Drawing.Point(226, 136);
             this.label_customer_name.Name = "label_customer_name";
-            this.label_customer_name.Size = new System.Drawing.Size(126, 16);
+            this.label_customer_name.Size = new System.Drawing.Size(121, 16);
             this.label_customer_name.TabIndex = 18;
             this.label_customer_name.Text = "Tên khách hàng:";
             this.label_customer_name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -116,7 +115,7 @@
             this.label_room_number.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_room_number.Location = new System.Drawing.Point(226, 102);
             this.label_room_number.Name = "label_room_number";
-            this.label_room_number.Size = new System.Drawing.Size(79, 16);
+            this.label_room_number.Size = new System.Drawing.Size(77, 16);
             this.label_room_number.TabIndex = 17;
             this.label_room_number.Text = "Số phòng:";
             this.label_room_number.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -131,6 +130,7 @@
             this.btnCheck.TabIndex = 16;
             this.btnCheck.Text = "Kiểm tra";
             this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
             // title
             // 
@@ -158,29 +158,26 @@
             this.btnReturn.Text = "Quay lại";
             this.btnReturn.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // tbTenKH
             // 
-            this.textBox2.Location = new System.Drawing.Point(401, 132);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(147, 20);
-            this.textBox2.TabIndex = 13;
-            this.textBox2.Text = "Võ Ngọc Sơn";
+            this.tbTenKH.Location = new System.Drawing.Point(401, 132);
+            this.tbTenKH.Name = "tbTenKH";
+            this.tbTenKH.Size = new System.Drawing.Size(147, 20);
+            this.tbTenKH.TabIndex = 13;
             // 
-            // textBox1
+            // tbSoPhong
             // 
-            this.textBox1.Location = new System.Drawing.Point(401, 98);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(73, 20);
-            this.textBox1.TabIndex = 12;
-            this.textBox1.Text = "101";
+            this.tbSoPhong.Location = new System.Drawing.Point(401, 98);
+            this.tbSoPhong.Name = "tbSoPhong";
+            this.tbSoPhong.Size = new System.Drawing.Size(73, 20);
+            this.tbSoPhong.TabIndex = 12;
             // 
             // dtgHistory
             // 
             this.dtgHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgHistory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.HOTEN,
-            this.SOPHONG,
-            this.THOIGIANNHAN});
+            this.SOPHONG});
             this.dtgHistory.Dock = System.Windows.Forms.DockStyle.Left;
             this.dtgHistory.Location = new System.Drawing.Point(0, 221);
             this.dtgHistory.Name = "dtgHistory";
@@ -188,33 +185,15 @@
             this.dtgHistory.Size = new System.Drawing.Size(418, 316);
             this.dtgHistory.TabIndex = 13;
             // 
-            // HOTEN
-            // 
-            this.HOTEN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HOTEN.HeaderText = "Tên khách hàng";
-            this.HOTEN.Name = "HOTEN";
-            // 
-            // SOPHONG
-            // 
-            this.SOPHONG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SOPHONG.HeaderText = "Số phòng";
-            this.SOPHONG.Name = "SOPHONG";
-            // 
-            // THOIGIANNHAN
-            // 
-            this.THOIGIANNHAN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.THOIGIANNHAN.HeaderText = "Thời gian nhận phòng";
-            this.THOIGIANNHAN.Name = "THOIGIANNHAN";
-            // 
             // btnCheckin
             // 
             this.btnCheckin.AutoSize = true;
             this.btnCheckin.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCheckin.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnCheckin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckin.Location = new System.Drawing.Point(418, 511);
+            this.btnCheckin.Location = new System.Drawing.Point(418, 508);
             this.btnCheckin.Name = "btnCheckin";
-            this.btnCheckin.Size = new System.Drawing.Size(590, 26);
+            this.btnCheckin.Size = new System.Drawing.Size(590, 29);
             this.btnCheckin.TabIndex = 14;
             this.btnCheckin.Text = "Nhận phòng";
             this.btnCheckin.UseVisualStyleBackColor = false;
@@ -251,7 +230,7 @@
             this.customer_phone_num.Name = "customer_phone_num";
             this.customer_phone_num.Size = new System.Drawing.Size(158, 22);
             this.customer_phone_num.TabIndex = 19;
-            this.customer_phone_num.Text = "Số ĐT: 0949531628";
+            this.customer_phone_num.Text = "SĐT: 0949531628";
             this.customer_phone_num.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // customer_email
@@ -302,7 +281,19 @@
             this.customer_name.Text = "Võ Ngọc Sơn";
             this.customer_name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // checkin
+            // HOTEN
+            // 
+            this.HOTEN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.HOTEN.HeaderText = "Tên khách hàng";
+            this.HOTEN.Name = "HOTEN";
+            // 
+            // SOPHONG
+            // 
+            this.SOPHONG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SOPHONG.HeaderText = "Số phòng";
+            this.SOPHONG.Name = "SOPHONG";
+            // 
+            // GUI_Checkin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -317,7 +308,7 @@
             this.Controls.Add(this.btnCheckin);
             this.Controls.Add(this.dtgHistory);
             this.Controls.Add(this.panel1);
-            this.Name = "checkin";
+            this.Name = "GUI_Checkin";
             this.Text = "checkin";
             this.Load += new System.EventHandler(this.checkin_Load);
             this.panel1.ResumeLayout(false);
@@ -336,12 +327,9 @@
         private System.Windows.Forms.Button btnCheck;
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.Button btnReturn;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbTenKH;
+        private System.Windows.Forms.TextBox tbSoPhong;
         private System.Windows.Forms.DataGridView dtgHistory;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HOTEN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SOPHONG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn THOIGIANNHAN;
         private System.Windows.Forms.Label label_customer;
         private System.Windows.Forms.Label label_history;
         private System.Windows.Forms.Button btnCheckin;
@@ -352,5 +340,7 @@
         private System.Windows.Forms.Label customer_year_of_birth;
         private System.Windows.Forms.Label customer_id_num;
         private System.Windows.Forms.Label customer_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HOTEN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SOPHONG;
     }
 }

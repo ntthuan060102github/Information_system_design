@@ -59,5 +59,9 @@ namespace INFSYS_Design.controllers
         {
             return DB_Phong.themPhong(soPhong, maLoaiPhong) == 1;
         }
+        public static List<Phong> layDanhSachPhongTrongTheoLoaiPhong(string loaiphong)
+        {
+            return DB_Phong.layDanhSachPhongTrongTheoLoaiPhong(loaiphong);
+        }
     }
 }
