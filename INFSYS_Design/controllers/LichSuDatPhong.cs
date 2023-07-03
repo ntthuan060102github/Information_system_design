@@ -70,7 +70,7 @@ namespace INFSYS_Design.controllers
         public static LichSuDatPhong layLichSuDatPhong(int maYeuCau)
         {
 
-            return DB_LichSuDatPhong.layLichSuDatPhong(maYeuCau);
+            return DB_LichSuDatPhong.layLichSuDatPhongTheoMaYeuCau(maYeuCau);
         }
 
         public static bool themLichSuDatPhong(LichSuDatPhong lsdp)
@@ -79,10 +79,13 @@ namespace INFSYS_Design.controllers
             return DB_LichSuDatPhong.themLichSuDatPhong(lsdp) == 1;
         }
 
-        public static bool capNhatLichSuDatPhong(string soPhong, int maYeuCau)
+        public static bool checkin(int maDatPhong)
         {
-            return DB_LichSuDatPhong.capNhatLichSuDatPhong(soPhong, maYeuCau) == 1;
+            return DB_LichSuDatPhong.capNhatThoiGianCheckin(maDatPhong, DateTime.Now.ToString()) == 1;
         }
-        public static int lay
+        public static LichSuDatPhong layLichSuDatPhongTheoMaKH(int maKh)
+        {
+            return DB_LichSuDatPhong.layLichSuDatPhongTheoMaKH(maKh);
+        }
     }
 }

@@ -92,13 +92,14 @@
             this.btnReturn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturn.ForeColor = System.Drawing.Color.Black;
-            this.btnReturn.Location = new System.Drawing.Point(16, 15);
+            this.btnReturn.Location = new System.Drawing.Point(13, 13);
             this.btnReturn.Margin = new System.Windows.Forms.Padding(4);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(117, 44);
+            this.btnReturn.Size = new System.Drawing.Size(107, 34);
             this.btnReturn.TabIndex = 14;
             this.btnReturn.Text = "Quay lại";
             this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // btnCheckin
             // 
@@ -113,6 +114,7 @@
             this.btnCheckin.TabIndex = 14;
             this.btnCheckin.Text = "Nhận phòng";
             this.btnCheckin.UseVisualStyleBackColor = false;
+            this.btnCheckin.Click += new System.EventHandler(this.btnCheckin_Click);
             // 
             // customer_gender
             // 

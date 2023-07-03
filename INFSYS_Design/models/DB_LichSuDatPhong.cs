@@ -12,7 +12,7 @@ namespace INFSYS_Design.models
 {
     class DB_LichSuDatPhong
     {
-        public static LichSuDatPhong layLichSuDatPhong(int maYeuCau)
+        public static LichSuDatPhong layLichSuDatPhongTheoMaYeuCau(int maYeuCau)
         {
             DBConn conn = new DBConn();
             SqlCommand sqlCmd = new SqlCommand();
@@ -20,6 +20,28 @@ namespace INFSYS_Design.models
             sqlCmd.CommandText = $"SELECT * FROM LICHSUDATPHONG WHERE MAYEUCAU = {maYeuCau}";
             sqlCmd.Connection = conn.conn;
             string[] columnNames = { "ma", "thoiGianTraPhongDuKien", "thoiGianDat", "hinhThucThanhToan", "soTienDatCoc", "maYeuCau", "soPhong", "thoiGianCheckin"};
+            SqlDataReader res = sqlCmd.ExecuteReader();
+
+            if (res.Read())
+            {
+                Dictionary<string, object> lichSu = new Dictionary<string, object>();
+                foreach (string colName in columnNames)
+                {
+                    lichSu.Add(colName.ToUpper(), res.GetValue(res.GetOrdinal(colName.ToUpper())));
+                }
+                LichSuDatPhong lsdp = new LichSuDatPhong(lichSu);
+                return lsdp;
+            }
+            return null;
+        }
+        public static LichSuDatPhong layLichSuDatPhong(int ma)
+        {
+            DBConn conn = new DBConn();
+            SqlCommand sqlCmd = new SqlCommand();
+            sqlCmd.CommandType = System.Data.CommandType.Text;
+            sqlCmd.CommandText = $"SELECT * FROM LICHSUDATPHONG WHERE MA = {ma}";
+            sqlCmd.Connection = conn.conn;
+            string[] columnNames = { "ma", "thoiGianTraPhongDuKien", "thoiGianDat", "hinhThucThanhToan", "soTienDatCoc", "maYeuCau", "soPhong", "thoiGianCheckin" };
             SqlDataReader res = sqlCmd.ExecuteReader();
 
             if (res.Read())
@@ -53,32 +75,87 @@ namespace INFSYS_Design.models
             return sqlCmd.ExecuteNonQuery();
         }
 
-        public static int capNhatLichSuDatPhong(string soPhong, int maYeuCau)
+        public static int capNhatThoiGianCheckin(int maDatPhong, string thoiGianCheckin)
         {
-            DateTime date = DateTime.Today;
-            string ngayCheckin = date.ToString("dd/MM/yyyy");
             DBConn conn = new DBConn();
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.CommandType = System.Data.CommandType.Text;
-            sqlCmd.CommandText = $"UPDATE LICHSUDATPHONG SET THOIGIANCHECKIN = {ngayCheckin} WHERE MAYEUCAU={maYeuCau} AND SOPHONG = {soPhong}";
+            sqlCmd.CommandText = $@"
+                UPDATE LICHSUDATPHONG 
+                SET THOIGIANCHECKIN = '{thoiGianCheckin}' 
+                WHERE MA={maDatPhong}
+                AND THOIGIANCHECKIN IS NULL
+            ";
             sqlCmd.Connection = conn.conn;
 
             return sqlCmd.ExecuteNonQuery();
         }
 
-        public static int layMaDatPhong(int soPhong)
+        public static LichSuDatPhong layLichSuDatPhongTheoSoPhong(int soPhong)
         {
             DBConn conn = new DBConn();
             SqlCommand sqlCmd = new SqlCommand
             {
                 CommandType = System.Data.CommandType.Text,
-                CommandText = $"SELECT TOP 1 ma FROM LICHSUDATPHONG WHERE SOPHONG = {soPhong}",
+                CommandText = $@"
+                    SELECT *
+                    FROM LICHSUDATPHONG 
+                    WHERE SOPHONG = {soPhong}
+                    AND MA NOT IN (
+                        SELECT MADATPHONG
+                        FROM LICHSUCHECKOUT
+                    )            
+                ",
                 Connection = conn.conn
             };
-            
+
+            string[] columnNames = { "ma", "thoiGianTraPhongDuKien", "thoiGianDat", "hinhThucThanhToan", "soTienDatCoc", "maYeuCau", "soPhong", "thoiGianCheckin" };
             SqlDataReader res = sqlCmd.ExecuteReader();
-            int ma = res.GetInt32(0);
-            return ma;
+
+            if (res.Read())
+            {
+                Dictionary<string, object> lichSu = new Dictionary<string, object>();
+                foreach (string colName in columnNames)
+                {
+                    lichSu.Add(colName.ToUpper(), res.GetValue(res.GetOrdinal(colName.ToUpper())));
+                }
+                LichSuDatPhong lsdp = new LichSuDatPhong(lichSu);
+                return lsdp;
+            }
+            return null;
+        }
+        public static LichSuDatPhong layLichSuDatPhongTheoMaKH(int maKh)
+        {
+            DBConn conn = new DBConn();
+            SqlCommand sqlCmd = new SqlCommand
+            {
+                CommandType = System.Data.CommandType.Text,
+                CommandText = $@"
+                    SELECT *
+                    FROM LICHSUDATPHONG 
+                    WHERE MA IN (
+                        SELECT MAKHACHHANG
+                        FROM YEUCAUDATPHONG
+                        WHERE MAKHACHHANG = {maKh}
+                    )            
+                ",
+                Connection = conn.conn
+            };
+
+            string[] columnNames = { "ma", "thoiGianTraPhongDuKien", "thoiGianDat", "hinhThucThanhToan", "soTienDatCoc", "maYeuCau", "soPhong", "thoiGianCheckin" };
+            SqlDataReader res = sqlCmd.ExecuteReader();
+
+            if (res.Read())
+            {
+                Dictionary<string, object> lichSu = new Dictionary<string, object>();
+                foreach (string colName in columnNames)
+                {
+                    lichSu.Add(colName.ToUpper(), res.GetValue(res.GetOrdinal(colName.ToUpper())));
+                }
+                LichSuDatPhong lsdp = new LichSuDatPhong(lichSu);
+                return lsdp;
+            }
+            return null;
         }
     }
 }

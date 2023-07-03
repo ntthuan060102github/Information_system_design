@@ -64,6 +64,38 @@ namespace INFSYS_Design.models
 
             return sqlCmd.ExecuteNonQuery();
         }
+        public static YeuCauDatPhong layThongtinYeuCauTheoMaDatPhong(int maDatPhong)
+        {
+            DBConn conn = new DBConn();
+            SqlCommand sqlCmd = new SqlCommand();
+            sqlCmd.CommandType = System.Data.CommandType.Text;
+            sqlCmd.CommandText = $@"
+                SELECT * 
+                FROM YEUCAUDATPHONG
+                WHERE MA IN (
+                    SELECT MAYEUCAU
+                    FROM LICHSUDATPHONG
+                    WHERE MA={maDatPhong}
+                )
+            ";
+            sqlCmd.Connection = conn.conn;
+            string[] columnNames = { "ma", "soDemLuuTru", "ngayDen", "ngayYeuCau", "yeuCauDacBiet", "maKhachHang", "loaiPhong" };
+
+            SqlDataReader res = sqlCmd.ExecuteReader();
+
+            if (res.Read())
+            {
+                Dictionary<string, object> requestInfo = new Dictionary<string, object>();
+                foreach (string colName in columnNames)
+                {
+                    requestInfo.Add(colName.ToUpper(), res.GetValue(res.GetOrdinal(colName.ToUpper())));
+                }
+                YeuCauDatPhong request = new YeuCauDatPhong(requestInfo);
+                return request;
+            }
+
+            return null;
+        }
 
     }
 }

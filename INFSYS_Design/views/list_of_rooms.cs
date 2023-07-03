@@ -154,7 +154,22 @@ namespace INFSYS_Design.views
 
             int soPhong = int.Parse(this.dataGridView1.Rows[idx].Cells[0].Value.ToString());
             
-            GUI_Checkin checkinPage = new GUI_Checkin();
+            if(Phong.layThongTinPhong(soPhong).trangThai != "DANG_SU_DUNG")
+            {
+                MessageBox.Show(
+                    "Phòng không được sử dụng nên không thể checkin!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+            ThongTinKhachHang customer = Phong.layThongTinHangDangThuePhong(soPhong);
+            LichSuDatPhong history = LichSuDatPhong.layLichSuDatPhongTheoMaKH(customer.ma);
+            GUI_Checkin checkinPage = new GUI_Checkin(history.ma);
+            Program.previousForm.Add(this);
+            checkinPage.Show();
+            this.Hide();
         }
     }
 }

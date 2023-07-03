@@ -66,6 +66,10 @@ namespace INFSYS_Design.controllers
         {
             return DB_YeuCauDatPhong.layThongtinYeuCau(maKH, soPhong);
         }
+        public static YeuCauDatPhong layThongtinYeuCauTheoMaDatPhong(int ma)
+        {
+            return DB_YeuCauDatPhong.layThongtinYeuCauTheoMaDatPhong(ma);
+        }
 
         public static bool themYeuCauDatPhong(YeuCauDatPhong yc)
         {

@@ -46,13 +46,5 @@ namespace INFSYS_Design.views
             customersPage.Show();
             this.Hide();
         }
-
-        private void checkin_btn_Click(object sender, EventArgs e)
-        {
-            GUI_Checkin checkinPage = new GUI_Checkin();
-            Program.previousForm.Add(this);
-            checkinPage.Show();
-            this.Hide();
-        }
     }
 }
