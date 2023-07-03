@@ -69,5 +69,19 @@ namespace INFSYS_Design.models
             return sqlCmd.ExecuteNonQuery();
         }
 
+        public static int layMaDatPhong(int soPhong)
+        {
+            DBConn conn = new DBConn();
+            SqlCommand sqlCmd = new SqlCommand
+            {
+                CommandType = System.Data.CommandType.Text,
+                CommandText = $"SELECT TOP 1 ma FROM LICHSUDATPHONG WHERE SOPHONG = {soPhong}",
+                Connection = conn.conn
+            };
+            
+            SqlDataReader res = sqlCmd.ExecuteReader();
+            int ma = res.GetInt32(0);
+            return ma;
+        }
     }
 }

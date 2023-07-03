@@ -118,7 +118,8 @@ namespace INFSYS_Design.views
         private void submit_btn_Click(object sender, EventArgs e)
         {
             ThongTinKhachHang cusomterInfo = Phong.layThongTinHangDangThuePhong(this.soPhong);
-            YeuCauDatPhong yeuCauDatPhong = YeuCauDatPhong.layThongtinYeuCau(cusomterInfo.ma);
+            YeuCauDatPhong yeuCauDatPhong = YeuCauDatPhong.layThongtinYeuCau(cusomterInfo.ma, this.soPhong);
+            DateTime thoiGianGiaHan = this.dateTimePicker1.Value;
             
         }
     }
