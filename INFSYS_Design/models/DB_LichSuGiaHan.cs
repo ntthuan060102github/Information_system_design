@@ -19,7 +19,7 @@ namespace INFSYS_Design.models
                 VALUES('{thoiGianGiaHan}', {maDatPhong}, {Program.currentUserId});
             ";
             sqlCmd.Connection = conn.conn;
-
+            Console.WriteLine(sqlCmd.CommandText);
             return sqlCmd.ExecuteNonQuery();
         }
     }

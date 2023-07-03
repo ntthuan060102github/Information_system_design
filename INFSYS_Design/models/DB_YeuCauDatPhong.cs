@@ -28,12 +28,10 @@ namespace INFSYS_Design.models
                     WHERE SOPHONG = {soPhong}
                 )
             ";
-            Console.WriteLine(sqlCmd.CommandText);
             sqlCmd.Connection = conn.conn;
-            string[] columnNames = { "soDemLuuTru", "ngayDen", "ngayYeuCau", "yeuCauDacBiet", "maKhachHang", "loaiPhong" };
+            string[] columnNames = { "ma", "soDemLuuTru", "ngayDen", "ngayYeuCau", "yeuCauDacBiet", "maKhachHang", "loaiPhong" };
 
             SqlDataReader res = sqlCmd.ExecuteReader();
-
 
             if (res.Read())
             {

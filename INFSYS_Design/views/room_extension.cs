@@ -122,16 +122,7 @@ namespace INFSYS_Design.views
             LichSuDatPhong lichSuDatPhong = LichSuDatPhong.layLichSuDatPhong(yeuCauDatPhong.ma);
             DateTime thoiGianGiaHan = this.dateTimePicker1.Value;
             
-            if(!LichSuGiaHan.themLichSuGiaHan(lichSuDatPhong.ma, thoiGianGiaHan))
-            {
-                MessageBox.Show(
-                    "Thất bại!",
-                    "Thất bại!",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error
-                );
-            }
-            else
+            if(LichSuGiaHan.themLichSuGiaHan(lichSuDatPhong.ma, thoiGianGiaHan))
             {
                 MessageBox.Show(
                     "Thành công!",
@@ -140,6 +131,17 @@ namespace INFSYS_Design.views
                     MessageBoxIcon.Information
                 );
             }
+            else
+            {
+                MessageBox.Show(
+                    "Thất bại!",
+                    "Thất bại!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+            }
+            return;
+
         }
     }
 }

@@ -20,7 +20,6 @@ namespace INFSYS_Design.models
             sqlCmd.CommandText = $"SELECT * FROM LICHSUDATPHONG WHERE MAYEUCAU = {maYeuCau}";
             sqlCmd.Connection = conn.conn;
             string[] columnNames = { "ma", "thoiGianTraPhongDuKien", "thoiGianDat", "hinhThucThanhToan", "soTienDatCoc", "maYeuCau", "soPhong", "thoiGianCheckin"};
-
             SqlDataReader res = sqlCmd.ExecuteReader();
 
             if (res.Read())
