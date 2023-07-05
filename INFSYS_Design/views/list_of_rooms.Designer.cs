@@ -161,6 +161,7 @@ namespace INFSYS_Design.views
             resources.ApplyResources(this.btn_checkout, "btn_checkout");
             this.btn_checkout.Name = "btn_checkout";
             this.btn_checkout.UseVisualStyleBackColor = false;
+            this.btn_checkout.Click += new System.EventHandler(this.btn_checkout_Click);
             // 
             // GUI_ListOfRooms
             // 

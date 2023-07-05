@@ -135,6 +135,7 @@
             this.lb_checkout_id_text.TabIndex = 29;
             this.lb_checkout_id_text.Text = "1";
             this.lb_checkout_id_text.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lb_checkout_id_text.Click += new System.EventHandler(this.lb_checkout_id_text_Click);
             // 
             // GUI_RoomStatus
             // 

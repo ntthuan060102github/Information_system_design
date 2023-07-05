@@ -63,5 +63,9 @@ namespace INFSYS_Design.controllers
         {
             return DB_Phong.layDanhSachPhongTrongTheoLoaiPhong(loaiphong);
         }
+        public static bool capNhatTrangThai(int soPhong, string status)
+        {
+            return DB_Phong.capNhatTrangThai(soPhong, status) == 1;
+        }
     }
 }

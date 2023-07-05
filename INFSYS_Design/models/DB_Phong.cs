@@ -181,5 +181,19 @@ namespace INFSYS_Design.models
             }
             return list_of_rooms;
         }
+        public static int capNhatTrangThai(int soPhong, string status)
+        {
+            DBConn conn = new DBConn();
+            SqlCommand sqlCmd = new SqlCommand();
+            sqlCmd.CommandType = System.Data.CommandType.Text;
+            sqlCmd.CommandText = $@"
+                UPDATE PHONG
+                SET TRANGTHAI = '{status}'
+                WHERE SOPHONG = {soPhong}
+            ";
+            sqlCmd.Connection = conn.conn;
+
+            return sqlCmd.ExecuteNonQuery();
+        }
     }
 }

@@ -36,10 +36,19 @@ namespace INFSYS_Design.controllers
             }
         }
 
-        public static bool themLichSuCheckout(LichSuCheckout c)
+        public static bool themLichSuCheckout(int maDatPhong, int soPhong)
         {
-
-            return DB_LichSuCheckout.themLichSuCheckout(c) == 1;
+            DateTime now = DateTime.Now;
+            bool check = DB_LichSuCheckout.themLichSuCheckout(maDatPhong, now.ToString(), Program.currentUserId) == 1;
+            if (check)
+            {
+                return Phong.capNhatTrangThai(soPhong, "TRONG");
+            }
+            return false;
+        }
+        public static LichSuCheckout layLichSuCheckout(int maDatPhong)
+        {
+            return DB_LichSuCheckout.layLichSuCheckout(maDatPhong);
         }
     }
 }

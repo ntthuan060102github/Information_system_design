@@ -12,9 +12,10 @@ namespace INFSYS_Design.views
 {
     public partial class GUI_RoomStatus : Form
     {
-        public GUI_RoomStatus()
+        public GUI_RoomStatus(int checkoutId)
         {
             InitializeComponent();
+            this.lb_checkout_id_text.Text = checkoutId.ToString();
         }
 
         private void room_status_Load(object sender, EventArgs e)
@@ -27,6 +28,11 @@ namespace INFSYS_Design.views
             GUI_Invoice invoice = new GUI_Invoice();
             invoice.ShowDialog();
             this.Close();
+        }
+
+        private void lb_checkout_id_text_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

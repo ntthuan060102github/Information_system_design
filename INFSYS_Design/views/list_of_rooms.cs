@@ -153,8 +153,11 @@ namespace INFSYS_Design.views
             int idx = this.dataGridView1.SelectedRows[0].Index;
 
             int soPhong = int.Parse(this.dataGridView1.Rows[idx].Cells[0].Value.ToString());
-            
-            if(Phong.layThongTinPhong(soPhong).trangThai != "DANG_SU_DUNG")
+            Phong room = Phong.layThongTinPhong(soPhong);
+            ThongTinKhachHang customer = Phong.layThongTinHangDangThuePhong(soPhong);
+            LichSuDatPhong history = LichSuDatPhong.layLichSuDatPhongTheoMaKH(customer.ma);
+
+            if (room.trangThai != "DANG_SU_DUNG")
             {
                 MessageBox.Show(
                     "Phòng không được sử dụng nên không thể checkin!",
@@ -164,12 +167,81 @@ namespace INFSYS_Design.views
                 );
                 return;
             }
-            ThongTinKhachHang customer = Phong.layThongTinHangDangThuePhong(soPhong);
-            LichSuDatPhong history = LichSuDatPhong.layLichSuDatPhongTheoMaKH(customer.ma);
+            if(history.thoiGianCheckin.Length != 0)
+            {
+                MessageBox.Show(
+                    "Phòng đã được checkin!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
             GUI_Checkin checkinPage = new GUI_Checkin(history.ma);
             Program.previousForm.Add(this);
             checkinPage.Show();
             this.Hide();
+        }
+
+        private void btn_checkout_Click(object sender, EventArgs e)
+        {
+            var selectedRow = this.dataGridView1.SelectedRows;
+            if (selectedRow.Count == 0)
+            {
+                MessageBox.Show(
+                    "Vui lòng chọn phòng cần checkout!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+            int idx = this.dataGridView1.SelectedRows[0].Index;
+
+            int soPhong = int.Parse(this.dataGridView1.Rows[idx].Cells[0].Value.ToString());
+            Phong room = Phong.layThongTinPhong(soPhong);
+            ThongTinKhachHang customer = Phong.layThongTinHangDangThuePhong(soPhong);
+            LichSuDatPhong history = LichSuDatPhong.layLichSuDatPhongTheoMaKH(customer.ma);
+
+            if (room.trangThai != "DANG_SU_DUNG")
+            {
+                MessageBox.Show(
+                    "Phòng không được sử dụng nên không thể checkout!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+            Console.WriteLine(history.thoiGianCheckin);
+            if (history.thoiGianCheckin.Length == 0)
+            {
+                MessageBox.Show(
+                    "Phòng chưa checkin nên không thể checkout!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+            if (LichSuCheckout.themLichSuCheckout(history.ma, soPhong))
+            {
+                LichSuCheckout checkoutHistory = LichSuCheckout.layLichSuCheckout(history.ma);
+                GUI_RoomStatus roomStatusPage = new GUI_RoomStatus(checkoutHistory.ma);
+                Program.previousForm.Add(this);
+                roomStatusPage.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show(
+                    "Thất bại!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+                return;
+            }
         }
     }
 }
