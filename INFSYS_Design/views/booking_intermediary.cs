@@ -32,7 +32,7 @@ namespace INFSYS_Design.views
 
             int loaiPhongColumnIndex = dtgLoaiPhong.Columns["MALOAIPHONG"].Index;
             DataGridViewRow currentRow = dtgLoaiPhong.CurrentRow;
-            if(currentRow != null)
+            if (currentRow != null)
             {
                 object value = currentRow.Cells[loaiPhongColumnIndex].Value;
                 string type = value.ToString();
@@ -210,7 +210,7 @@ namespace INFSYS_Design.views
                 var typeRoom = this.dtgLoaiPhong.SelectedRows;
                 string type = typeRoom[0].ToString();
 
-                ThongTinKhachHang kh = new ThongTinKhachHang(text_ID, text_loaiDinhDanh, text_email, namSinh,text_tenKH, text_diaChi, text_gioiTinh);
+                ThongTinKhachHang kh = new ThongTinKhachHang(text_ID, text_loaiDinhDanh, text_email, namSinh, text_tenKH, text_diaChi, text_gioiTinh);
 
                 bool checkKHtontai = ThongTinKhachHang.kiemTraKhachHang(kh);
 
@@ -251,7 +251,7 @@ namespace INFSYS_Design.views
                 {
                     object value = currentRow.Cells[soPhongColumnIndex].Value;
                     soPhong = value.ToString();
-                
+
 
                     int sp = int.Parse(soPhong);
 
@@ -262,7 +262,7 @@ namespace INFSYS_Design.views
                     int maYeuCau = yc_get.ma;
 
                     DanhSachCho kh_dsCho = new DanhSachCho("", ngayYeuCau, ngHetHan, nguoiThucHien, maYeuCau);
-                
+
 
                     if (checkDSCho || dtgDSPhongTrong == null)
                     {
@@ -288,10 +288,10 @@ namespace INFSYS_Design.views
                             return;
                         }
                     }
-                    else if(dtgDSPhongTrong != null && currentRow !=null)
+                    else if (dtgDSPhongTrong != null && currentRow != null)
                     {
 
-                        LichSuDatPhong ls = new LichSuDatPhong(text_tgCheckout,ngayYeuCau, text_hinhThucThanhToan, soTienDatCoc, maYeuCau, soPhong);
+                        LichSuDatPhong ls = new LichSuDatPhong(text_tgCheckout, ngayYeuCau, text_hinhThucThanhToan, soTienDatCoc, maYeuCau, soPhong);
                         if (LichSuDatPhong.themLichSuDatPhong(ls))
                         {
                             MessageBox.Show(
@@ -327,7 +327,7 @@ namespace INFSYS_Design.views
                 );
                 return;
             }
-    }
+        }
 
         private void dtgLoaiPhong_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

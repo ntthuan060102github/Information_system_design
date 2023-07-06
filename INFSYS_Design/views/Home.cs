@@ -46,5 +46,13 @@ namespace INFSYS_Design.views
             customersPage.Show();
             this.Hide();
         }
+
+        private void btn_room_booking_Click(object sender, EventArgs e)
+        {
+            GUI_DatPhong customersPage = new GUI_DatPhong();
+            Program.previousForm.Add(this);
+            customersPage.Show();
+            this.Hide();
+        }
     }
 }
