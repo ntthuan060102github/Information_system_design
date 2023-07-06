@@ -161,7 +161,7 @@ namespace INFSYS_Design.models
             DBConn conn = new DBConn();
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.CommandType = System.Data.CommandType.Text;
-            sqlCmd.CommandText = $"SELECT * FROM PHONG WHERE LOAIPHONG = {loaiphong} AND TRANGTHAI = 'TRONG'";
+            sqlCmd.CommandText = $"SELECT * FROM PHONG WHERE LOAIPHONG = '{loaiphong}' AND TRANGTHAI = 'TRONG'";
             sqlCmd.Connection = conn.conn;
             string[] columnNames = { "soPhong", "trangThai", "loaiPhong" };
 

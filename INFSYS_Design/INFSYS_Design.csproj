@@ -85,6 +85,12 @@
     <Compile Include="views\add_service.Designer.cs">
       <DependentUpon>add_service.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\booking_intermediary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\booking_intermediary.Designer.cs">
+      <DependentUpon>booking_intermediary.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\components\add_room_modal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,12 +163,6 @@
     <Compile Include="views\checkin.Designer.cs">
       <DependentUpon>checkin.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\booking_intermediary.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="views\booking_intermediary.Designer.cs">
-      <DependentUpon>booking_intermediary.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="views\room_status.cs">
@@ -194,6 +194,9 @@
     </Compile>
     <EmbeddedResource Include="views\add_service.resx">
       <DependentUpon>add_service.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\booking_intermediary.resx">
+      <DependentUpon>booking_intermediary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\components\add_room_modal.resx">
       <DependentUpon>add_room_modal.cs</DependentUpon>
@@ -233,9 +236,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\checkin.resx">
       <DependentUpon>checkin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="views\booking_intermediary.resx">
-      <DependentUpon>booking_intermediary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\room_status.resx">
       <DependentUpon>room_status.cs</DependentUpon>

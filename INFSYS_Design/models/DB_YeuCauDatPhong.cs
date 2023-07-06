@@ -47,7 +47,7 @@ namespace INFSYS_Design.models
             return null;
         }
 
-        public static int themYeuCauDatPhong(YeuCauDatPhong yc)
+        public static int themYeuCauDatPhong(int soDemLuuTru, string ngayDen, string ngayYeuCau, string yeuCauDacBiet, int maKH, string loaiPhong)
         {
             DBConn conn = new DBConn();
             SqlCommand sqlCmd = new SqlCommand();
@@ -55,12 +55,12 @@ namespace INFSYS_Design.models
             sqlCmd.CommandText = "INSERT INTO YEUCAUDATPHONG (SODEMLUUTRU, NGAYDEN, NGAYYEUCAU, YEUCAUDACBIET, MAKH, LOAIPHONG) VALUES (@soDemLuuTru, @ngayDen, @ngayYeuCau, @yeuCauDacBiet, @maKH, @loaiPhong)";
             sqlCmd.Connection = conn.conn;
 
-            sqlCmd.Parameters.AddWithValue("@soDemLuuTru", yc.soDemLuuTru);
-            sqlCmd.Parameters.AddWithValue("@ngayDen", yc.ngayDen);
-            sqlCmd.Parameters.AddWithValue("@ngayYeuCau", yc.ngayYeuCau);
-            sqlCmd.Parameters.AddWithValue("@yeuCauDacBiet", yc.yeuCauDacBiet);
-            sqlCmd.Parameters.AddWithValue("@maKH", yc.maKH);
-            sqlCmd.Parameters.AddWithValue("@loaiPhong", yc.loaiPhong);
+            sqlCmd.Parameters.AddWithValue("@soDemLuuTru", soDemLuuTru);
+            sqlCmd.Parameters.AddWithValue("@ngayDen", ngayDen);
+            sqlCmd.Parameters.AddWithValue("@ngayYeuCau", ngayYeuCau);
+            sqlCmd.Parameters.AddWithValue("@yeuCauDacBiet", yeuCauDacBiet);
+            sqlCmd.Parameters.AddWithValue("@maKH", maKH);
+            sqlCmd.Parameters.AddWithValue("@loaiPhong", loaiPhong);
 
             return sqlCmd.ExecuteNonQuery();
         }

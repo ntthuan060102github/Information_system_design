@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
+using System.Text.RegularExpressions;
 
 namespace INFSYS_Design.views
 {
@@ -19,7 +19,6 @@ namespace INFSYS_Design.views
         {
             InitializeComponent();
             List<LoaiPhong> dsLoaiPhong = LoaiPhong.layDanhSachLoaiPhong();
-
             foreach (LoaiPhong typeroom in dsLoaiPhong)
             {
                 this.dtgLoaiPhong.Rows.Add(
@@ -46,7 +45,12 @@ namespace INFSYS_Design.views
                     );
                 }
             }
-
+            this.comboBox1.Items.Add("Nam");
+            this.comboBox1.Items.Add("Nữ");
+            this.comboBox1.Text = "Nam";
+            this.comboBox2.Items.Add("Trực tiếp");
+            this.comboBox2.Items.Add("Chuyển khoản");
+            this.comboBox2.Text = "Trực tiếp";
         }
 
         private void booking_intermediary_Load(object sender, EventArgs e)
@@ -136,7 +140,14 @@ namespace INFSYS_Design.views
 
         private void dtg_list_empty_room_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            this.dtgDSPhongTrong.Rows.Clear();
+            string roomType = this.dtgLoaiPhong.SelectedRows[0].Cells[0].Value.ToString();
 
+            List<Phong> listOfRoom = Phong.layDanhSachPhongTrongTheoLoaiPhong(roomType);
+            foreach (Phong room in listOfRoom)
+            {
+                this.dtgDSPhongTrong.Rows.Add(room.soPhong.ToString());
+            }
         }
 
         private void label_customer_info_Click(object sender, EventArgs e)
@@ -178,165 +189,193 @@ namespace INFSYS_Design.views
         {
 
         }
-
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void dtgLoaiPhong_SelectionChanged(object sender, DataGridViewCellEventArgs e)
         {
-            try
+            if(!this.checkDSCho.Checked)
             {
-                string text_tenKH = this.tbTenKH.Text;
-                string text_SDT = this.tbSDT.Text;
-                string text_email = this.tbEmail.Text;
-                string text_ID = this.tbDinhDanh.Text;
-                string text_loaiDinhDanh = this.tbLoaiDinhDanh.Text;
-                string text_diaChi = this.tbDiaChi.Text;
-                string text_gioiTinh = this.tbGioiTinh.Text;
-                string text_yeuCauDacBiet = this.tbYeuCauDacBiet.Text;
-                string text_hinhThucThanhToan = this.tbhinhThucThanhToan.Text;
-                int soTienDatCoc = int.Parse(this.tbSoTienDatCoc.Text);
+                this.dtgDSPhongTrong.Rows.Clear();
+                string roomType = this.dtgLoaiPhong.SelectedRows[0].Cells[0].Value.ToString();
 
-                string text_ngSinh = this.dtpNgaySinh.Value.ToString();
-                int namSinh = int.Parse(text_ngSinh.Substring(text_ngSinh.Length, -4));
-                string text_ngDen = this.dtpNgayDen.Value.ToString();
-                string text_tgCheckin = this.dtpCheckin.Value.ToString();
-                string text_tgCheckout = this.dtpCheckout.Value.ToString();
-                bool checkDSCho = this.checkDSCho.Checked;
-
-                DateTime date = DateTime.Today;
-                string ngayYeuCau = date.ToString("dd/MM/yyyy");
-                // Tăng thêm 7 ngày cho DateTime
-                DateTime newDate = date.AddDays(7);
-                string ngHetHan = newDate.ToString("dd/MM/yyyy");
-
-                var typeRoom = this.dtgLoaiPhong.SelectedRows;
-                string type = typeRoom[0].ToString();
-
-                ThongTinKhachHang kh = new ThongTinKhachHang(text_ID, text_loaiDinhDanh, text_email, namSinh, text_tenKH, text_diaChi, text_gioiTinh);
-
-                bool checkKHtontai = ThongTinKhachHang.kiemTraKhachHang(kh);
-
-                if (checkKHtontai == false)
+                List<Phong> listOfRoom = Phong.layDanhSachPhongTrongTheoLoaiPhong(roomType);
+                foreach(Phong room in listOfRoom)
                 {
-                    if (ThongTinKhachHang.themKhachHang(kh))
-                    {
-                        MessageBox.Show(
-                            "Thành công!",
-                            "Thông báo!",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Information
-                        );
-                        this.Close();
-                        return;
-                    }
-                    else
-                    {
-                        MessageBox.Show(
-                            "Thất bại!",
-                            "Thông báo!",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error
-                        );
-                        return;
-                    }
+                    this.dtgDSPhongTrong.Rows.Add(room.soPhong.ToString());
                 }
-
-
-                int nguoiThucHien = Program.currentUserId;
-
-                ThongTinKhachHang kh_get = ThongTinKhachHang.layThongTinKhachHangTheoTen(text_tenKH);
-                string soPhong = "1";
-
-                int soPhongColumnIndex = dtgDSPhongTrong.Columns["SOPHONG"].Index;
-                DataGridViewRow currentRow = dtgDSPhongTrong.CurrentRow;
-                if (currentRow != null)
-                {
-                    object value = currentRow.Cells[soPhongColumnIndex].Value;
-                    soPhong = value.ToString();
-
-
-                    int sp = int.Parse(soPhong);
-
-                    YeuCauDatPhong yc = new YeuCauDatPhong(1, text_ngDen, ngayYeuCau, text_yeuCauDacBiet, kh_get.ma, type);
-
-                    YeuCauDatPhong yc_get = YeuCauDatPhong.layThongtinYeuCau(kh_get.ma, sp);
-
-                    int maYeuCau = yc_get.ma;
-
-                    DanhSachCho kh_dsCho = new DanhSachCho("", ngayYeuCau, ngHetHan, nguoiThucHien, maYeuCau);
-
-
-                    if (checkDSCho || dtgDSPhongTrong == null)
-                    {
-                        if (DanhSachCho.themKHVaoDSCho(kh_dsCho))
-                        {
-                            MessageBox.Show(
-                                "Thành công!",
-                                "Thông báo!",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information
-                            );
-                            this.Close();
-                            return;
-                        }
-                        else
-                        {
-                            MessageBox.Show(
-                                "Thất bại!",
-                                "Thông báo!",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error
-                            );
-                            return;
-                        }
-                    }
-                    else if (dtgDSPhongTrong != null && currentRow != null)
-                    {
-
-                        LichSuDatPhong ls = new LichSuDatPhong(text_tgCheckout, ngayYeuCau, text_hinhThucThanhToan, soTienDatCoc, maYeuCau, soPhong);
-                        if (LichSuDatPhong.themLichSuDatPhong(ls))
-                        {
-                            MessageBox.Show(
-                                "Thành công!",
-                                "Thông báo!",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information
-                            );
-                            this.Close();
-                            return;
-                        }
-                        else
-                        {
-                            MessageBox.Show(
-                                "Thất bại!",
-                                "Thông báo!",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error
-                            );
-                            return;
-                        }
-                    }
-                }
-
             }
-            catch
-            {
-                MessageBox.Show(
-                    "Yêu cầu không hợp lệ!",
-                    "Lỗi!",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error
-                );
-                return;
-            }
-        }
-
-        private void dtgLoaiPhong_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void label_list_empty_room_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSubmit_Click_1(object sender, EventArgs e)
+        {
+            string customer_name = this.tbTenKH.Text;
+            string customer_phone = this.tbSDT.Text;
+            string customer_email = this.tbEmail.Text;
+            string txt_customer_year_of_birthday = this.tb_namSinh.Text;
+            int customer_year_of_birthday;
+            string customer_id = this.tbDinhDanh.Text;
+            string customer_address = this.tbDiaChi.Text;
+            string customer_gender = this.comboBox1.SelectedItem.ToString();
+            DateTime arrive_date = this.dtpNgayDen.Value;
+            string payment_method = this.comboBox2.SelectedItem.ToString();
+            DateTime checkin_date = this.dtpCheckin.Value;
+            DateTime return_date = this.dtpCheckout.Value;
+            bool to_wait_list = this.checkDSCho.Checked;
+
+            if (customer_name.Length <= 0)
+            {
+                MessageBox.Show(
+                    "Tên khách hàng không hợp lệ!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+            else if (!Regex.IsMatch(customer_phone, @"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$"))
+            {
+                MessageBox.Show(
+                    "Số điện thoại không hợp lệ!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+            else if (!Regex.IsMatch(customer_email, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))
+            {
+                MessageBox.Show(
+                    "Email không hợp lệ!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+            else if (
+                !(int.TryParse(txt_customer_year_of_birthday, out customer_year_of_birthday)
+                && customer_year_of_birthday >= 1990
+                && customer_year_of_birthday <= DateTime.Now.Year - 18)
+            )
+            {
+                MessageBox.Show(
+                    "Năm sinh không hợp lệ!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+            else if (customer_id.Length <= 0)
+            {
+                MessageBox.Show(
+                    "CCCD/CMND không hợp lệ!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+            else if (arrive_date.Date < DateTime.Now.Date)
+            {
+                MessageBox.Show(
+                    "Ngày đến không hợp lệ!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+            else if (checkin_date.Date < DateTime.Now.Date)
+            {
+                MessageBox.Show(
+                    "Ngày checkin dự kiến không hợp lệ!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+            else if (return_date.Date < DateTime.Now.Date)
+            {
+                MessageBox.Show(
+                    "Ngày trả phòng dự kiến không hợp lệ!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+            else if (this.dtgLoaiPhong.SelectedRows.Count == 0)
+            {
+                MessageBox.Show(
+                    "Vui lòng chọn loại phòng!",
+                    "Thông báo!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+            
+            if(to_wait_list)
+            {
+
+            }
+            else
+            {
+                if (this.dtgDSPhongTrong.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show(
+                        "Vui lòng chọn phòng!",
+                        "Thông báo!",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning
+                    );
+                    return;
+                }
+            }
+            int customer = ThongTinKhachHang.themKhachHang(
+                customer_id,
+                customer_email,
+                customer_year_of_birthday,
+                customer_name,
+                customer_phone,
+                customer_address,
+                customer_gender == "Nam" ? 1 : 0
+            );
+        }
+
+        private void checkDSCho_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.checkDSCho.Checked)
+            {
+                this.dtgDSPhongTrong.Rows.Clear();
+            }
+            else
+            {
+                this.dtgDSPhongTrong.Rows.Clear();
+                string roomType = this.dtgLoaiPhong.SelectedRows[0].Cells[0].Value.ToString();
+
+                List<Phong> listOfRoom = Phong.layDanhSachPhongTrongTheoLoaiPhong(roomType);
+                foreach (Phong room in listOfRoom)
+                {
+                    this.dtgDSPhongTrong.Rows.Add(room.soPhong.ToString());
+                }
+
+            }
         }
     }
 }

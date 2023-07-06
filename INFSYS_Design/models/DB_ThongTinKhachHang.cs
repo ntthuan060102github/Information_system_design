@@ -90,24 +90,24 @@ namespace INFSYS_Design.models
             return null;
         }
 
-        public static int themKhachHang(ThongTinKhachHang kh)
+        public static int themKhachHang(string customerId, string email, int yearOfBirth, string fullName, string phone, string address, int gender)
         {
             DBConn conn = new DBConn();
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.CommandType = System.Data.CommandType.Text;
-            sqlCmd.CommandText = "INSERT INTO THONGTINKHACHHANG ( MASODINHDANH, LOAIMASODINHDANH, EMAIL, NAMSINH, HOTEN, SDT, DIACHITHUONGTRU, GIOITINH) VALUES (@maSoDinhDanh, @loaiMaSoDinhDanh, @email, @namSinh, @hoTen, @sdt, @diaChiThuongTru, @gioiTinh)";
+            sqlCmd.CommandText = "INSERT INTO THONGTINKHACHHANG ( MASODINHDANH, LOAIMASODINHDANH, EMAIL, NAMSINH, HOTEN, SDT, DIACHITHUONGTRU, GIOITINH) output INSERTED.MA VALUES (@maSoDinhDanh, @loaiMaSoDinhDanh, @email, @namSinh, @hoTen, @sdt, @diaChiThuongTru, @gioiTinh)";
             sqlCmd.Connection = conn.conn;
 
-            sqlCmd.Parameters.AddWithValue("@maSoDinhDanh", kh.maSoDinhDanh);
-            sqlCmd.Parameters.AddWithValue("@loaiMaSoDinhDanh", kh.loaiMaSoDinhDanh);
-            sqlCmd.Parameters.AddWithValue("@email", kh.email);
-            sqlCmd.Parameters.AddWithValue("@namSinh", kh.namSinh);
-            sqlCmd.Parameters.AddWithValue("@hoTen", kh.hoTen);
-            sqlCmd.Parameters.AddWithValue("@sdt", kh.sdt);
-            sqlCmd.Parameters.AddWithValue("@diaChiThuongTru", kh.diaChiThuongTru);
-            sqlCmd.Parameters.AddWithValue("@gioiTinh", kh.gioiTinh);
+            sqlCmd.Parameters.AddWithValue("@maSoDinhDanh", customerId);
+            sqlCmd.Parameters.AddWithValue("@loaiMaSoDinhDanh", "CCCD");
+            sqlCmd.Parameters.AddWithValue("@email", email);
+            sqlCmd.Parameters.AddWithValue("@namSinh", yearOfBirth);
+            sqlCmd.Parameters.AddWithValue("@hoTen", fullName);
+            sqlCmd.Parameters.AddWithValue("@sdt", phone);
+            sqlCmd.Parameters.AddWithValue("@diaChiThuongTru", address);
+            sqlCmd.Parameters.AddWithValue("@gioiTinh", gender);
 
-            return sqlCmd.ExecuteNonQuery();
+            return sqlCmd.ExecuteScalar();
         }
 
         public static ThongTinKhachHang layTTKhachHang(ThongTinKhachHang kh)

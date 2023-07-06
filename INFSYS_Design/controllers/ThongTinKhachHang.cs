@@ -96,10 +96,10 @@ namespace INFSYS_Design.controllers
             return DB_ThongTinKhachHang.layThongtinKhachHangTheoTen(hoTen);
         }
 
-        public static bool themKhachHang(ThongTinKhachHang kh)
+        public static int themKhachHang(string customerId, string email, int yearOfBirth, string fullName, string phone, string address, int gender)
         {
-
-            return DB_ThongTinKhachHang.themKhachHang(kh) == 1;
+            int customer = DB_ThongTinKhachHang.themKhachHang(customerId, email, yearOfBirth, fullName, phone, address, gender);
+            return customer;
         }
         public static bool kiemTraKhachHang(ThongTinKhachHang kh)
         {
