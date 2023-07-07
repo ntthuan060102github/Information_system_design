@@ -38,8 +38,6 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dtpNgayDen = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
             this.label_customer_birth_day = new System.Windows.Forms.Label();
             this.label_customer_gender = new System.Windows.Forms.Label();
             this.tbDiaChi = new System.Windows.Forms.TextBox();
@@ -65,6 +63,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tb_namSinh = new System.Windows.Forms.TextBox();
+            this.cb_team = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDSPhongTrong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgLoaiPhong)).BeginInit();
             this.SuspendLayout();
@@ -156,7 +155,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(148, 472);
+            this.comboBox2.Location = new System.Drawing.Point(148, 460);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(187, 24);
             this.comboBox2.TabIndex = 74;
@@ -164,7 +163,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(148, 391);
+            this.comboBox1.Location = new System.Drawing.Point(148, 415);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(187, 24);
             this.comboBox1.TabIndex = 73;
@@ -173,7 +172,7 @@
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(1, 472);
+            this.label5.Location = new System.Drawing.Point(1, 460);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 12);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(146, 24);
@@ -182,33 +181,11 @@
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label5.Click += new System.EventHandler(this.label5_Click_1);
             // 
-            // dtpNgayDen
-            // 
-            this.dtpNgayDen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNgayDen.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayDen.Location = new System.Drawing.Point(148, 431);
-            this.dtpNgayDen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 25);
-            this.dtpNgayDen.Name = "dtpNgayDen";
-            this.dtpNgayDen.Size = new System.Drawing.Size(187, 26);
-            this.dtpNgayDen.TabIndex = 71;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(0, 431);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 26);
-            this.label2.TabIndex = 70;
-            this.label2.Text = "Ngày đến";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // label_customer_birth_day
             // 
             this.label_customer_birth_day.BackColor = System.Drawing.Color.Transparent;
             this.label_customer_birth_day.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label_customer_birth_day.Location = new System.Drawing.Point(0, 268);
+            this.label_customer_birth_day.Location = new System.Drawing.Point(0, 280);
             this.label_customer_birth_day.Margin = new System.Windows.Forms.Padding(4, 0, 4, 12);
             this.label_customer_birth_day.Name = "label_customer_birth_day";
             this.label_customer_birth_day.Size = new System.Drawing.Size(147, 26);
@@ -220,7 +197,7 @@
             // 
             this.label_customer_gender.BackColor = System.Drawing.Color.Transparent;
             this.label_customer_gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label_customer_gender.Location = new System.Drawing.Point(1, 391);
+            this.label_customer_gender.Location = new System.Drawing.Point(1, 415);
             this.label_customer_gender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 12);
             this.label_customer_gender.Name = "label_customer_gender";
             this.label_customer_gender.Size = new System.Drawing.Size(146, 24);
@@ -231,7 +208,7 @@
             // tbDiaChi
             // 
             this.tbDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDiaChi.Location = new System.Drawing.Point(148, 350);
+            this.tbDiaChi.Location = new System.Drawing.Point(148, 370);
             this.tbDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 25);
             this.tbDiaChi.Name = "tbDiaChi";
             this.tbDiaChi.Size = new System.Drawing.Size(187, 26);
@@ -241,7 +218,7 @@
             // 
             this.label_customer_address.BackColor = System.Drawing.Color.Transparent;
             this.label_customer_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label_customer_address.Location = new System.Drawing.Point(0, 347);
+            this.label_customer_address.Location = new System.Drawing.Point(0, 367);
             this.label_customer_address.Margin = new System.Windows.Forms.Padding(4, 0, 4, 12);
             this.label_customer_address.Name = "label_customer_address";
             this.label_customer_address.Size = new System.Drawing.Size(147, 30);
@@ -252,7 +229,7 @@
             // tbDinhDanh
             // 
             this.tbDinhDanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDinhDanh.Location = new System.Drawing.Point(148, 308);
+            this.tbDinhDanh.Location = new System.Drawing.Point(148, 324);
             this.tbDinhDanh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 25);
             this.tbDinhDanh.Name = "tbDinhDanh";
             this.tbDinhDanh.Size = new System.Drawing.Size(187, 26);
@@ -263,7 +240,7 @@
             // 
             this.label_customer_id.BackColor = System.Drawing.Color.Transparent;
             this.label_customer_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label_customer_id.Location = new System.Drawing.Point(-1, 305);
+            this.label_customer_id.Location = new System.Drawing.Point(-1, 321);
             this.label_customer_id.Margin = new System.Windows.Forms.Padding(4, 0, 4, 12);
             this.label_customer_id.Name = "label_customer_id";
             this.label_customer_id.Size = new System.Drawing.Size(148, 30);
@@ -274,7 +251,7 @@
             // tbEmail
             // 
             this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmail.Location = new System.Drawing.Point(148, 229);
+            this.tbEmail.Location = new System.Drawing.Point(148, 237);
             this.tbEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 25);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(187, 26);
@@ -285,7 +262,7 @@
             // 
             this.label_customer_email.BackColor = System.Drawing.Color.Transparent;
             this.label_customer_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label_customer_email.Location = new System.Drawing.Point(0, 226);
+            this.label_customer_email.Location = new System.Drawing.Point(0, 234);
             this.label_customer_email.Margin = new System.Windows.Forms.Padding(4, 0, 4, 12);
             this.label_customer_email.Name = "label_customer_email";
             this.label_customer_email.Size = new System.Drawing.Size(147, 30);
@@ -296,7 +273,7 @@
             // tbSDT
             // 
             this.tbSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSDT.Location = new System.Drawing.Point(148, 186);
+            this.tbSDT.Location = new System.Drawing.Point(148, 190);
             this.tbSDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 25);
             this.tbSDT.Name = "tbSDT";
             this.tbSDT.Size = new System.Drawing.Size(187, 26);
@@ -307,7 +284,7 @@
             // 
             this.label_customer_phone_number.BackColor = System.Drawing.Color.Transparent;
             this.label_customer_phone_number.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label_customer_phone_number.Location = new System.Drawing.Point(0, 183);
+            this.label_customer_phone_number.Location = new System.Drawing.Point(0, 187);
             this.label_customer_phone_number.Margin = new System.Windows.Forms.Padding(4, 0, 4, 12);
             this.label_customer_phone_number.Name = "label_customer_phone_number";
             this.label_customer_phone_number.Size = new System.Drawing.Size(147, 30);
@@ -436,6 +413,7 @@
             this.btn_back.TabIndex = 83;
             this.btn_back.Text = "Quay lại";
             this.btn_back.UseVisualStyleBackColor = false;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // label1
             // 
@@ -463,9 +441,9 @@
             // 
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(-1, 47);
+            this.label6.Location = new System.Drawing.Point(-1, 45);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(1007, 42);
+            this.label6.Size = new System.Drawing.Size(1007, 39);
             this.label6.TabIndex = 86;
             this.label6.Text = "ĐẶT PHÒNG";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -473,12 +451,24 @@
             // tb_namSinh
             // 
             this.tb_namSinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_namSinh.Location = new System.Drawing.Point(148, 268);
+            this.tb_namSinh.Location = new System.Drawing.Point(148, 280);
             this.tb_namSinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 25);
             this.tb_namSinh.Name = "tb_namSinh";
             this.tb_namSinh.Size = new System.Drawing.Size(187, 26);
             this.tb_namSinh.TabIndex = 87;
             this.tb_namSinh.Text = "2002";
+            // 
+            // cb_team
+            // 
+            this.cb_team.BackColor = System.Drawing.Color.Transparent;
+            this.cb_team.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cb_team.Location = new System.Drawing.Point(148, 496);
+            this.cb_team.Margin = new System.Windows.Forms.Padding(4);
+            this.cb_team.Name = "cb_team";
+            this.cb_team.Size = new System.Drawing.Size(144, 24);
+            this.cb_team.TabIndex = 88;
+            this.cb_team.Text = "Đoàn khách";
+            this.cb_team.UseVisualStyleBackColor = false;
             // 
             // GUI_DatPhong
             // 
@@ -487,6 +477,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1006, 529);
+            this.Controls.Add(this.cb_team);
             this.Controls.Add(this.tb_namSinh);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
@@ -503,8 +494,6 @@
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dtpNgayDen);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label_customer_birth_day);
             this.Controls.Add(this.label_customer_gender);
             this.Controls.Add(this.tbDiaChi);
@@ -541,8 +530,6 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dtpNgayDen;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label_customer_birth_day;
         private System.Windows.Forms.Label label_customer_gender;
         private System.Windows.Forms.TextBox tbDiaChi;
@@ -568,5 +555,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tb_namSinh;
+        private System.Windows.Forms.CheckBox cb_team;
     }
 }

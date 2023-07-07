@@ -59,9 +59,9 @@ namespace INFSYS_Design.controllers
         {
             return DB_DanhSachCho.layDanhSachTheoTheoLoaiPhong(maLoaiPhong);
         }
-        public static bool themKHVaoDSCho(DanhSachCho kh)
+        public static bool themDanhSachCho(DateTime deadline, int requestId)
         {
-            return DB_DanhSachCho.themKHVaoDSCho(kh) == 1;
+            return DB_DanhSachCho.themDanhSachCho(deadline.ToString(), requestId, DateTime.Now.ToString(), Program.currentUserId) == 1;
         }
     }
 }

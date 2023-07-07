@@ -152,7 +152,6 @@ namespace INFSYS_Design.views
             }
             int idx = this.dataGridView1.SelectedRows[0].Index;
 
-            Console.WriteLine(this.dataGridView1.Rows[idx].Cells[0].Value.ToString());
             int soPhong = int.Parse(this.dataGridView1.Rows[idx].Cells[0].Value.ToString());
             Phong room = Phong.layThongTinPhong(soPhong);
             if (room.trangThai != "DANG_SU_DUNG")
@@ -215,7 +214,7 @@ namespace INFSYS_Design.views
             ThongTinKhachHang customer = Phong.layThongTinHangDangThuePhong(soPhong);
             LichSuDatPhong history = LichSuDatPhong.layLichSuDatPhongTheoMaKH(customer.ma);
 
-            if (history.thoiGianCheckin.Length == 0)
+            if (history == null || history.thoiGianCheckin == null || history.thoiGianCheckin.Length == 0)
             {
                 MessageBox.Show(
                     "Phòng chưa checkin nên không thể checkout!",

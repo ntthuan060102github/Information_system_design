@@ -73,10 +73,10 @@ namespace INFSYS_Design.controllers
             return DB_LichSuDatPhong.layLichSuDatPhongTheoMaYeuCau(maYeuCau);
         }
 
-        public static bool themLichSuDatPhong(LichSuDatPhong lsdp)
+        public static bool themLichSuDatPhong(DateTime thoiGianTraPhongDuKien, string hinhThucThanhToan, int soTienCoc, int maYeuCau, int soPhong)
         {
 
-            return DB_LichSuDatPhong.themLichSuDatPhong(lsdp) == 1;
+            return DB_LichSuDatPhong.themLichSuDatPhong(thoiGianTraPhongDuKien.ToString(), DateTime.Now.ToString(), hinhThucThanhToan, soTienCoc, maYeuCau, soPhong) == 1;
         }
 
         public static bool checkin(int maDatPhong)

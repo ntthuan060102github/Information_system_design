@@ -107,7 +107,7 @@ namespace INFSYS_Design.models
             sqlCmd.Parameters.AddWithValue("@diaChiThuongTru", address);
             sqlCmd.Parameters.AddWithValue("@gioiTinh", gender);
 
-            return sqlCmd.ExecuteScalar();
+            return (int)sqlCmd.ExecuteScalar();
         }
 
         public static ThongTinKhachHang layTTKhachHang(ThongTinKhachHang kh)

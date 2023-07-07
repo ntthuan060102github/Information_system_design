@@ -48,19 +48,22 @@ namespace INFSYS_Design.models
             return waitingList;
         }
 
-        public static int themKHVaoDSCho(DanhSachCho kh)
+        public static int themDanhSachCho(string deadline, int requestId, string createdTime, int userId)
         {
             DBConn conn = new DBConn();
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.CommandType = System.Data.CommandType.Text;
-            sqlCmd.CommandText = "INSERT INTO THONGTINKHACHHANG ( TRANGTHAI, THOIGIANTAO, HANCHOT, NGUOITHUCHIEN, MAYEUCAU) VALUES (@trangThai, @thoiGianTao, @hanChot, @nguoiThucHien, @maYeuCau)";
+            sqlCmd.CommandText = @"
+                INSERT INTO DANHSACHCHO(TRANGTHAI, THOIGIANTAO, HANCHOT, NGUOITHUCHIEN, MAYEUCAU)
+                VALUES (@trangThai, @thoiGianTao, @hanChot, @nguoiThucHien, @maYeuCau)
+            ";
             sqlCmd.Connection = conn.conn;
 
-            sqlCmd.Parameters.AddWithValue("@trangThai", kh.trangThai);
-            sqlCmd.Parameters.AddWithValue("@thoiGianTao", kh.thoiGianTao);
-            sqlCmd.Parameters.AddWithValue("@hanChot", kh.hanChot);
-            sqlCmd.Parameters.AddWithValue("@nguoiThucHien", kh.nguoiThucHien);
-            sqlCmd.Parameters.AddWithValue("@maYeuCau", kh.maYeuCau);
+            sqlCmd.Parameters.AddWithValue("@trangThai", "DANG_CHO");
+            sqlCmd.Parameters.AddWithValue("@thoiGianTao", createdTime);
+            sqlCmd.Parameters.AddWithValue("@hanChot", deadline);
+            sqlCmd.Parameters.AddWithValue("@nguoiThucHien", userId);
+            sqlCmd.Parameters.AddWithValue("@maYeuCau", requestId);
 
             return sqlCmd.ExecuteNonQuery();
         }

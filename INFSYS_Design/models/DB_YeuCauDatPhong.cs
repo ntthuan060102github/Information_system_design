@@ -52,17 +52,14 @@ namespace INFSYS_Design.models
             DBConn conn = new DBConn();
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.CommandType = System.Data.CommandType.Text;
-            sqlCmd.CommandText = "INSERT INTO YEUCAUDATPHONG (SODEMLUUTRU, NGAYDEN, NGAYYEUCAU, YEUCAUDACBIET, MAKH, LOAIPHONG) VALUES (@soDemLuuTru, @ngayDen, @ngayYeuCau, @yeuCauDacBiet, @maKH, @loaiPhong)";
+            sqlCmd.CommandText = $@"INSERT INTO 
+                YEUCAUDATPHONG (SODEMLUUTRU, NGAYDEN, NGAYYEUCAU, YEUCAUDACBIET, MAKHACHHANG, LOAIPHONG) 
+                output INSERTED.MA 
+                VALUES ({soDemLuuTru}, '{ngayDen}', '{ngayYeuCau}', '{yeuCauDacBiet}', {maKH}, '{loaiPhong}')";
             sqlCmd.Connection = conn.conn;
 
-            sqlCmd.Parameters.AddWithValue("@soDemLuuTru", soDemLuuTru);
-            sqlCmd.Parameters.AddWithValue("@ngayDen", ngayDen);
-            sqlCmd.Parameters.AddWithValue("@ngayYeuCau", ngayYeuCau);
-            sqlCmd.Parameters.AddWithValue("@yeuCauDacBiet", yeuCauDacBiet);
-            sqlCmd.Parameters.AddWithValue("@maKH", maKH);
-            sqlCmd.Parameters.AddWithValue("@loaiPhong", loaiPhong);
-
-            return sqlCmd.ExecuteNonQuery();
+            Console.WriteLine(sqlCmd.CommandText);
+            return (int)sqlCmd.ExecuteScalar();
         }
         public static YeuCauDatPhong layThongtinYeuCauTheoMaDatPhong(int maDatPhong)
         {

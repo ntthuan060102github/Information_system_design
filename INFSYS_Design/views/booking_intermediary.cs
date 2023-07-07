@@ -229,11 +229,11 @@ namespace INFSYS_Design.views
             string customer_id = this.tbDinhDanh.Text;
             string customer_address = this.tbDiaChi.Text;
             string customer_gender = this.comboBox1.SelectedItem.ToString();
-            DateTime arrive_date = this.dtpNgayDen.Value;
             string payment_method = this.comboBox2.SelectedItem.ToString();
             DateTime checkin_date = this.dtpCheckin.Value;
             DateTime return_date = this.dtpCheckout.Value;
             bool to_wait_list = this.checkDSCho.Checked;
+            string specialRequest = this.tbYeuCauDacBiet.Text;
 
             if (customer_name.Length <= 0)
             {
@@ -289,16 +289,6 @@ namespace INFSYS_Design.views
                 );
                 return;
             }
-            else if (arrive_date.Date < DateTime.Now.Date)
-            {
-                MessageBox.Show(
-                    "Ngày đến không hợp lệ!",
-                    "Thông báo!",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
-                return;
-            }
             else if (checkin_date.Date < DateTime.Now.Date)
             {
                 MessageBox.Show(
@@ -329,12 +319,8 @@ namespace INFSYS_Design.views
                 );
                 return;
             }
-            
-            if(to_wait_list)
-            {
 
-            }
-            else
+            if (!to_wait_list)
             {
                 if (this.dtgDSPhongTrong.SelectedRows.Count == 0)
                 {
@@ -347,7 +333,8 @@ namespace INFSYS_Design.views
                     return;
                 }
             }
-            int customer = ThongTinKhachHang.themKhachHang(
+
+            int customerDbId = ThongTinKhachHang.themKhachHang(
                 customer_id,
                 customer_email,
                 customer_year_of_birthday,
@@ -356,6 +343,72 @@ namespace INFSYS_Design.views
                 customer_address,
                 customer_gender == "Nam" ? 1 : 0
             );
+            Console.WriteLine(this.dtgLoaiPhong.SelectedRows[0].Cells[0].ToString());
+            int requestId = YeuCauDatPhong.themYeuCauDatPhong(
+                (return_date - checkin_date).Days,
+                checkin_date,
+                specialRequest,
+                customerDbId,
+                this.dtgLoaiPhong.SelectedRows[0].Cells[0].Value.ToString()
+            );
+
+            if (to_wait_list)
+            {
+                if(DanhSachCho.themDanhSachCho(checkin_date.AddDays(7), requestId))
+                {
+                    MessageBox.Show(
+                        "Thành công!",
+                        "Thông báo",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show(
+                        "Thất bại!",
+                        "Thông báo",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
+                    return;
+                }
+            }
+            else
+            {
+                LoaiPhong roomType = LoaiPhong.layThongTinLoaiPhong(this.dtgLoaiPhong.SelectedRows[0].Cells[0].Value.ToString());
+                int roomNum = Convert.ToInt32(this.dtgDSPhongTrong.SelectedRows[0].Cells[0].Value.ToString());
+                bool history = LichSuDatPhong.themLichSuDatPhong(
+                    return_date, 
+                    payment_method == "Tr?c ti?p" ? "TRUC_TIEP" : "CHUYEN_KHOAN", 
+                    roomType.gia,
+                    requestId, 
+                    roomNum
+                );
+                bool room_modified = Phong.capNhatTrangThai(roomNum, "DANG_SU_DUNG");
+                
+                if (history && room_modified)
+                {
+                    MessageBox.Show(
+                        "Thành công!",
+                        "Thông báo",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show(
+                        "Thất bại!",
+                        "Thông báo",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
+                    return;
+                }
+            }
         }
 
         private void checkDSCho_CheckedChanged(object sender, EventArgs e)
@@ -376,6 +429,15 @@ namespace INFSYS_Design.views
                 }
 
             }
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            int idx = Program.previousForm.Count - 1;
+            Form prvForm = Program.previousForm[idx];
+            Program.previousForm.RemoveAt(idx);
+            prvForm.Show();
+            this.Hide();
         }
     }
 }

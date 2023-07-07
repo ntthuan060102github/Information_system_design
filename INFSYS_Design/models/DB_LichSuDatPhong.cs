@@ -57,7 +57,7 @@ namespace INFSYS_Design.models
             return null;
         }
 
-        public static int themLichSuDatPhong(LichSuDatPhong lsdp)
+        public static int themLichSuDatPhong(string thoiGianTraPhongDuKien, string thoiGianDat, string hinhThucThanhToan, int soTienCoc, int maYeuCau, int soPhong)
         {
             DBConn conn = new DBConn();
             SqlCommand sqlCmd = new SqlCommand();
@@ -65,12 +65,12 @@ namespace INFSYS_Design.models
             sqlCmd.CommandText = "INSERT INTO LICHSUDATPHONG (THOIGIANTRAPHONGDUKIEN, THOIGIANDAT, HINHTHUCTHANHTOAN, SOTIENDATCOC, MAYEUCAU, SOPHONG) VALUES (@thoiGianTraPhongDuKien, @thoiGianDat, @hinhThucThanhToan, @soTienDatCoc, @maYeuCau, @soPhong)";
             sqlCmd.Connection = conn.conn;
 
-            sqlCmd.Parameters.AddWithValue("@thoiGianTraPhongDuKien", lsdp.thoiGianTraPhongDuKien);
-            sqlCmd.Parameters.AddWithValue("@thoiGianDat", lsdp.thoiGianDat);
-            sqlCmd.Parameters.AddWithValue("@hinhThucThanhToan", lsdp.hinhThucThanhToan);
-            sqlCmd.Parameters.AddWithValue("@soTienDatCoc", lsdp.soTienDatCoc);
-            sqlCmd.Parameters.AddWithValue("@maYeuCau", lsdp.maYeuCau);
-            sqlCmd.Parameters.AddWithValue("@soPhong", lsdp.soPhong);
+            sqlCmd.Parameters.AddWithValue("@thoiGianTraPhongDuKien", thoiGianTraPhongDuKien);
+            sqlCmd.Parameters.AddWithValue("@thoiGianDat", thoiGianDat);
+            sqlCmd.Parameters.AddWithValue("@hinhThucThanhToan", hinhThucThanhToan);
+            sqlCmd.Parameters.AddWithValue("@soTienDatCoc", soTienCoc);
+            sqlCmd.Parameters.AddWithValue("@maYeuCau", maYeuCau);
+            sqlCmd.Parameters.AddWithValue("@soPhong", soPhong);
 
             return sqlCmd.ExecuteNonQuery();
         }
@@ -133,8 +133,8 @@ namespace INFSYS_Design.models
                 CommandText = $@"
                     SELECT *
                     FROM LICHSUDATPHONG 
-                    WHERE MA IN (
-                        SELECT MAKHACHHANG
+                    WHERE MAYEUCAU IN (
+                        SELECT MA
                         FROM YEUCAUDATPHONG
                         WHERE MAKHACHHANG = {maKh}
                     )            

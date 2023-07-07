@@ -70,10 +70,16 @@ namespace INFSYS_Design.controllers
             return DB_YeuCauDatPhong.layThongtinYeuCauTheoMaDatPhong(ma);
         }
 
-        public static bool themYeuCauDatPhong(int numDay, DateTime arriveDate, string specialRequest, int customerId, string roomType)
+        public static int themYeuCauDatPhong(int numDay, DateTime arriveDate, string specialRequest, int customerId, string roomType)
         {
-
-            return DB_YeuCauDatPhong.themYeuCauDatPhong(numDay, arriveDate.ToString(), DateTime.Now.ToString(), specialRequest, customerId, roomType) == 1;
+            return DB_YeuCauDatPhong.themYeuCauDatPhong(
+                numDay, 
+                arriveDate.Date.ToString(), 
+                DateTime.Now.Date.ToString(), 
+                specialRequest, 
+                customerId, 
+                roomType
+            );
         }
     }
 }
