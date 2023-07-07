@@ -70,5 +70,13 @@ namespace INFSYS_Design.views
             registerServicesPage.Show();
             this.Hide();
         }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            GUI_Login loginPage = new GUI_Login();
+            Program.previousForm.Clear();
+            loginPage.Show();
+            this.Hide();
+        }
     }
 }

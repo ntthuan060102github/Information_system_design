@@ -36,6 +36,7 @@ namespace INFSYS_Design.views
             this.btn_room_booking = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.btn_logout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // hello_label
@@ -56,7 +57,7 @@ namespace INFSYS_Design.views
             // 
             this.btn_customer_list.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_customer_list.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_customer_list.Location = new System.Drawing.Point(374, 162);
+            this.btn_customer_list.Location = new System.Drawing.Point(372, 133);
             this.btn_customer_list.Name = "btn_customer_list";
             this.btn_customer_list.Size = new System.Drawing.Size(259, 46);
             this.btn_customer_list.TabIndex = 2;
@@ -68,7 +69,7 @@ namespace INFSYS_Design.views
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.Location = new System.Drawing.Point(374, 214);
+            this.button1.Location = new System.Drawing.Point(372, 185);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(259, 46);
             this.button1.TabIndex = 3;
@@ -80,7 +81,7 @@ namespace INFSYS_Design.views
             // 
             this.btn_tour_management.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_tour_management.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_tour_management.Location = new System.Drawing.Point(374, 266);
+            this.btn_tour_management.Location = new System.Drawing.Point(372, 237);
             this.btn_tour_management.Name = "btn_tour_management";
             this.btn_tour_management.Size = new System.Drawing.Size(259, 46);
             this.btn_tour_management.TabIndex = 4;
@@ -91,7 +92,7 @@ namespace INFSYS_Design.views
             // 
             this.btn_room_booking.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_room_booking.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_room_booking.Location = new System.Drawing.Point(374, 318);
+            this.btn_room_booking.Location = new System.Drawing.Point(372, 289);
             this.btn_room_booking.Name = "btn_room_booking";
             this.btn_room_booking.Size = new System.Drawing.Size(259, 46);
             this.btn_room_booking.TabIndex = 5;
@@ -103,7 +104,7 @@ namespace INFSYS_Design.views
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button2.Location = new System.Drawing.Point(374, 370);
+            this.button2.Location = new System.Drawing.Point(372, 341);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(259, 46);
             this.button2.TabIndex = 6;
@@ -115,7 +116,7 @@ namespace INFSYS_Design.views
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button3.Location = new System.Drawing.Point(374, 422);
+            this.button3.Location = new System.Drawing.Point(372, 393);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(259, 46);
             this.button3.TabIndex = 7;
@@ -123,12 +124,25 @@ namespace INFSYS_Design.views
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // btn_logout
+            // 
+            this.btn_logout.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_logout.Location = new System.Drawing.Point(372, 445);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(259, 46);
+            this.btn_logout.TabIndex = 8;
+            this.btn_logout.Text = "Đăng xuất";
+            this.btn_logout.UseVisualStyleBackColor = false;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
+            // 
             // GUI_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1006, 529);
+            this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_room_booking);
@@ -154,5 +168,6 @@ namespace INFSYS_Design.views
         private System.Windows.Forms.Button btn_room_booking;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_logout;
     }
 }

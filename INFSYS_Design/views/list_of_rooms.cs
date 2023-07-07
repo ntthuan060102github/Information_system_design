@@ -19,8 +19,13 @@ namespace INFSYS_Design.views
             InitializeComponent();
             if(Program.currentUserRole == "NHANVIEN")
             {
-                this.btn_delete_room.Hide();
-                this.add_room_btn.Hide();
+                this.btn_delete_room.Enabled = false;
+                this.add_room_btn.Enabled = false;
+            }
+            else if (Program.currentUserRole == "ADMIN")
+            {
+                this.btn_checkin.Enabled = false;
+                this.btn_checkout.Enabled = false;
             }
             List<Phong> list_of_rooms = Phong.layDanhSachPhong();
             foreach(Phong room in list_of_rooms)

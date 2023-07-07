@@ -27,6 +27,12 @@ namespace INFSYS_Design.views
                     service.gia
                 );
             }
+            if(Program.currentUserRole != "ADMIN")
+            {
+                this.add_service_btn.Enabled = false;
+                this.delete_service_btn.Enabled = false;
+                this.update_service_btn.Enabled = false;
+            }
         }
 
         private void add_service_btn_Click(object sender, EventArgs e)
