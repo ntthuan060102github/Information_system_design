@@ -87,6 +87,7 @@ namespace INFSYS_Design.views
             this.btn_tour_management.TabIndex = 4;
             this.btn_tour_management.Text = "Quản lý hệ thống Tour";
             this.btn_tour_management.UseVisualStyleBackColor = false;
+            this.btn_tour_management.Click += new System.EventHandler(this.btn_tour_management_Click);
             // 
             // btn_room_booking
             // 

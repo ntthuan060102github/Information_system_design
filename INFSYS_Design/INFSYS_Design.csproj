@@ -52,6 +52,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controllers\DanhSachTour.cs" />
     <Compile Include="controllers\DichVu.cs" />
     <Compile Include="controllers\DanhSachCho.cs" />
     <Compile Include="controllers\GhiNhanHuHai.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="controllers\LichSuDatPhong.cs" />
     <Compile Include="controllers\LichSuGiaHan.cs" />
     <Compile Include="DBConn.cs" />
+    <Compile Include="models\DB_DanhSachTour.cs" />
     <Compile Include="models\DB_DichVu.cs" />
     <Compile Include="models\DB_DanhSachCho.cs" />
     <Compile Include="models\DB_GhiNhanHuHai.cs" />
@@ -96,6 +98,18 @@
     </Compile>
     <Compile Include="views\components\add_room_modal.Designer.cs">
       <DependentUpon>add_room_modal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\components\add_tour_modal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\components\add_tour_modal.Designer.cs">
+      <DependentUpon>add_tour_modal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\components\modify_tour_modal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\components\modify_tour_modal.Designer.cs">
+      <DependentUpon>modify_tour_modal.cs</DependentUpon>
     </Compile>
     <Compile Include="views\components\team_info_modal.cs">
       <SubType>Form</SubType>
@@ -183,6 +197,12 @@
     <Compile Include="views\service_charge.Designer.cs">
       <DependentUpon>service_charge.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\tour_management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\tour_management.Designer.cs">
+      <DependentUpon>tour_management.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\udpate_service.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +226,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\components\add_room_modal.resx">
       <DependentUpon>add_room_modal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\components\add_tour_modal.resx">
+      <DependentUpon>add_tour_modal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\components\modify_tour_modal.resx">
+      <DependentUpon>modify_tour_modal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\components\team_info_modal.resx">
       <DependentUpon>team_info_modal.cs</DependentUpon>
@@ -251,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\service_charge.resx">
       <DependentUpon>service_charge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\tour_management.resx">
+      <DependentUpon>tour_management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\udpate_service.resx">
       <DependentUpon>udpate_service.cs</DependentUpon>

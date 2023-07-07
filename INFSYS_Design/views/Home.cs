@@ -84,5 +84,13 @@ namespace INFSYS_Design.views
             loginPage.Show();
             this.Hide();
         }
+
+        private void btn_tour_management_Click(object sender, EventArgs e)
+        {
+            GUI_DanhSachTour toursPage = new GUI_DanhSachTour();
+            Program.previousForm.Add(this);
+            toursPage.Show();
+            this.Hide();
+        }
     }
 }
