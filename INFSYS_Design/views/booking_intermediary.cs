@@ -390,8 +390,11 @@ namespace INFSYS_Design.views
                 
                 if (history && room_modified)
                 {
-                    GUI_TeamInfoModal modal = new GUI_TeamInfoModal(customerDbId);
-                    modal.ShowDialog();
+                    if (this.cb_team.Checked)
+                    {
+                        GUI_TeamInfoModal modal = new GUI_TeamInfoModal(customerDbId);
+                        modal.ShowDialog();
+                    }
                     return;
                 }
                 else

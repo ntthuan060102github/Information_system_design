@@ -62,5 +62,13 @@ namespace INFSYS_Design.views
             servicesPage.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            GUI_RegisterService registerServicesPage = new GUI_RegisterService();
+            Program.previousForm.Add(this);
+            registerServicesPage.Show();
+            this.Hide();
+        }
     }
 }

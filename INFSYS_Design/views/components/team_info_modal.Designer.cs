@@ -103,7 +103,7 @@ namespace INFSYS_Design.views.components
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(102, 244);
+            this.button1.Location = new System.Drawing.Point(104, 244);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 29);
             this.button1.TabIndex = 6;

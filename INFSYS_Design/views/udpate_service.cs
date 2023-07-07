@@ -40,7 +40,6 @@ namespace INFSYS_Design.views
                 string text_gia = tb_price.Text;
                 int ma = int.Parse(text_ma);
                 int gia = int.Parse(text_gia);
-                Console.WriteLine(text_tenDichVu + ' ' + text_moTa + ' ' + text_loaiDichVu);
                 if (string.IsNullOrEmpty(text_tenDichVu))
                 {
                     MessageBox.Show(
@@ -99,7 +98,11 @@ namespace INFSYS_Design.views
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information
                     );
-                    this.Close();
+                    int idx = Program.previousForm.Count - 1;
+                    Form prvForm = Program.previousForm[idx];
+                    Program.previousForm.RemoveAt(idx);
+                    prvForm.Show();
+                    this.Hide();
                     return;
                 }
                 else

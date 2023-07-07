@@ -35,6 +35,7 @@ namespace INFSYS_Design.views
             this.btn_tour_management = new System.Windows.Forms.Button();
             this.btn_room_booking = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // hello_label
@@ -110,12 +111,25 @@ namespace INFSYS_Design.views
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button3.Location = new System.Drawing.Point(374, 422);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(259, 46);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Đặt dịch vụ";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // GUI_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1006, 529);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_room_booking);
             this.Controls.Add(this.btn_tour_management);
@@ -139,5 +153,6 @@ namespace INFSYS_Design.views
         private System.Windows.Forms.Button btn_tour_management;
         private System.Windows.Forms.Button btn_room_booking;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
