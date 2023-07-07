@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.back_btn = new System.Windows.Forms.Button();
             this.add_service_btn = new System.Windows.Forms.Button();
             this.update_service_btn = new System.Windows.Forms.Button();
@@ -45,45 +45,49 @@
             // back_btn
             // 
             this.back_btn.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.back_btn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.back_btn.Location = new System.Drawing.Point(12, 12);
             this.back_btn.Name = "back_btn";
             this.back_btn.Size = new System.Drawing.Size(86, 29);
             this.back_btn.TabIndex = 0;
             this.back_btn.Text = "Trang chủ";
-            this.back_btn.UseVisualStyleBackColor = true;
+            this.back_btn.UseVisualStyleBackColor = false;
             this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
             // 
             // add_service_btn
             // 
             this.add_service_btn.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.add_service_btn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.add_service_btn.Location = new System.Drawing.Point(104, 12);
             this.add_service_btn.Name = "add_service_btn";
             this.add_service_btn.Size = new System.Drawing.Size(112, 29);
             this.add_service_btn.TabIndex = 1;
             this.add_service_btn.Text = "Thêm dịch vụ";
-            this.add_service_btn.UseVisualStyleBackColor = true;
+            this.add_service_btn.UseVisualStyleBackColor = false;
             this.add_service_btn.Click += new System.EventHandler(this.add_service_btn_Click);
             // 
             // update_service_btn
             // 
             this.update_service_btn.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.update_service_btn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.update_service_btn.Location = new System.Drawing.Point(222, 12);
             this.update_service_btn.Name = "update_service_btn";
             this.update_service_btn.Size = new System.Drawing.Size(97, 29);
             this.update_service_btn.TabIndex = 2;
             this.update_service_btn.Text = "Sửa dịch vụ";
-            this.update_service_btn.UseVisualStyleBackColor = true;
+            this.update_service_btn.UseVisualStyleBackColor = false;
             this.update_service_btn.Click += new System.EventHandler(this.update_service_btn_Click);
             // 
             // delete_service_btn
             // 
             this.delete_service_btn.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.delete_service_btn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.delete_service_btn.Location = new System.Drawing.Point(325, 12);
             this.delete_service_btn.Name = "delete_service_btn";
             this.delete_service_btn.Size = new System.Drawing.Size(97, 29);
             this.delete_service_btn.TabIndex = 3;
             this.delete_service_btn.Text = "Xóa dịch vụ";
-            this.delete_service_btn.UseVisualStyleBackColor = true;
+            this.delete_service_btn.UseVisualStyleBackColor = false;
             this.delete_service_btn.Click += new System.EventHandler(this.delete_service_btn_Click);
             // 
             // dataGridView1
@@ -93,14 +97,15 @@
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.service_id,
@@ -159,6 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1006, 529);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.delete_service_btn);
