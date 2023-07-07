@@ -19,6 +19,12 @@ namespace INFSYS_Design.views
             InitializeComponent();
             NhanVien currentUser = NhanVien.layThongTinNhanVien();
             this.hello_label.Text = $"Xin chào {currentUser.hoTen}";
+
+            if(Program.currentUserRole == "ADMIN")
+            {
+                this.button3.Enabled = false;
+                this.btn_room_booking.Enabled = false;
+            }
         }
 
         private void Home_Load(object sender, EventArgs e)
