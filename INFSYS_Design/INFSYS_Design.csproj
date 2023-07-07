@@ -97,6 +97,12 @@
     <Compile Include="views\components\add_room_modal.Designer.cs">
       <DependentUpon>add_room_modal.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\components\team_info_modal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\components\team_info_modal.Designer.cs">
+      <DependentUpon>team_info_modal.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\components\add_room_modal.resx">
       <DependentUpon>add_room_modal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\components\team_info_modal.resx">
+      <DependentUpon>team_info_modal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
