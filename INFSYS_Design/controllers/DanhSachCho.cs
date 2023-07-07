@@ -61,7 +61,7 @@ namespace INFSYS_Design.controllers
         }
         public static bool themDanhSachCho(DateTime deadline, int requestId)
         {
-            return DB_DanhSachCho.themDanhSachCho(deadline.ToString(), requestId, DateTime.Now.ToString(), Program.currentUserId) == 1;
+            return DB_DanhSachCho.themDanhSachCho(deadline.Date.ToString("MM/dd/yyyy"), requestId, DateTime.Now.ToString(), Program.currentUserId) == 1;
         }
     }
 }

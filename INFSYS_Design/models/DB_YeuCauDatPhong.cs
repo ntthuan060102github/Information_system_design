@@ -58,7 +58,6 @@ namespace INFSYS_Design.models
                 VALUES ({soDemLuuTru}, '{ngayDen}', '{ngayYeuCau}', '{yeuCauDacBiet}', {maKH}, '{loaiPhong}')";
             sqlCmd.Connection = conn.conn;
 
-            Console.WriteLine(sqlCmd.CommandText);
             return (int)sqlCmd.ExecuteScalar();
         }
         public static YeuCauDatPhong layThongtinYeuCauTheoMaDatPhong(int maDatPhong)

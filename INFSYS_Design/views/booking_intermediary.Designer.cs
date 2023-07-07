@@ -342,7 +342,7 @@
             this.checkDSCho.Location = new System.Drawing.Point(623, 486);
             this.checkDSCho.Margin = new System.Windows.Forms.Padding(4);
             this.checkDSCho.Name = "checkDSCho";
-            this.checkDSCho.Size = new System.Drawing.Size(144, 24);
+            this.checkDSCho.Size = new System.Drawing.Size(163, 24);
             this.checkDSCho.TabIndex = 80;
             this.checkDSCho.Text = "Danh sách chờ";
             this.checkDSCho.UseVisualStyleBackColor = false;
@@ -351,7 +351,6 @@
             // dtpCheckout
             // 
             this.dtpCheckout.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpCheckout.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpCheckout.Location = new System.Drawing.Point(375, 487);
             this.dtpCheckout.Margin = new System.Windows.Forms.Padding(4);
             this.dtpCheckout.Name = "dtpCheckout";
@@ -361,7 +360,6 @@
             // dtpCheckin
             // 
             this.dtpCheckin.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpCheckin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpCheckin.Location = new System.Drawing.Point(375, 427);
             this.dtpCheckin.Margin = new System.Windows.Forms.Padding(4);
             this.dtpCheckin.Name = "dtpCheckin";
@@ -395,10 +393,10 @@
             this.btnSubmit.AutoSize = true;
             this.btnSubmit.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnSubmit.Location = new System.Drawing.Point(775, 479);
+            this.btnSubmit.Location = new System.Drawing.Point(786, 479);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(218, 37);
+            this.btnSubmit.Size = new System.Drawing.Size(207, 37);
             this.btnSubmit.TabIndex = 75;
             this.btnSubmit.Text = "Đặt phòng/thêm yêu cầu";
             this.btnSubmit.UseVisualStyleBackColor = false;

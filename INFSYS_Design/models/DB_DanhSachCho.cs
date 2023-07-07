@@ -53,18 +53,12 @@ namespace INFSYS_Design.models
             DBConn conn = new DBConn();
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.CommandType = System.Data.CommandType.Text;
-            sqlCmd.CommandText = @"
+            sqlCmd.CommandText = $@"
                 INSERT INTO DANHSACHCHO(TRANGTHAI, THOIGIANTAO, HANCHOT, NGUOITHUCHIEN, MAYEUCAU)
-                VALUES (@trangThai, @thoiGianTao, @hanChot, @nguoiThucHien, @maYeuCau)
+                VALUES ('DANG_CHO', '{createdTime}', '{deadline}', {userId}, {requestId})
             ";
             sqlCmd.Connection = conn.conn;
-
-            sqlCmd.Parameters.AddWithValue("@trangThai", "DANG_CHO");
-            sqlCmd.Parameters.AddWithValue("@thoiGianTao", createdTime);
-            sqlCmd.Parameters.AddWithValue("@hanChot", deadline);
-            sqlCmd.Parameters.AddWithValue("@nguoiThucHien", userId);
-            sqlCmd.Parameters.AddWithValue("@maYeuCau", requestId);
-
+            Console.WriteLine(sqlCmd.CommandText);
             return sqlCmd.ExecuteNonQuery();
         }
     }
