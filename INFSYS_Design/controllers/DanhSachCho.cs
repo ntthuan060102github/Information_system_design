@@ -55,9 +55,9 @@ namespace INFSYS_Design.controllers
             this.maYeuCau = maYeuCau;
         }
 
-        public static List<DanhSachCho> layDanhlayDanhSachTheoTheoLoaiPhong(string maLoaiPhong)
+        public static List<DanhSachCho> layDanhSachChoTheoLoaiPhong(string maLoaiPhong)
         {
-            return DB_DanhSachCho.layDanhSachTheoTheoLoaiPhong(maLoaiPhong);
+            return DB_DanhSachCho.layDanhSachChoTheoLoaiPhong(maLoaiPhong);
         }
         public static bool themDanhSachCho(DateTime deadline, int requestId)
         {

@@ -10,7 +10,7 @@ namespace INFSYS_Design.models
 {
     class DB_DanhSachCho
     {
-        public static List<DanhSachCho> layDanhSachTheoTheoLoaiPhong(string maLoaiPhong)
+        public static List<DanhSachCho> layDanhSachChoTheoLoaiPhong(string maLoaiPhong)
         {
             DBConn conn = new DBConn();
             SqlCommand sqlCmd = new SqlCommand();

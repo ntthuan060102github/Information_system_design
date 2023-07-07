@@ -21,7 +21,7 @@ namespace INFSYS_Design.views
             this.soPhong = soPhong;
             LoaiPhong roomType = LoaiPhong.layThongTinLoaiPhong(room.loaiPhong);
             ThongTinKhachHang cusomterInfo = Phong.layThongTinHangDangThuePhong(soPhong);
-            List<DanhSachCho> waitingList = DanhSachCho.layDanhlayDanhSachTheoTheoLoaiPhong(room.loaiPhong);
+            List<DanhSachCho> waitingList = DanhSachCho.layDanhSachChoTheoLoaiPhong(room.loaiPhong);
             if (cusomterInfo != null)
             {
                 this.customer_name.Text = cusomterInfo.hoTen;
