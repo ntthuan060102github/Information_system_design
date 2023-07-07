@@ -54,5 +54,13 @@ namespace INFSYS_Design.views
             customersPage.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            GUI_ListOfServices servicesPage = new GUI_ListOfServices();
+            Program.previousForm.Add(this);
+            servicesPage.Show();
+            this.Hide();
+        }
     }
 }

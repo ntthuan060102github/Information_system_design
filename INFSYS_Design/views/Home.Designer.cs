@@ -34,6 +34,7 @@ namespace INFSYS_Design.views
             this.button1 = new System.Windows.Forms.Button();
             this.btn_tour_management = new System.Windows.Forms.Button();
             this.btn_room_booking = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // hello_label
@@ -97,12 +98,25 @@ namespace INFSYS_Design.views
             this.btn_room_booking.UseVisualStyleBackColor = false;
             this.btn_room_booking.Click += new System.EventHandler(this.btn_room_booking_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button2.Location = new System.Drawing.Point(374, 370);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(259, 46);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Quản lý dịch vụ";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // GUI_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1006, 529);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_room_booking);
             this.Controls.Add(this.btn_tour_management);
             this.Controls.Add(this.button1);
@@ -124,5 +138,6 @@ namespace INFSYS_Design.views
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_tour_management;
         private System.Windows.Forms.Button btn_room_booking;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using INFSYS_Design.views.components;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 
@@ -140,14 +141,14 @@ namespace INFSYS_Design.views
 
         private void dtg_list_empty_room_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.dtgDSPhongTrong.Rows.Clear();
+            /*this.dtgDSPhongTrong.Rows.Clear();
             string roomType = this.dtgLoaiPhong.SelectedRows[0].Cells[0].Value.ToString();
 
             List<Phong> listOfRoom = Phong.layDanhSachPhongTrongTheoLoaiPhong(roomType);
             foreach (Phong room in listOfRoom)
             {
                 this.dtgDSPhongTrong.Rows.Add(room.soPhong.ToString());
-            }
+            }*/
         }
 
         private void label_customer_info_Click(object sender, EventArgs e)
@@ -343,7 +344,6 @@ namespace INFSYS_Design.views
                 customer_address,
                 customer_gender == "Nam" ? 1 : 0
             );
-            Console.WriteLine(this.dtgLoaiPhong.SelectedRows[0].Cells[0].ToString());
             int requestId = YeuCauDatPhong.themYeuCauDatPhong(
                 (return_date - checkin_date).Days,
                 checkin_date,
@@ -390,12 +390,8 @@ namespace INFSYS_Design.views
                 
                 if (history && room_modified)
                 {
-                    MessageBox.Show(
-                        "Thành công!",
-                        "Thông báo",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information
-                    );
+                    GUI_TeamInfoModal modal = new GUI_TeamInfoModal(customerDbId);
+                    modal.ShowDialog();
                     return;
                 }
                 else
