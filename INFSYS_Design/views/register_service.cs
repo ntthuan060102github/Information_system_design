@@ -27,7 +27,7 @@ namespace INFSYS_Design.views
             
             foreach(DichVu service in this.listOfServices)
             {
-                this.cbb_service.Items.Add($"<{service.ma}> {service.tenDichVu}");
+                //this.cbb_service.Items.Add($"<{service.ma}> {service.tenDichVu}");
             }
         }
 
